@@ -6,6 +6,7 @@ DISABLE_AUTO_UPDATE="true"
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
+
 plugins=(
     git
 	zsh-syntax-highlighting
@@ -33,7 +34,7 @@ alias gpl="git pull"
 alias gps="git push"
 alias gs="git status"
 alias mkdir="mkdir -pv"
-alias ls="ls -aFG"
+alias ls="ls -aFG --color=always"
 
 # Additional paths
 export PATH="/home/ssiyad/.gem/ruby/2.6.0/bin:$PATH"
