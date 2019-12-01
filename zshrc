@@ -3,12 +3,17 @@ export ZSH="/home/ssiyad/.oh-my-zsh"
 ZSH_THEME="sunrise"
 
 DISABLE_AUTO_UPDATE="true"
-ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(
     git
+    git-extras
+    sudo
+    extract
+    pyenv
+    python
+    wd
 	zsh-syntax-highlighting
 	zsh-autosuggestions
 )

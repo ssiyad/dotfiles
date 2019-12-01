@@ -323,11 +323,12 @@ blacklist-0 = scroll lock
 
 format = <label-indicator>
 format-background = ${colors.grey}
+format-padding = 1
 
-label-indicator-on-capslock = " CAPS "
-label-indicator-off-capslock = " CAPS "
-label-indicator-on-numlock = "NUM "
-label-indicator-off-numlock = "NUM "
+label-indicator-on-capslock = "CAPS "
+label-indicator-off-capslock = "CAPS "
+label-indicator-on-numlock = "NUM"
+label-indicator-off-numlock = "NUM"
 
 label-indicator-on-capslock-foreground = ${colors.green2}
 label-indicator-off-capslock-foreground = ${colors.red2}
