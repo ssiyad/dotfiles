@@ -36,6 +36,7 @@ goldlight = #ffd75f
 blueroyal = #5f87ff
 grey = #767676
 xtra = #444444
+xtra2 = #792826
 primary = ${xrdb:color1}
 alert = ${xrdb:color3}
 
@@ -70,7 +71,7 @@ font-3 = "Noto\ Sans\ Symbols2:size=13;1"
 font-4 = "FontAwesome:size=10;1"
 
 modules-center =
-modules-left = i3 arrowtitle1 arrowtitle0 arrowtitle1 arrowtitle0 arrowtitle1
+modules-left = i3 arrowtitle1 arrowtitle0
 modules-right = arrow9 arrow8 keyboard arrow7 backlight arrow6 pulseaudio arrow5 memory arrow4 cpu arrow3 wlan arrow2 battery arrow1 temperature arrow0 date
 
 [module/i3]
@@ -83,7 +84,7 @@ strip-wsnumbers = true
 ; Only show workspaces on the same output as the bar
 ; pin-workspaces = true
 
-label-mode-padding = 0
+label-mode-padding = 1
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
@@ -96,6 +97,8 @@ label-focused-padding = 1
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %name%
 label-unfocused-padding = 1
+label-unfocused-foreground = ${colors.background}
+label-unfocused-background = ${colors.primary}
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %name%
@@ -235,15 +238,15 @@ label-font = 3
 type = custom/text
 content = ""
 content-font = 4
-content-foreground = ${colors.background}
-content-background = ${colors.primary}
+content-foreground = ${colors.xtra2}
+content-background = ${colors.background}
 
 [module/arrowtitle1]
 type = custom/text
 content = ""
 content-font = 4
 content-foreground = ${colors.primary}
-content-background = ${colors.background}
+content-background = ${colors.xtra2}
 
 [module/arrow0]
 type = custom/text

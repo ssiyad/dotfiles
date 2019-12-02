@@ -40,6 +40,7 @@ alias gps="git push"
 alias gs="git status"
 alias mkdir="mkdir -pv"
 alias ls="ls -aFG --color=always"
+alias bc="bc -lq"
 
 # Additional paths
 export PATH="/home/ssiyad/.gem/ruby/2.6.0/bin:$PATH"
