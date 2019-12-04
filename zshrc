@@ -41,7 +41,7 @@ alias gs="git status"
 alias mkdir="mkdir -pv"
 alias ls="ls -aFG --color=always"
 alias bc="bc -lq"
-alias rm="rm -rv"
+alias rm="rm -rfv"
 alias mv="mv -iv"
 
 # Additional paths
