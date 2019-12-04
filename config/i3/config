@@ -176,7 +176,8 @@ bindsym XF86MonBrightnessDown exec --no-startup-id light -U 2
 exec --no-startup-id mpd
 
 # screenshot
-bindsym Print exec scrot
+bindsym Print exec scrot '%d-%m-%Y_$p_full_$wx$h.png' -q 100 -e 'mv $f ~/Screenshots'
+bindsym $mod+Print exec scrot '%d-%m-%Y_$p_window_$wx$h.png' -u -q 100 -e 'mv $f ~/Screenshots'
 
 # You can also use any non-zero value if you'd like to have a border
 for_window [class=".*"] border pixel 1
