@@ -20,12 +20,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
-
 export ARCHFLAGS="-arch x86_64"
 
 alias ga="git add"
