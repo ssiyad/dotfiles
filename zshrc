@@ -11,7 +11,6 @@ plugins=(
     git-extras
     sudo
     extract
-    pyenv
     python
     wd
 	zsh-syntax-highlighting
@@ -19,6 +18,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 
 export ARCHFLAGS="-arch x86_64"
 
@@ -37,7 +37,9 @@ alias ls="ls -aFG --color=always"
 alias bc="bc -lq"
 alias rm="rm -rfv"
 alias mv="mv -iv"
+alias cl="clear -x"
+alias r="ranger"
 
-# Additional paths
+# Additional env
 export PATH="/home/ssiyad/.gem/ruby/2.6.0/bin:$PATH"
 export TERM=xterm-256color
