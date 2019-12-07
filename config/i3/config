@@ -152,13 +152,15 @@ bar {
 
 # wallpaper
 exec --no-startup-id source ~/.fehbg
-bindsym $mod+backslash exec --no-startup-id feh --bg-scale --randomize ~/Pictures/*
 
 # polybar instead of i3bar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec --no-startup-id hideIt.sh --name '^polybar-bottom_eDP-1$' -p 0 -d bottom --signal -w &
+exec --no-startup-id hideIt.sh --name '^polybar-top_eDP-1$' -p 0 -d top --signal -w &
+exec --no-startup-id ~/.config/polybar/launch.sh
+bindsym $mod+backslash exec --no-startup-id hideIt.sh --name '^polybar-bottom_eDP-1$' --toggle & hideIt.sh --name '^polybar-top_eDP-1$' --toggle
 
 # gaps // smart_gaps on
-gaps outer 1
+gaps outer 0
 gaps inner 0
 
 # audio
@@ -172,8 +174,11 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous & mpc prev
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 2
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 2
 
+# picom aka compton
+exec_always --no-startup-id picom -C
+
 # mpd
-exec --no-startup-id mpd
+exec --no-startup-id mpd &
 
 # screenshot
 bindsym Print exec scrot '%d-%m-%Y_$p_full_$wx$h.png' -q 100 -e 'mv $f ~/Screenshots'
@@ -184,7 +189,6 @@ for_window [class=".*"] border pixel 1
 
 # misc
 bindsym $mod+b exec firefox
-bindsym $mod+a exec atom
 
 # App Specific Workspace
 assign [class="URxvt"] $ws1
