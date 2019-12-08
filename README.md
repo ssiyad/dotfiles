@@ -1,2 +1,2 @@
 ## Screenshot
-[[/Screenshots/1.png|align=center]]
+![Screenshot main](Screenshots/1.png)
