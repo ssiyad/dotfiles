@@ -39,6 +39,7 @@ alias rm="rm -rfv"
 alias mv="mv -iv"
 alias cl="clear -x"
 alias r="ranger"
+alias n="ncmpcpp"
 
 # Additional env
 export PATH="/home/ssiyad/.gem/ruby/2.6.0/bin:$PATH"

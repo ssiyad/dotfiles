@@ -128,7 +128,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec i3-msg exit
 
 # resize window
 mode "resize" {
@@ -181,8 +181,8 @@ exec_always --no-startup-id picom -C
 exec --no-startup-id mpd &
 
 # screenshot
-bindsym Print exec scrot '%d-%m-%Y_$p_full_$wx$h.png' -q 100 -e 'mv $f ~/Screenshots'
-bindsym $mod+Print exec scrot '%d-%m-%Y_$p_window_$wx$h.png' -u -q 100 -e 'mv $f ~/Screenshots'
+bindsym Print exec scrot '%F-%T-%a_full_$wx$h.png' -q 100 -e 'mv $f ~/Screenshots'
+bindsym $mod+Print exec scrot '%F-%T-%a_window_$wx$h.png' -u -b -q 100 -e 'mv $f ~/Screenshots'
 
 # You can also use any non-zero value if you'd like to have a border
 for_window [class=".*"] border pixel 1
