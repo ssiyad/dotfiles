@@ -41,6 +41,7 @@ alias cl="clear -x"
 alias r="ranger"
 alias n="ncmpcpp"
 alias htop="htop -t"
+alias cp="cp -rv"
 
 # Additional env
 export PATH="/home/ssiyad/.gem/ruby/2.6.0/bin:$PATH"
