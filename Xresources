@@ -1,16 +1,22 @@
+urxvt*termName:         rxvt
+urxvt*scrollBar:        false
+urxvt*perl-lib:         /usr/lib/urxvt/perl/
+urxvt*perl-ext-common:  default,matcher
+urxvt*urlLauncher:      /usr/bin/firefox
+
+Xft*antialias:          true
+Xft*hinting:            full
+
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+
+
 Xft.dpi:                96
 Xft.rgba:               rgb
 Xft.hintstyle:          hintslight
 Xft.lcdfilter:          lcddefault
 Xft*hinting:            full
 Xft*antialias:          true
-
-URxvt*termName:         rxvt
-URxvt*scrollBar:        false
-URxvt*perl-lib:         /usr/lib/urxvt/perl/
-URxvt*perl-ext-common:  default,matcher
-URxvt*urlLauncher:      /usr/bin/firefox
-URxvt*loginShell:       true
 
 !! Some unused options
 ! urxvt*fading:         21

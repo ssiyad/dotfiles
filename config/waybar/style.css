@@ -1,0 +1,112 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: Hack;
+  font-size: 12px;
+  color: #dfdfdf;
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: #222222;
+  color: #dfdfdf;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#workspaces button {
+  padding: 0 3px;
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+}
+
+#workspaces button:hover {
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: inherit;
+  border-bottom: 1px solid #1793d1;
+}
+
+#workspaces button.focused {
+  background-color: #444;
+  border-bottom: 1px solid #1793d1;
+}
+
+#workspaces button.urgent {
+  background-color: #eb4d4b;
+  border-bottom: 1px solid #eb4d4b;
+}
+
+#mode {
+  background-color: #64727d;
+}
+
+#clock,
+#battery,
+#backlight,
+#network,
+#pulseaudio,
+#mode {
+  padding: 0 3px;
+  margin: 0 2px;
+  color: #dfdfdf;
+}
+
+#clock {
+  border-bottom: 1px solid #7e66b9;
+}
+
+#battery {
+  border-bottom: 1px solid #ffb52a;
+}
+
+#battery.charging {
+  border-bottom: 1px solid #44bd32;
+}
+
+@keyframes blink {
+  to {
+    color: #de0037;
+    border-bottom: 1px solid #de0037;
+  }
+}
+
+#battery.critical:not(.charging) {
+  color: #dfdfdf;
+  border-bottom: 1px solid #ffb52a;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+label:focus {
+  background-color: #000000;
+}
+
+#backlight {
+  background-color: #222;
+  border-bottom: 1px solid #f1c40f;
+}
+
+#network {
+  border-bottom: 1px solid #9f78e1;
+}
+
+#network.disconnected {
+    border-bottom: none;
+    padding: 0 0;
+    margin: 0 0;
+}
+
+#pulseaudio {
+  border-bottom: 1px solid #55aa55;
+}
+
+#pulseaudio.muted {
+  border-bottom: 1px solid #ff5555;
+}
