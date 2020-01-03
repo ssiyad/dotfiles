@@ -42,6 +42,8 @@ alias r="ranger"
 alias n="ncmpcpp"
 alias htop="htop -t"
 alias cp="cp -rv"
+alias icat="kitty +kitten icat --silent"
+alias dif="kitty +kitten diff"
 
 # Additional env
 export PATH="/home/ssiyad/.gem/ruby/2.6.0/bin:$PATH"

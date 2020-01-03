@@ -156,11 +156,3 @@ gaps inner 5
 
 # misc
 bindsym $mod+b exec firefox
-
-# App Specific Workspace
-assign [class="URxvt"] $ws1
-assign [class="firefox"] $ws2
-assign [class="jetbrains-pycharm-ce"] $ws3
-assign [class="java-lang-Thread"] $ws3 # PyCharm loading screen
-assign [class="telegram-desktop"] $ws4
-assign [class="Atom"] $ws3
