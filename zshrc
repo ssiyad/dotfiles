@@ -44,6 +44,7 @@ alias htop="htop -t"
 alias cp="cp -rv"
 alias icat="kitty +kitten icat --silent"
 alias dif="kitty +kitten diff"
+alias ix.io="curl -F 'f:1=<-' ix.io <"
 
 # Additional env
 export PATH="/home/ssiyad/.gem/ruby/2.6.0/bin:$PATH"
