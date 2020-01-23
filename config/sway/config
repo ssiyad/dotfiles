@@ -149,7 +149,6 @@ exec --no-startup-id mpd &
 # screenshot
 bindsym Print exec grim "$HOME/Screenshots/$(date '+%F-%T-%a')_full_.png"
 
-# You can also use any non-zero value if you'd like to have a border
 default_border pixel 1
 gaps outer 0
 gaps inner 5
