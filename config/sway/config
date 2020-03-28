@@ -143,9 +143,6 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous & mpc prev
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 2
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 2
 
-# mpd
-exec --no-startup-id mpd &
-
 # screenshot
 bindsym Print exec grim "$HOME/Screenshots/$(date '+%F-%T-%a')_full_.png"
 
