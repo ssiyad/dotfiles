@@ -145,6 +145,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id light -U 2
 
 # screenshot
 bindsym Print exec grim "$HOME/Screenshots/$(date '+%F-%T-%a')_full_.png"
+bindsym $mod+Print exec ~/dotfiles/scripts/part_ss.sh
 
 default_border pixel 1
 gaps outer 0
