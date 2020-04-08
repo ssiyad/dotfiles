@@ -24,7 +24,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Shift+e exec sway exit
 
 # start rofi (a program launcher)
-bindsym $mod+d exec --no-startup-id "rofi -show drun -modi drun,window,ssh"
+bindsym $mod+d exec --no-startup-id rofi -show drun
 
 # change focus
 bindsym $mod+Left focus left

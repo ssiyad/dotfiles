@@ -1,0 +1,12 @@
+configuration {
+    modi: "drun";
+    width: 40;
+    lines: 12;
+    columns: 2;
+    font: "Hack 10";
+    show-icons: false;
+    drun-display-format: "{name}";
+    matching: "fuzzy";
+	theme: "/usr/share/rofi/themes/gruvbox-dark-hard.rasi";
+    display-drun: "Apps";
+}
