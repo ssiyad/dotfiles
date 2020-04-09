@@ -23,6 +23,14 @@ bindsym $mod+Shift+q kill
 # exit sway
 bindsym $mod+Shift+e exec sway exit
 
+# GTK3 settings
+set $gnome-schema org.gnome.desktop.interface
+exec_always {
+    gsettings set $gnome-schema gtk-theme "Arc-Darker"
+    gsettings set $gnome-schema icon-theme "Papirus-Dark"
+    gsettings set $gnome-schema cursor-theme "Adwaita"
+}
+
 # start rofi (a program launcher)
 bindsym $mod+d exec --no-startup-id rofi -show drun
 
