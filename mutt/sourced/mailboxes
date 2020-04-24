@@ -1,0 +1,32 @@
+# -*- muttrc -*-
+#
+# List of folders that are considered to be "mailboxes" (folders that
+# receive incoming mail).
+#
+
+# work
+set folder=~/Mail/Disroot
+
+mailboxes !
+mailboxes +Archive
+mailboxes +Sent
+mailboxes +Trash
+mailboxes +git-general
+mailboxes +arch-announce
+mailboxes +arch-dev-public
+mailboxes +arch-events
+mailboxes +arch-general
+mailboxes +arch-projects
+mailboxes +arch-security
+mailboxes +aur-dev
+mailboxes +aur-general
+mailboxes +aur-requests
+mailboxes +pacman-contrib
+mailboxes +pacman-dev
+mailboxes +debian-announce
+mailboxes +debian-dug-in
+mailboxes +debian-lts-announce
+mailboxes +debian-l10n-malayalam
+mailboxes +debian-news
+mailboxes +debian-security
+

@@ -1,0 +1,39 @@
+# -*- muttrc -*-
+#
+# Display settings
+#
+set sort=threads			                # Sort by threads
+set sort_aux=reverse-last-date-received		# Secondary sorting method
+set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
+set pager_index_lines=6		                # 15 lines assigned to message list when viewing one
+set read_inc=20				                # Read counter ticks every 20 msgs.
+set write_inc=20			                # Write counter ticks every 20 msgs.
+set pager_stop				                # Don't skip msgs on next page.
+unset menu_move_off			                # Don't let last items of menus scroll up past the bottom of the screen.
+set menu_scroll				                # Scroll line by line when reaching end of page.
+set menu_context=5			                # Lines of context
+set pager_context=1			                # Lines of context
+unset markers				                # + need not be displayed for wrapped lines.
+mime_lookup application/octet-stream	    # See if it is really the correct MIME type, otherwise change it.
+mime_lookup text/plain		 	            # See if it is really the correct MIME type, otherwise change it.
+alternative_order text/plain text/html
+set ignore_list_reply_to
+set status_chars  = " *%A"
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+set assumed_charset=iso-8859-1
+set to_chars=" +TCF "                       # Drop L
+
+unset wait_key				                # Don't prompt for a key press after shell-escape and the like.
+
+## Date: Default: “!%a, %b %d, %Y at %I:%M:%S%p %Z”
+set date_format="%b.%d %H:%M"
+## Index: Default: “%4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s”
+# Now in folder-hooks
+## Folder: Default: “%2C %t %N %F %2l %-8.8u %-8.8g %8s %d %f”
+set folder_format=" %2C %s %d %t %2N   %f"
+
+## Sidebar
+set sidebar_visible=yes
+set sidebar_width=25
+set sidebar_divider_char=|
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"

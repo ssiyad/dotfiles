@@ -1,0 +1,25 @@
+# -*- muttrc -*-
+#
+# List of mailing lists I'm subscribed to.
+#
+
+# lists <name>
+
+subscribe arch-announce
+subscribe arch-dev-public
+subscribe arch-events
+subscribe arch-general
+subscribe arch-projects
+subscribe arch-security
+subscribe aur-dev
+subscribe aur-general
+subscribe aur-requests
+subscribe pacman-contrib
+subscribe pacman-dev
+subscribe debian-announce
+subscribe debian-dug-in
+subscribe debian-lts-announce
+subscribe debian-l10n-malayalam
+subscribe debian-news
+subscribe debian-security
+

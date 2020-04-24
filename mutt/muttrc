@@ -1,0 +1,19 @@
+# -*- muttrc -*-
+#
+# Main configuration file.
+#
+
+source ~/.mutt/theme                    # Theme
+source ~/.mutt/sourced/autoview			# Autoview
+source ~/.mutt/sourced/bindings			# Key bindings
+source ~/.mutt/sourced/composing		# Composing & sending
+source ~/.mutt/sourced/display			# Display settings
+source ~/.mutt/sourced/identity			# Identity
+source ~/.mutt/sourced/headers			# Customize header display
+source ~/.mutt/sourced/lists			# Mailing lists (subscribed or not)
+source ~/.mutt/sourced/macros			# Macros
+source ~/.mutt/sourced/mailboxes		# Mailboxes that receive mail
+source ~/.mutt/sourced/options			# Options
+source ~/.mutt/sourced/folder-hooks		# Folder hooks
+source ~/.mutt/sourced/gpg		        # Encrypt mail
+

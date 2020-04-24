@@ -1,5 +1,8 @@
 ## Screenshots
 ### i3 & polybar
-![Screenshot one](Screenshots/1.png)
+![i3](Screenshots/1.png)
 ### sway & waybar
-![Screenshot one](Screenshots/2.png)
+![sway](Screenshots/2.png)
+### Mutt
+![mutt](Screenshots/3.png)
+

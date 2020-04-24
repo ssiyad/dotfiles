@@ -160,4 +160,4 @@ gaps outer 0
 gaps inner 5
 
 # misc
-bindsym $mod+b exec firefox
+bindsym $mod+b exec MOZ_ENABLE_WAYLAND=1 firefox
