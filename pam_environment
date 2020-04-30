@@ -1,0 +1,7 @@
+PATH DEFAULT=@{HOME}/.cargo/bin:${PATH}
+PATH DEFAULT=@{HOME}/go/bin:${PATH}
+PATH DEFAULT=@{HOME}/.gem/ruby/2.6.0/bin:${PATH}
+PATH DEFAULT=@{HOME}/.gem/ruby/2.7.0/bin:${PATH}
+TERM DEFAULT=xterm-256color
+MOZ_ENABLE_WAYLAND DEFAULT=1
+

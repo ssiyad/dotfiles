@@ -19,7 +19,7 @@ subscribe pacman-dev
 subscribe debian-announce
 subscribe debian-dug-in
 subscribe debian-lts-announce
-subscribe debian-l10n-malayalam
 subscribe debian-news
 subscribe debian-security
+subscribe kernelnewbies
 
