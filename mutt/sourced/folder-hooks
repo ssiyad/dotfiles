@@ -5,3 +5,5 @@
 
 folder-hook . "set index_format='%4C %Z %D %-22.22n (%?l?%4l&%4c?) %s'"
 folder-hook +Sent "set index_format='%4C %Z %D %-22.22L (%?l?%4l&%4c?) %s'"
+folder-hook . "unset trash"
+folder-hook ! "set trash=+Trash"
