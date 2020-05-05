@@ -7,6 +7,7 @@
 
 subscribe arch-announce
 subscribe arch-dev-public
+subscribe arch-devops
 subscribe arch-events
 subscribe arch-general
 subscribe arch-projects

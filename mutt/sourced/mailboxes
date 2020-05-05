@@ -14,6 +14,7 @@ mailboxes +Trash
 mailboxes +git-general
 mailboxes +arch-announce
 mailboxes +arch-dev-public
+mailboxes +arch-devops
 mailboxes +arch-events
 mailboxes +arch-general
 mailboxes +arch-projects
