@@ -1,5 +1,7 @@
+icons=0
 max-visible=7
 font=Hack 10
 width=400
 padding=3
 default-timeout=60000
+
