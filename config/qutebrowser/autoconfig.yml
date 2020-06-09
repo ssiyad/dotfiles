@@ -11,6 +11,16 @@ settings:
       normal:
         J: tab-prev
         K: tab-next
+  colors.completion.even.bg:
+    global: '#212121'
+  colors.completion.item.selected.match.fg:
+    global: '#ff0000'
+  colors.completion.odd.bg:
+    global: '#212121'
+  colors.completion.scrollbar.bg:
+    global: '#212121'
+  colors.completion.scrollbar.fg:
+    global: '#d898eb'
   colors.statusbar.command.bg:
     global: '#212121'
   colors.statusbar.normal.bg:
@@ -43,6 +53,8 @@ settings:
     global: default_size default_family
   fonts.tabs:
     global: 10 default_family
+  scrolling.smooth:
+    global: true
   statusbar.hide:
     global: true
   tabs.favicons.show:
