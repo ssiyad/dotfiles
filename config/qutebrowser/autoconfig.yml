@@ -11,6 +11,10 @@ settings:
       normal:
         J: tab-prev
         K: tab-next
+        pa: spawn --detach mpv --no-video {url}
+        pla: hint links spawn --detach mpv --no-video {hint-url}
+        plv: hint links spawn --detach mpv {hint-url}
+        pv: spawn --detach mpv {url}
   colors.completion.even.bg:
     global: '#212121'
   colors.completion.item.selected.match.fg:
@@ -45,6 +49,7 @@ settings:
     global: true
   content.notifications:
     https://www.reddit.com: false
+    https://www.youtube.com: false
   content.register_protocol_handler:
     https://mail.disroot.org?mailto&to=%25s: true
   fonts.default_size:
@@ -53,6 +58,10 @@ settings:
     global: default_size default_family
   fonts.tabs:
     global: 10 default_family
+  input.insert_mode.auto_enter:
+    global: true
+  input.insert_mode.auto_leave:
+    global: true
   scrolling.smooth:
     global: true
   statusbar.hide:
@@ -68,7 +77,7 @@ settings:
   tabs.show:
     global: switching
   tabs.show_switching_delay:
-    global: 2000
+    global: 1000
   url.default_page:
     global: ~/.config/qutebrowser/html/homepage.html
   url.open_base_url:
@@ -82,5 +91,6 @@ settings:
       gl: https://gitlab.com/search?utf8=%E2%9C%93&search={}
       r: https://old.reddit.com/search/?q={}
       w: https://en.wikipedia.org/wiki/Special:Search?search={}
+      y: https://www.youtube.com/results?search_query={}
   url.start_pages:
     global: ~/.config/qutebrowser/html/homepage.html
