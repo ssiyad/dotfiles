@@ -3,7 +3,7 @@ configuration {
     width: 40;
     lines: 12;
     columns: 2;
-    font: "Fira\ Mono\ for\ Powerline 10";
+    font: "Hack 10";
     show-icons: false;
     drun-display-format: "{name}";
     matching: "fuzzy";
