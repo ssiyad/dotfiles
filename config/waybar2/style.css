@@ -8,36 +8,36 @@
 }
 
 window#waybar {
-  background-color: #242c34;
+  background-color: #222222;
   color: #dfdfdf;
   transition-property: background-color;
-  transition-duration: 0.3s;
+  transition-duration: 0.5s;
 }
 
-window#waybar.empty {
-  background-color: #1d1c1c;
-}
-
-#workspaces {
-  background-color: #1c1c1c;
+window#waybar.hidden {
+  opacity: 0.2;
 }
 
 #workspaces button {
   padding: 0 1px;
   background-color: transparent;
+  border-bottom: 1px solid transparent;
 }
 
 #workspaces button:hover {
   background: rgba(0, 0, 0, 0.2);
   box-shadow: inherit;
+  border-bottom: 1px solid #1793d1;
 }
 
 #workspaces button.focused {
   background-color: #444;
+  border-bottom: 1px solid #1793d1;
 }
 
 #workspaces button.urgent {
   background-color: #eb4d4b;
+  border-bottom: 1px solid #eb4d4b;
 }
 
 #mode {
@@ -50,14 +50,21 @@ window#waybar.empty {
 #network,
 #pulseaudio,
 #mode {
-  padding: 4px 4px;
-  /* margin: 2px 2px; */
+  padding: 0 3px;
+  margin: 0 2px;
   color: #dfdfdf;
-  background-color: #1c1c1c;
+}
+
+#clock {
+  border-bottom: 1px solid #7e66b9;
+}
+
+#battery {
+  border-bottom: 1px solid #ffb52a;
 }
 
 #battery.charging {
-  color: #44bd32;
+  border-bottom: 1px solid #44bd32;
 }
 
 @keyframes blink {
@@ -81,8 +88,25 @@ label:focus {
   background-color: #000000;
 }
 
+#backlight {
+  background-color: #222;
+  border-bottom: 1px solid #f1c40f;
+}
+
+#network {
+  border-bottom: 1px solid #9f78e1;
+}
+
 #network.disconnected {
     border-bottom: none;
     padding: 0 0;
     margin: 0 0;
+}
+
+#pulseaudio {
+  border-bottom: 1px solid #55aa55;
+}
+
+#pulseaudio.muted {
+  border-bottom: 1px solid #ff5555;
 }

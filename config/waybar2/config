@@ -1,20 +1,18 @@
 {
   "position": "top",
-  "layer": "top",
+  "layer": "bottom",
   "height": 20,
-  "modules-left": ["sway/workspaces", "sway/window"],
-  "modules-center": [],
+  "modules-left": ["sway/workspaces"],
+  "modules-center": ["clock"],
   "modules-right": [
     "backlight",
     "pulseaudio",
     "network",
-    "battery",
-    "clock#date",
-    "clock#time"
+    "battery"
   ],
   "sway/workspaces": {
     "disable-scroll": true,
-    "all-outputs": true,
+    "all-outputs": false,
     "format": "{name}",
     "format-icons": {
       "urgent": "",
@@ -22,16 +20,11 @@
       "default": ""
     }
   },
-  "sway/window": {
-    "format": " {}"
-  },
-  "clock#time": {
+  "clock": {
     "interval": 2,
-    "format": " {:%I:%M}"
-  },
-  "clock#date": {
-    "interval": 60,
-    "format": " {:%d %A}"
+    "format": "{:%I:%M}",
+    "tooltip-format": "{:%B %d %a | %T}",
+    "format-alt": "{:%B %d %a | %T}"
   },
   "backlight": {
     "format": "{icon} {percent}%",
@@ -43,16 +36,16 @@
       "critical": 15
     },
     "format": "{icon} {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
     "format-alt": "{time} {icon}",
     "format-icons": ["", "", "", "", ""]
   },
   "network": {
     "inteval": 20,
     "format-wifi": " {essid} ({signalStrength}%)",
-    "format-ethernet": " {ipaddr}/{cidr}",
-    "format-linked": " {ifname} (No IP)",
+    "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
+    "format-linked": " {ifname} (No IP)",
     "format-disconnected": "",
     "format-alt": "{ifname}: {ipaddr}/{cidr}"
   },

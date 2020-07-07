@@ -1,5 +1,5 @@
 output eDP-1 {
-    background ~/dotfiles/wallpaper.png fill
+    background ~/Pictures/365039a0d3b706ed980b421ee6cd38c34b90b136.png fit
     mode --custom 1536x864@60Hz
 }
 # set mod key
@@ -72,9 +72,9 @@ bindsym $mod+p focus parent
 # focus the child container
 bindsym $mod+c focus child
 
-client.focused          #78b3bd #23252e #78b3bd #bcc3d2 #78b3bd
-client.unfocused        #242c34 #23252e #242c34 #bcc3d2 #242c34
-client.focused_inactive #78b3bd #23252e #242c34 #bcc3d2 #242c34
+client.focused          #d898eb #23252e #d898eb #bcc3d2 #d898eb
+client.unfocused        #563c5e #23252e #563c5e #bcc3d2 #563c5e
+client.focused_inactive #d898eb #23252e #563c5e #bcc3d2 #563c5e
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -155,12 +155,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id light -U 2
 bindsym Print exec grim "$HOME/Screenshots/$(date '+%F-%T-%a')_full_.png"
 bindsym $mod+Print exec ~/dotfiles/scripts/part_ss.sh
 
-# Start mako
-exec --no-startup-id mako &
-
 default_border pixel 1
-smart_gaps on
-smart_borders on
 gaps outer 0
 gaps inner 5
 

@@ -48,6 +48,8 @@ settings:
   colors.webpage.prefers_color_scheme_dark:
     global: true
   content.notifications:
+    https://mdbootstrap.com: false
+    https://www.facebook.com: false
     https://www.reddit.com: false
     https://www.youtube.com: false
   content.register_protocol_handler:
@@ -56,16 +58,18 @@ settings:
     global: 9pt
   fonts.statusbar:
     global: default_size default_family
-  fonts.tabs:
+  fonts.tabs.selected:
+    global: 10 default_family
+  fonts.tabs.unselected:
     global: 10 default_family
   input.insert_mode.auto_enter:
-    global: true
+    global: false
   input.insert_mode.auto_leave:
-    global: true
+    global: false
   scrolling.smooth:
     global: true
-  statusbar.hide:
-    global: true
+  statusbar.show:
+    global: never
   tabs.favicons.show:
     global: pinned
   tabs.indicator.width:
@@ -73,7 +77,7 @@ settings:
   tabs.last_close:
     global: startpage
   tabs.position:
-    global: top
+    global: bottom
   tabs.show:
     global: switching
   tabs.show_switching_delay:

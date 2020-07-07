@@ -10,3 +10,4 @@ configuration {
 	theme: "/usr/share/rofi/themes/gruvbox-dark-hard.rasi";
     display-drun: "Apps";
 }
+@import "/usr/share/rofi/themes/android_notification.rasi"
