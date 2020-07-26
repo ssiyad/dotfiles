@@ -1,0 +1,37 @@
+order += "backlight"
+order += "volume_status"
+order += "networkmanager"
+order += "battery_level"
+order += "time"
+
+general {
+colors = true
+markup="pango"
+}
+
+time {
+format = " %d %A  %I:%M"
+}
+
+battery_level {
+notify_low_level = true
+charging_character = ""
+blocks= ""
+format = "{icon} {percent}%"
+}
+
+networkmanager {
+cache_timeout = 2
+format_device = "[\?if=ap_ssid {ap_ssid} ][\?if=general_connection {ip4_address1}]"
+}
+
+volume_status {
+cache_timeout = 1
+blocks = ""
+format = "{icon} {percentage}%"
+}
+
+backlight {
+cache_timeout = 1
+format = " {level}%"
+}
