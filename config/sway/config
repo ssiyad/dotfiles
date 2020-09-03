@@ -1,4 +1,4 @@
-output eDP-1 {
+output * {
     background ~/dotfiles/wallpaper.png fill
     mode --custom 1536x864@60Hz
 }

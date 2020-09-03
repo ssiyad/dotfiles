@@ -49,7 +49,7 @@
     "format-icons": ["", "", "", "", ""]
   },
   "network": {
-    "inteval": 20,
+    "inteval": 2,
     "format-wifi": " {essid} ({signalStrength}%)",
     "format-ethernet": " {ipaddr}/{cidr}",
     "format-linked": " {ifname} (No IP)",

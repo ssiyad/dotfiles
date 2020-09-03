@@ -24,10 +24,5 @@ mailboxes +aur-general
 mailboxes +aur-requests
 mailboxes +pacman-contrib
 mailboxes +pacman-dev
-mailboxes +debian-announce
-mailboxes +debian-dug-in
-mailboxes +debian-lts-announce
-mailboxes +debian-news
-mailboxes +debian-security
 mailboxes +kernelnewbies
 
