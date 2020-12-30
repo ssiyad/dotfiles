@@ -33,6 +33,8 @@ exec_always {
 
 # start rofi (a program launcher)
 bindsym $mod+d exec --no-startup-id rofi -show drun
+# sshelper binding
+bindsym Alt+d exec --no-startup-id sshelper
 
 # change focus
 bindsym $mod+Left focus left
