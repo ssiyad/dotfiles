@@ -46,3 +46,4 @@ alias icat="kitty +kitten icat --silent"
 alias dif="kitty +kitten diff"
 alias ix.io="curl -F 'f:1=<-' ix.io"
 alias emacs="emacs -nw"
+source /usr/share/nvm/init-nvm.sh
