@@ -6,5 +6,5 @@
 ### Mutt
 ![mutt](Screenshots/3.png)
 ### py3status
-![mutt](Screenshots/4.png)
+![py3status](Screenshots/4.png)
 
