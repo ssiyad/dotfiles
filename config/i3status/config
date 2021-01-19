@@ -6,7 +6,7 @@
 # ß
 # If the above line is not correctly displayed, fix your editor first!
 
-order += "external_script"
+order += "window"
 order += "volume_status"
 order += "backlight"
 order += "battery_level"
@@ -16,7 +16,6 @@ order += "load"
 order += "memory"
 order += "disk /home/"
 order += "tztime local"
-order += "window"
 
 general {
     colors = true
@@ -24,7 +23,7 @@ general {
 }
 
 window {
-    format = "{title}"
+    max_width = 100
 }
 
 battery_level {
@@ -48,13 +47,6 @@ disk "/home/" {
 	color = "#ffcd1a"
     # background = "#ff9119"
     format = " %avail"
-}
-
-external_script {
-    format = "{output} <<-"
-    strip_output = true
-    cache_timeout = 0.1
-    script_path = 'swaymsg -t get_tree | jq -r ".. | select(.focused?).name"'
 }
 
 load {
