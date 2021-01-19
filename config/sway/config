@@ -6,7 +6,7 @@ output * {
 set $mod Mod4
 
 # set font for title
-font xft:Hack
+font pango:Fira\ Code
 
 # set floating modifier
 floating_modifier $mod
@@ -130,22 +130,21 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Bar
-#bar {
-#    status_command py3status
-#    position top
-#	font Hack 12px
-#	mode dock
-#    colors {
-#        statusline  #78da59
-#       background  #242c34
-#		                    #border #bg		#txt
-#        focused_workspace	#444444	#444444	#dfdfdf
-#        urgent_workspace	#eb4d3b	#eb4deb	#dfdfdf
-#    }
-#}
-
 bar {
-    swaybar_command waybar
+    status_command py3status --wm sway
+    separator_symbol " "
+    tray_output none
+    position top
+	font Fira Code 12px
+	mode dock
+	gaps 0
+    colors {
+        # item              #border #bg		#txt
+        # statusline        #78da59
+        background          #242c34
+        focused_workspace	#444444	#444444	#dfdfdf
+        urgent_workspace	#eb4d3b	#eb4deb	#dfdfdf
+    }
 }
 
 input "1739:10601:SYN1B7B:01_06CB:2969_Touchpad" {
