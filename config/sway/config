@@ -31,10 +31,11 @@ exec_always {
     gsettings set $gnome-schema cursor-theme "Adwaita"
 }
 
-# start rofi (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show drun
-# sshelper binding
-bindsym Alt+d exec --no-startup-id sshelper
+# j4-dmenu-desktop + bemenu (a program launcher)
+bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --dmenu='bemenu -i --fn "Fira Code 9" --nb "#242c34" --nf "#dfdfdf" --tb "#444444" --tf "#dfdfdf" --fb "#242c34" --ff "#ffcd1a" --hb "#242c34" --hf "#8734ff"' --term=kitty
+
+# helper script
+bindsym $mod+backslash exec --no-startup-id ~/dotfiles/scripts/helper.sh
 
 # change focus
 bindsym $mod+Left focus left
@@ -166,12 +167,11 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous & mpc prev
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 2
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 2
 
-# screenshot
-bindsym Print exec grim "$HOME/Screenshots/$(date '+%F-%T-%a')_full_.png"
-bindsym $mod+Print exec ~/dotfiles/scripts/part_ss.sh
-
 # Start mako
 exec --no-startup-id mako &
+
+# Clipboard
+exec --no-startup-id wl-paste -w wl-paste >> /tmp/clipboard &
 
 default_border pixel 1
 smart_gaps on
