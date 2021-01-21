@@ -48,6 +48,8 @@ settings:
     global: white
   colors.webpage.darkmode.enabled:
     global: false
+  colors.webpage.darkmode.grayscale.all:
+    global: false
   colors.webpage.prefers_color_scheme_dark:
     global: true
   content.geolocation:
@@ -71,6 +73,8 @@ settings:
   content.register_protocol_handler:
     https://mail.disroot.org?mailto&to=%25s: true
     https://mail.google.com?extsrc=mailto&url=%25s: false
+  fonts.default_family:
+    global: Fira Code
   fonts.default_size:
     global: 9pt
   fonts.statusbar:
@@ -79,10 +83,14 @@ settings:
     global: 10 default_family
   fonts.tabs.unselected:
     global: 10 default_family
+  fonts.web.size.default:
+    global: 16
   input.insert_mode.auto_enter:
     global: false
   input.insert_mode.auto_leave:
     global: false
+  qt.highdpi:
+    global: true
   scrolling.smooth:
     global: true
   spellcheck.languages:
@@ -119,3 +127,5 @@ settings:
       y: https://www.youtube.com/results?search_query={}
   url.start_pages:
     global: https://home.ssyd.pw
+  zoom.default:
+    global: 100%

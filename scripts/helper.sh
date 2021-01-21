@@ -66,9 +66,24 @@ function browser {
 }
 
 function clipboard {
-    wl-copy $(bemenu_show "$(tac /tmp/clipboard)")
+    choice=$(bemenu_show "$(tac /tmp/clipboard)")
+    [[ -z $choice ]] && exit 0
+    wl-copy $choice
+    sed -i '$ d' /tmp/clipboard
 }
 
-choice=$(bemenu_show "go-pass\nscreenshot\nclipboard\nbrowser\nmusic\nmovies\nmanual\npublic-ip")
+function power-menu {
+    choice=$(bemenu_show "poweroff\nreboot")
+    [[ -z $choice ]] && exit 0
+    $choice
+}
+
+function reminder {
+    time=$(bemenu_show "")
+    text=$(bemenu_show "")
+    (sleep $time && notify-send -t 0 "reminder" "<span foreground='gray'>$(date '+%F-%T-%a')</span>\n$text") &
+}
+
+choice=$(bemenu_show "go-pass\nscreenshot\nclipboard\nreminder\nbrowser\nmusic\nmovies\nmanual\npublic-ip\npower-menu")
 [[ -z $choice ]] && exit 0
 $choice
