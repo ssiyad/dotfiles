@@ -17,6 +17,15 @@ plugins=(
 	zsh-autosuggestions
 )
 
+transfer(){
+    if [ $# -eq 0 ];
+    then
+        echo "No arguments specified.\nUsage:\n  transfer <file|directory>\n  ... | transfer <file_name>">&2;
+        exit 1;
+    fi;
+    echo $(curl --upload-file "$1" https://transfer.sh/$1)
+}
+
 source $ZSH/oh-my-zsh.sh
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 
