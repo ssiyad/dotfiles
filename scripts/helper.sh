@@ -37,6 +37,26 @@ function screenshot {
     $choice
 }
 
+function sc-start {
+    cat /tmp/sc.pid && notify-send "screencapture" "already recording" && exit
+    dest="$HOME/Screencaptures/$(date '+%F-%T-%a').mkv"
+    notify-send "screencapture" "screen capturing started"
+    wf-recorder -g "$(slurp)" -f $dest &
+    echo $! > /tmp/sc.pid
+    wl-copy $dest
+}
+
+function sc-stop {
+    pkill -F /tmp/sc.pid
+    rm /tmp/sc.pid
+    notify-send "screencapture" "screen capturing stopped"
+}
+
+function screencapture {
+    choice=$(bemenu_show "sc-start\nsc-stop")
+    $choice
+}
+
 function music {
     choice=$(bemenu_show "prev\nnext\npause\nplay")
     res=$(mpc $choice)
@@ -84,6 +104,6 @@ function reminder {
     (sleep $time && notify-send -t 0 "reminder" "<span foreground='gray'>$(date '+%F-%T-%a')</span>\n$text") &
 }
 
-choice=$(bemenu_show "go-pass\nscreenshot\nclipboard\nreminder\nbrowser\nmusic\nmovies\nmanual\npublic-ip\npower-menu")
+choice=$(bemenu_show "go-pass\nscreenshot\nscreencapture\nclipboard\nreminder\nbrowser\nmusic\nmovies\nmanual\npublic-ip\npower-menu")
 [[ -z $choice ]] && exit 0
 $choice
