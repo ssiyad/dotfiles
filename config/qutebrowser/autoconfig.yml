@@ -13,7 +13,9 @@ settings:
       normal:
         J: tab-prev
         K: tab-next
-        \: spawn --userscript qute-pass --mode gopass --dmenu-invocation "rofi -dmenu"
+        \: spawn --userscript qute-pass --mode gopass --dmenu-invocation 'bemenu --fn
+          "Fira Code 9" --nb "#242c34" --nf "#dfdfdf" --tb "#444444" --tf "#dfdfdf"
+          --fb "#242c34" --ff "#ffcd1a" --hb "#242c34" --hf "#8734ff"'
         pa: spawn --detach mpv --no-video {url}
         pla: hint links spawn --detach mpv --no-video {hint-url}
         plv: hint links spawn --detach mpv {hint-url}
@@ -46,15 +48,19 @@ settings:
     global: '#212121'
   colors.tabs.selected.odd.fg:
     global: white
+  colors.webpage.bg:
+    global: white
   colors.webpage.darkmode.enabled:
     global: false
   colors.webpage.darkmode.grayscale.all:
     global: false
-  colors.webpage.prefers_color_scheme_dark:
-    global: true
+  colors.webpage.preferred_color_scheme:
+    global: dark
   content.geolocation:
     https://capture.kyc.idfy.com: true
+    https://upstox.com: true
     https://www.google.com: false
+    https://www.olx.in: false
   content.media.audio_capture:
     https://capture.kyc.idfy.com: true
   content.media.video_capture:
