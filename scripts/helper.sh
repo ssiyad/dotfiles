@@ -20,7 +20,7 @@ function ss-full {
 
 function ss-window {
     dest="$HOME/Screenshots/$(date '+%F-%T-%a')_window.png"
-    grim -g "$(swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"')" $dest
+    grim -g "$(swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp)" $dest
     wl-copy $dest
     notify-send "grim" "window screenshot saved as $dest"
 }
