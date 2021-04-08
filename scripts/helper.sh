@@ -65,7 +65,7 @@ function music {
 }
 
 function movies {
-    choice=$(bemenu_show "$(ls ~/Movies)")
+    choice=$(bemenu_show "$(ls ~/Movies | sed 's/.mkv//')")
     [[ -z $choice ]] && exit 0
     mpv "$HOME/Movies/$choice"
 }
