@@ -117,7 +117,7 @@ settings:
   tabs.show_switching_delay:
     global: 1000
   url.default_page:
-    global: https://home.ssyd.pw
+    global: https://google.com
   url.open_base_url:
     global: true
   url.searchengines:
@@ -132,6 +132,6 @@ settings:
       w: https://en.wikipedia.org/wiki/Special:Search?search={}
       y: https://www.youtube.com/results?search_query={}
   url.start_pages:
-    global: https://home.ssyd.pw
+    global: https://google.com
   zoom.default:
     global: 100%
