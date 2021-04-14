@@ -183,3 +183,6 @@ gaps inner 5
 # misc
 bindsym $mod+b exec qutebrowser
 
+# https://github.com/nwg-piotr/autotiling
+default_orientation vertical
+for_window [app_id=".*"] split toggle
