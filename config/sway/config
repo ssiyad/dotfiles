@@ -32,10 +32,10 @@ exec_always {
 }
 
 # j4-dmenu-desktop + bemenu (a program launcher)
-bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --dmenu='bemenu -i --fn "Fira Code 9" --nb "#242c34" --nf "#dfdfdf" --tb "#444444" --tf "#dfdfdf" --fb "#242c34" --ff "#ffcd1a" --hb "#242c34" --hf "#8734ff"' --term=kitty
+bindsym $mod+d exec j4-dmenu-desktop --dmenu='bemenu -i --fn "Fira Code 9" --nb "#242c34" --nf "#dfdfdf" --tb "#444444" --tf "#dfdfdf" --fb "#242c34" --ff "#ffcd1a" --hb "#242c34" --hf "#8734ff"' --term=kitty
 
 # helper script
-bindsym $mod+backslash exec --no-startup-id ~/dotfiles/scripts/helper.sh
+bindsym $mod+backslash exec ~/dotfiles/scripts/helper.sh
 
 # change focus
 bindsym $mod+Left focus left
@@ -59,8 +59,6 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -81,16 +79,22 @@ client.focused_inactive #78b3bd #23252e #242c34 #bcc3d2 #242c34
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 1
-set $ws2 2
-set $ws3 3
-set $ws4 4
+set $ws1 1:Term
+set $ws2 2:Code
+set $ws3 3:Web
+set $ws4 4:Comm
 set $ws5 5
 set $ws6 6
 set $ws7 7
 set $ws8 8
 set $ws9 9
 set $ws10 10
+
+# Assing some default workspaces
+assign [app_id="kitty"] $ws1
+assign [class="^code-oss$"] $ws2
+assign [app_id="qutebrowser"] $ws3
+assign [app_id="telegramdesktop"] $ws4
 
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -132,20 +136,7 @@ bindsym $mod+r mode "resize"
 
 # Bar
 bar {
-    status_command py3status --wm sway --dbus-notify
-    separator_symbol " "
-    tray_output none
-    position top
-	font Fira Code 12px
-	mode dock
-	gaps 0
-    colors {
-        # item              #border #bg		#txt
-        # statusline        #78da59
-        background          #242c34
-        focused_workspace	#444444	#444444	#dfdfdf
-        urgent_workspace	#eb4d3b	#eb4deb	#dfdfdf
-    }
+    swaybar_command waybar
 }
 
 input "1739:10601:SYN1B7B:01_06CB:2969_Touchpad" {
@@ -159,19 +150,16 @@ input "1739:10601:SYN1B7B:01_06CB:2969_Touchpad" {
 # audio
 bindsym XF86AudioRaiseVolume exec pamixer -i 1
 bindsym XF86AudioLowerVolume exec pamixer -d 1
-bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
-bindsym XF86AudioNext exec --no-startup-id playerctl next & mpc next
-bindsym XF86AudioPrev exec --no-startup-id playerctl previous & mpc prev
 
 # backlight
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 2
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 2
+bindsym XF86MonBrightnessUp exec light -A 2
+bindsym XF86MonBrightnessDown exec light -U 2
 
 # Start mako
-exec --no-startup-id mako &
+exec mako &
 
 # Clipboard
-exec --no-startup-id wl-paste -w wl-paste >> /tmp/clipboard &
+exec wl-paste -w wl-paste >> /tmp/clipboard &
 
 default_border pixel 1
 default_floating_border pixel 1

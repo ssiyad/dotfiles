@@ -1,71 +1,56 @@
 {
   "position": "top",
-  "layer": "top",
-  "modules-left": ["sway/workspaces", "sway/window"],
+  "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
   "modules-center": [],
-  "modules-right": [
-    "backlight",
-    "pulseaudio",
-    "network",
-    "battery",
-    "clock#date",
-    "clock#time"
-  ],
+  "modules-right": ["pulseaudio", "backlight", "battery", "network", "cpu", "memory", "clock"],
+
   "sway/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
-    "format": "{name}",
-    "format-icons": {
-      "urgent": "",
-      "focused": "",
-      "default": ""
+    "format": " {name} ",
+    "persistent_workspaces": {
+      "1:Term": [],
+      "2:Code": [],
+      "3:Web": [],
+      "4:Comm": []
     }
+  },
+  "sway/mode": {
+    "format": " {} ",
   },
   "sway/window": {
     "format": " {}"
   },
-  "clock#time": {
+  "clock": {
     "interval": 2,
-    "format": " {:%I:%M}"
+    "format": "{:%d %A %I:%M} ",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
-  "clock#date": {
-    "interval": 60,
-    "format": " {:%d %A}"
-  },
-  "backlight": {
-    "format": "{icon} {percent}%",
-    "format-icons": ["", ""]
-  },
-  "battery": {
-    "states": {
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{icon} {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
-    "format-alt": "{time} {icon}",
-    "format-icons": ["", "", "", "", ""]
+  "memory": {
+    "interval": 2,
+    "format": "MEM {percentage}% "
   },
   "network": {
-    "inteval": 2,
-    "format-wifi": " {essid} ({signalStrength}%)",
-    "format-ethernet": " {ipaddr}/{cidr}",
-    "format-linked": " {ifname} (No IP)",
-    "format-disconnected": "",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    "interval": 2,
+    "tooltip": false,
+    "format-wifi": " {essid} {signalStrength}% ",
+    "format-ethernet": " {ipaddr} "
+  },
+  "battery": {
+    "interval": 2,
+    "tooltip": false,
+    "format": " {capacity}% "
+  },
+  "backlight": {
+    "format": " {percent}% ",
+    "tooltip": false
   },
   "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-icons": {
-      "headphones": "",
-      "handsfree": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["", "", ""]
-    },
-    "smooth-scrolling-threshold": 3
+    "format": " {volume}% ",
+    "tooltip": false
+  },
+  "cpu": {
+    "interval": 2,
+    "format": "CPU {usage}% "
   }
 }
