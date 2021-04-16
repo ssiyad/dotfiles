@@ -6,7 +6,7 @@ output * {
 set $mod Mod4
 
 # set font for title
-font pango:Fira\ Code
+font pango:Fira\ Code 12
 
 # set floating modifier
 floating_modifier $mod
@@ -20,9 +20,6 @@ bindsym $mod+Return exec kitty
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# exit sway
-bindsym $mod+Shift+e exec sway exit
-
 # GTK3 settings
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
@@ -32,7 +29,7 @@ exec_always {
 }
 
 # j4-dmenu-desktop + bemenu (a program launcher)
-bindsym $mod+d exec j4-dmenu-desktop --dmenu='bemenu -i --fn "Fira Code 9" --nb "#242c34" --nf "#dfdfdf" --tb "#444444" --tf "#dfdfdf" --fb "#242c34" --ff "#ffcd1a" --hb "#242c34" --hf "#8734ff"' --term=kitty
+bindsym $mod+d exec j4-dmenu-desktop --dmenu='bemenu -i -l 13 --fn "Fira Code 9" --nb "#201C1C" --nf "#dfdfdf" --tb "#444444" --tf "#dfdfdf" --ff "#ffcd1a" --hb "#242c34" --hf "#8734ff"' --term=kitty
 
 # helper script
 bindsym $mod+backslash exec ~/dotfiles/scripts/helper.sh
@@ -57,9 +54,6 @@ bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -171,6 +165,7 @@ gaps inner 5
 # misc
 bindsym $mod+b exec qutebrowser
 
-# https://github.com/nwg-piotr/autotiling
+# https://github.com/swaywm/sway/issues/4034
 default_orientation vertical
 for_window [app_id=".*"] split toggle
+for_window [class=".*"] split toggle

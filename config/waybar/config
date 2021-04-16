@@ -28,7 +28,7 @@
   },
   "memory": {
     "interval": 2,
-    "format": "MEM {percentage}% "
+    "format": "MEM {percentage:0>2}% "
   },
   "network": {
     "interval": 2,
@@ -39,7 +39,11 @@
   "battery": {
     "interval": 2,
     "tooltip": false,
-    "format": " {capacity}% "
+    "format": " {capacity}% ",
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
   },
   "backlight": {
     "format": " {percent}% ",
@@ -51,6 +55,6 @@
   },
   "cpu": {
     "interval": 2,
-    "format": "CPU {usage}% "
+    "format": "CPU {usage:0>2}% "
   }
 }

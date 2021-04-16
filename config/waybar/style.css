@@ -6,7 +6,7 @@ window#waybar {
 }
 
 window#waybar.empty {
-  background: transparent;
+  background: #201C1C;
 }
 
 #workspaces button {
@@ -28,6 +28,33 @@ window#waybar.empty {
   color: #201C1C;
 }
 
+#pulseaudio {
+  color: paleturquoise;
+}
+
+#backlight {
+  color: khaki;
+}
+
+#battery.plugged {
+  color: green;
+}
+
+#battery.full {
+  color: yellow;
+  animation: blinker 1s linear infinite;
+}
+
+#battery.warning {
+  color: orangered;
+  animation: blinker 1s linear infinite;
+}
+
+#battery.critical {
+  color: red;
+  animation: blinker 1s linear infinite;
+}
+
 #network {
   color: yellowgreen;
 }
@@ -41,5 +68,11 @@ window#waybar.empty {
 }
 
 #clock {
-  color: aqua;
+  color: lightgoldenrodyellow;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.5;
+  }
 }
