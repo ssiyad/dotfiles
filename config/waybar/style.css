@@ -36,6 +36,10 @@ window#waybar.empty {
   color: khaki;
 }
 
+#battery {
+  color: lightseagreen;
+}
+
 #battery.plugged {
   color: green;
 }
@@ -69,6 +73,10 @@ window#waybar.empty {
 
 #clock {
   color: lightgoldenrodyellow;
+}
+
+#custom-tasks {
+  color: greenyellow;
 }
 
 @keyframes blinker {

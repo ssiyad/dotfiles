@@ -2,7 +2,7 @@
   "position": "top",
   "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
   "modules-center": [],
-  "modules-right": ["pulseaudio", "backlight", "battery", "network", "cpu", "memory", "clock"],
+  "modules-right": ["pulseaudio", "backlight", "battery", "network", "cpu", "memory", "custom/tasks", "clock"],
 
   "sway/workspaces": {
     "disable-scroll": true,
@@ -56,5 +56,10 @@
   "cpu": {
     "interval": 2,
     "format": "CPU {usage:0>2}% "
+  },
+  "custom/tasks": {
+    "interval": 60,
+    "format": " {} ",
+    "exec": "head -n 1 ~/.tasks"
   }
 }

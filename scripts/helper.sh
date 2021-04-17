@@ -2,8 +2,12 @@
 
 TERM=kitty
 
-function bemenu_show {
+function bemenu_show_raw {
     printf "$@" | bemenu -i -l 13 --fn "Fira Code 9" --nb "#201C1C" --nf "#dfdfdf" --tb "#444444" --tf "#dfdfdf" --ff "#ffcd1a" --hb "#242c34" --hf "#8734ff"
+}
+
+function bemenu_show {
+    bemenu_show_raw "$@" | sed -r 's/ /-/g'
 }
 
 function go-pass {
@@ -11,49 +15,48 @@ function go-pass {
     notify-send "gopass" "password copied to clipboard"
 }
 
-function ss-full {
-    dest="$HOME/Screenshots/$(date '+%F-%T-%a')_full.png"
-    grim $dest
-    wl-copy $dest
-    notify-send "grim" "full screenshot saved as $dest"
-}
-
-function ss-window {
-    dest="$HOME/Screenshots/$(date '+%F-%T-%a')_window.png"
-    grim -g "$(swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp)" $dest
-    wl-copy $dest
-    notify-send "grim" "window screenshot saved as $dest"
-}
-
-function ss-partial {
-    dest="$HOME/Screenshots/$(date '+%F-%T-%a')_partial.png"
-    grim -g "$(slurp)" $dest
-    wl-copy $dest
-    notify-send "grim" "partial screenshot saved as $dest"
-}
-
 function screenshot {
-    choice=$(bemenu_show "ss-full\nss-window\nss-partial")
+    function full {
+        dest="$HOME/Screenshots/$(date '+%F-%T-%a')_full.png"
+        grim $dest
+        wl-copy $dest
+        notify-send "grim" "full screenshot saved as $dest"
+    }
+
+    function window {
+        dest="$HOME/Screenshots/$(date '+%F-%T-%a')_window.png"
+        grim -g "$(swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp)" $dest
+        wl-copy $dest
+        notify-send "grim" "window screenshot saved as $dest"
+    }
+    function partial {
+        dest="$HOME/Screenshots/$(date '+%F-%T-%a')_partial.png"
+        grim -g "$(slurp)" $dest
+        wl-copy $dest
+        notify-send "grim" "partial screenshot saved as $dest"
+    }
+
+    choice=$(bemenu_show "full\nwindow\npartial")
     $choice
 }
 
-function sc-start {
-    cat /tmp/sc.pid && notify-send "screencapture" "already recording" && exit
-    dest="$HOME/Screencaptures/$(date '+%F-%T-%a').mkv"
-    notify-send "screencapture" "screen capturing started"
-    wf-recorder -g "$(slurp)" -f $dest &
-    echo $! > /tmp/sc.pid
-    wl-copy $dest
-}
-
-function sc-stop {
-    pkill -F /tmp/sc.pid
-    rm /tmp/sc.pid
-    notify-send "screencapture" "screen capturing stopped"
-}
-
 function screencapture {
-    choice=$(bemenu_show "sc-start\nsc-stop")
+    function start {
+        cat /tmp/sc.pid && notify-send "screencapture" "already recording" && exit
+        dest="$HOME/Screencaptures/$(date '+%F-%T-%a').mkv"
+        notify-send "screencapture" "screen capturing started"
+        wf-recorder -g "$(slurp)" -f $dest &
+        echo $! > /tmp/sc.pid
+        wl-copy $dest
+    }
+
+    function stop {
+        pkill -F /tmp/sc.pid
+        rm /tmp/sc.pid
+        notify-send "screencapture" "screen capturing stopped"
+    }
+
+    choice=$(bemenu_show "start\nstop")
     $choice
 }
 
@@ -98,12 +101,24 @@ function power-menu {
     $choice
 }
 
-function reminder {
-    time=$(bemenu_show "")
-    text=$(bemenu_show "")
-    (sleep $time && notify-send -t 0 "reminder" "<span foreground='gray'>$(date '+%F-%T-%a')</span>\n$text") &
+function tasks {
+    function add-task {
+        choice=$(bemenu_show_raw "")
+        [[ -z $choice ]] && exit 0
+        echo $choice >> ~/.tasks
+        notify-send "tasks" "new task added: $choice"
+    }
+
+    function mark-current-as-done {
+        sed -i '1d' ~/.tasks
+        notify-send "tasks" "marked current task as done"
+    }
+
+    choice=$(bemenu_show "add task\nmark current as done")
+    [[ -z $choice ]] && exit 0
+    $choice
 }
 
-choice=$(bemenu_show "go-pass\nscreenshot\nscreencapture\nclipboard\nreminder\nbrowser\nmusic\nmovies\nmanual\npublic-ip\npower-menu")
+choice=$(bemenu_show "go-pass\nscreenshot\nscreencapture\nclipboard\ntasks\nbrowser\nmusic\nmovies\nmanual\npublic-ip\npower-menu")
 [[ -z $choice ]] && exit 0
 $choice
