@@ -24,7 +24,7 @@
   "clock": {
     "interval": 2,
     "format": "{:%d %A %I:%M} ",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    "tooltip": false
   },
   "memory": {
     "interval": 2,
@@ -60,6 +60,7 @@
   "custom/tasks": {
     "interval": 60,
     "format": " {} ",
-    "exec": "head -n 1 ~/.tasks"
+    "exec": "head -n 1 ~/.tasks",
+    "tooltip": false
   }
 }
