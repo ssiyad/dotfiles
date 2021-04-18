@@ -40,8 +40,8 @@ window#waybar.empty {
   color: lightseagreen;
 }
 
-#battery.plugged {
-  color: green;
+#battery.charging {
+  color: yellowgreen;
 }
 
 #battery.full {
@@ -49,18 +49,18 @@ window#waybar.empty {
   animation: blinker 1s linear infinite;
 }
 
-#battery.warning {
+#battery.discharging.warning {
   color: orangered;
   animation: blinker 1s linear infinite;
 }
 
-#battery.critical {
+#battery.discharging.critical {
   color: red;
   animation: blinker 1s linear infinite;
 }
 
 #network {
-  color: yellowgreen;
+  color: palegreen;
 }
 
 #cpu {

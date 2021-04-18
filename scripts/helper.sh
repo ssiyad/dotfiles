@@ -89,10 +89,10 @@ function browser {
 }
 
 function clipboard {
-    choice=$(bemenu_show "$(tac /tmp/clipboard)")
+    choice=$(bemenu_show_raw "$(grep -m 1 -H '.' /tmp/clipboard/* | tac | sed -r 's/\/tmp\/clipboard\///g' | sed -r 's/:/ /')")
+    read -ra array <<< $choice
     [[ -z $choice ]] && exit 0
-    wl-copy $choice
-    sed -i '$ d' /tmp/clipboard
+    wl-copy < /tmp/clipboard/${array[0]}
 }
 
 function power-menu {

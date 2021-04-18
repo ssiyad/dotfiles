@@ -153,7 +153,9 @@ bindsym XF86MonBrightnessDown exec light -U 2
 exec mako &
 
 # Clipboard
-exec wl-paste -w wl-paste >> /tmp/clipboard &
+# exec wl-paste -w wl-paste >> /tmp/clipboard &
+exec wl-paste -w ~/dotfiles/scripts/wl-cb.sh &
+
 
 default_border pixel 1
 default_floating_border pixel 1
