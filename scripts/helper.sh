@@ -93,6 +93,7 @@ function clipboard {
     read -ra array <<< $choice
     [[ -z $choice ]] && exit 0
     wl-copy < /tmp/clipboard/${array[0]}
+    rm /tmp/clipboard/${array[0]}
 }
 
 function power-menu {
