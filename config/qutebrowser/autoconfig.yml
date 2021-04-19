@@ -13,39 +13,37 @@ settings:
       normal:
         J: tab-prev
         K: tab-next
-        \: spawn --userscript qute-pass --mode gopass --dmenu-invocation 'bemenu --fn
-          "Fira Code 9" --nb "#242c34" --nf "#dfdfdf" --tb "#444444" --tf "#dfdfdf"
-          --fb "#242c34" --ff "#ffcd1a" --hb "#242c34" --hf "#8734ff"'
+        \: spawn --userscript qute-pass --mode gopass --dmenu-invocation 'bemenu -i -l 13 --fn "Fira Code 9" --nb "#201C1C" --nf "#dfdfdf" --tb "#444444" --tf "#dfdfdf" --ff "#ffcd1a" --hb "#242c34" --hf "#8734ff"'
         pa: spawn --detach mpv --no-video {url}
         pla: hint links spawn --detach mpv --no-video {hint-url}
         plv: hint links spawn --detach mpv {hint-url}
         pv: spawn --detach mpv {url}
   colors.completion.even.bg:
-    global: '#212121'
+    global: "#212121"
   colors.completion.item.selected.match.fg:
-    global: '#ff0000'
+    global: "#ff0000"
   colors.completion.odd.bg:
-    global: '#212121'
+    global: "#212121"
   colors.completion.scrollbar.bg:
-    global: '#212121'
+    global: "#212121"
   colors.completion.scrollbar.fg:
-    global: '#d898eb'
+    global: "#d898eb"
   colors.statusbar.command.bg:
-    global: '#212121'
+    global: "#212121"
   colors.statusbar.normal.bg:
-    global: '#212121'
+    global: "#212121"
   colors.statusbar.progress.bg:
-    global: '#212121'
+    global: "#212121"
   colors.tabs.bar.bg:
-    global: '#d898eb'
+    global: "#d898eb"
   colors.tabs.even.fg:
     global: grey
   colors.tabs.odd.fg:
     global: darkgrey
   colors.tabs.selected.even.bg:
-    global: '#212121'
+    global: "#212121"
   colors.tabs.selected.odd.bg:
-    global: '#212121'
+    global: "#212121"
   colors.tabs.selected.odd.fg:
     global: white
   colors.webpage.bg:
@@ -101,7 +99,7 @@ settings:
     global: true
   spellcheck.languages:
     global:
-    - en-US
+      - en-US
   statusbar.show:
     global: never
   tabs.favicons.show:
