@@ -14,5 +14,6 @@ set mail_check_stats=yes
 set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/messages
 set mail_check=60
+set mailcap_path=~/.mutt/mailcap
 unset confirmappend
 
