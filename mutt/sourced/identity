@@ -2,12 +2,11 @@
 #
 # Account setup
 #
-source "cat $HOME/.Keys/pass |"
 set from="Sabu Siyad <ssiyad@disroot.org>"
 
 ## Folders
 set folder=~/Mail/Disroot
 set spoolfile=+Inbox
 set smtp_url="smtps://ssiyad@disroot.org:465"
-set smtp_pass=$my_pass
+set smtp_pass="`gopass show -o websites/disroot.org/ssiyad`"
 
