@@ -120,6 +120,13 @@ function tasks {
     $choice
 }
 
-choice=$(bemenu_show "go-pass\nscreenshot\nscreencapture\nclipboard\ntasks\nbrowser\nmusic\nmovies\nmanual\npublic-ip\npower-menu")
+function calculator {
+    choice=$(bemenu_show_raw "")
+    [[ -z $choice ]] && exit 0
+    result=$(echo $choice | bc -l)
+    notify-send "bc" "$choice = $(echo $choice | bc -l)"
+}
+
+choice=$(bemenu_show "go-pass\ncalculator\nscreenshot\nscreencapture\nclipboard\ntasks\nbrowser\nmusic\nmovies\nmanual\npublic-ip\npower-menu")
 [[ -z $choice ]] && exit 0
 $choice
