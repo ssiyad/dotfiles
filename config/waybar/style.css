@@ -79,6 +79,10 @@ window#waybar.empty {
   color: greenyellow;
 }
 
+#custom-mail {
+  color: mediumpurple;
+}
+
 @keyframes blinker {
   50% {
     opacity: 0.5;
