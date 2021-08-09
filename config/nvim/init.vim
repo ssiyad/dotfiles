@@ -129,10 +129,11 @@ let g:nvim_tree_auto_open = 1
 let g:nvim_tree_auto_close = 1
 let g:nvim_tree_highlight_opened_files = 1
 let g:nvim_tree_quit_on_open = 1
-let g:nvim_tree_root_folder_modifier = ':~'
+let g:nvim_tree_root_folder_modifier = ':~:.'
 let g:nvim_tree_git_hl = 1
 let g:nvim_tree_group_empty = 1
 let g:nvim_tree_ignore = [ '.git', 'node_modules', '.vscode' ]
+let g:nvim_tree_lsp_diagnostics = 1
 
 let g:compe = {}
 let g:compe.enabled = v:true
