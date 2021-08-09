@@ -26,7 +26,8 @@ source $ZSH/oh-my-zsh.sh
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 
 export ARCHFLAGS="-arch x86_64"
-export EDITOR=vim
+export EDITOR=nvim
+export PIPENV_VENV_IN_PROJECT=1
 
 alias mkdir="mkdir -pv"
 alias ls="ls -aFGh --color=always"
@@ -35,5 +36,7 @@ alias mv="mv -iv"
 alias cp="cp -rv"
 alias ix.io="curl -F 'f:1=<-' ix.io"
 alias emacs="emacs -nw"
+alias code="code-oss --enable-features=UseOzonePlatform --ozone-platform=wayland"
+alias vim="nvim"
 
 source /usr/share/nvm/init-nvm.sh
