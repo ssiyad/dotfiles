@@ -335,6 +335,15 @@ c.input.insert_mode.auto_leave = False
 # Type: Bool
 c.scrolling.smooth = True
 
+# When/how to show the scrollbar.
+# Type: String
+# Valid values:
+# always: Always show the scrollbar.
+# never: Never show the scrollbar.
+# when-searching: Show the scrollbar when searching for text in the webpage. With the QtWebKit backend, this is equal to never.
+# Default: overlay
+c.scrolling.bar = "when-searching"
+
 # Languages to use for spell checking. You can check for available
 # languages and install dictionaries using scripts/dictcli.py. Run the
 # script with -h/--help for instructions.
@@ -391,7 +400,20 @@ c.spellcheck.languages = ["en-US"]
 #   - always: Always show the statusbar.
 #   - never: Always hide the statusbar.
 #   - in-mode: Show the statusbar when in modes other than normal mode.
-c.statusbar.show = "never"
+c.statusbar.show = "always"
+
+# List of widgets displayed in the statusbar.
+# Type: List of StatusbarWidget
+# Valid values:
+# url: Current page URL.
+# scroll: Percentage of the current page position like 10%.
+# scroll_raw: Raw percentage of the current page position like 10.
+# history: Display an arrow when possible to go back/forward in history.
+# tabs: Current active tab, e.g. 2.
+# keypress: Display pressed keys when composing a vi command.
+# progress: Progress bar for the current page loading.
+# text: foo: Display the static text after the colon, foo in the example.
+c.statusbar.widgets = ["keypress", "url", "scroll", "history", "tabs"]
 
 # When to show favicons in the tab bar. When switching this from never
 # to always/pinned, note that favicons might not be loaded yet, thus
@@ -431,7 +453,7 @@ c.tabs.position = "bottom"
 #   - never: Always hide the tab bar.
 #   - multiple: Hide the tab bar if only one tab is open.
 #   - switching: Show the tab bar when switching tabs.
-c.tabs.show = "switching"
+c.tabs.show = "never"
 
 # Duration (in milliseconds) to show the tab bar before hiding it when
 # tabs.show is set to 'switching'.
@@ -626,8 +648,6 @@ c.fonts.tabs.unselected = "10 default_family"
 c.fonts.web.size.default = 16
 
 # Bindings for normal mode
-config.bind("J", "tab-prev")
-config.bind("K", "tab-next")
 config.bind(
     "\\",
     'spawn --userscript qute-pass --mode gopass --dmenu-invocation \'bemenu -i -l 13 --fn "Fira Code 9" --nb "#201C1C" --nf "#dfdfdf" --tb "#444444" --tf "#dfdfdf" --ff "#ffcd1a" --hb "#242c34" --hf "#8734ff"\'',
