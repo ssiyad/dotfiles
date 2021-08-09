@@ -2,18 +2,12 @@
   "position": "top",
   "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
   "modules-center": [],
-  "modules-right": ["custom/mail", "pulseaudio", "backlight", "battery", "network", "cpu", "memory", "custom/tasks", "clock"],
+  "modules-right": ["pulseaudio", "backlight", "battery", "network", "cpu", "memory", "custom/tasks", "clock"],
 
   "sway/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
-    "format": " {name} ",
-    "persistent_workspaces": {
-      "1:Term": [],
-      "2:Code": [],
-      "3:Web": [],
-      "4:Comm": []
-    }
+    "format": " {name} "
   },
   "sway/mode": {
     "format": " {} ",
@@ -61,13 +55,6 @@
     "interval": 60,
     "format": " {} ",
     "exec": "head -n 1 ~/.tasks",
-    "tooltip": false
-  },
-  "custom/mail": {
-    "interval": 60,
-    "format": " {} ",
-    "exec": "find ~/Mail/**/**/new -type f | wc -l",
-    "exec-if": "[[ $(find ~/Mail/**/**/new -type f | wc -l) -gt 0 ]]",
     "tooltip": false
   }
 }
