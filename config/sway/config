@@ -73,10 +73,10 @@ client.focused_inactive #78b3bd #23252e #242c34 #bcc3d2 #242c34
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 1:Term
-set $ws2 2:Code
-set $ws3 3:Web
-set $ws4 4:Comm
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
 set $ws5 5
 set $ws6 6
 set $ws7 7
@@ -85,8 +85,7 @@ set $ws9 9
 set $ws10 10
 
 # Assing some default workspaces
-assign [app_id="kitty"] $ws1
-assign [class="^code-oss$"] $ws2
+assign [app_id="code-oss"] $ws2
 assign [app_id="qutebrowser"] $ws3
 assign [app_id="telegramdesktop"] $ws4
 
@@ -152,6 +151,9 @@ bindsym XF86MonBrightnessDown exec light -U 2
 # Start mako
 exec mako &
 
+# Start gammastep (to adjust screen temprature)
+exec gammastep -P -O 5000K
+
 # Clipboard
 # exec wl-paste -w wl-paste >> /tmp/clipboard &
 exec wl-paste -w ~/dotfiles/scripts/wl-cb.sh &
@@ -167,7 +169,3 @@ gaps inner 5
 # misc
 bindsym $mod+b exec qutebrowser
 
-# https://github.com/swaywm/sway/issues/4034
-default_orientation vertical
-for_window [app_id=".*"] split toggle
-for_window [class=".*"] split toggle
