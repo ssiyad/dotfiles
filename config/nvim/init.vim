@@ -9,7 +9,7 @@ Plug 'luochen1990/rainbow'
 Plug 'jiangmiao/auto-pairs'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
-Plug 'lewis6991/gitsigns.nvim'
+Plug 'airblade/vim-gitgutter'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'tpope/vim-commentary'
@@ -23,7 +23,6 @@ Plug 'junegunn/fzf.vim'
 call plug#end()
 
 lua << EOF
-require('gitsigns').setup()
 require'navigator'.setup()
 require "lsp_signature".setup({
   bind = true, -- This is mandatory, otherwise border config won't get registered.
@@ -183,6 +182,7 @@ nnoremap <silent> <C-s> :NvimTreeToggle<CR><C-s>
 
 nnoremap <silent> <C-q> :ToggleTerminal<Enter>
 tnoremap <silent> <C-q> <C-\><C-n>:ToggleTerminal<Enter>
+tnoremap <C-w> <C-\><C-n><C-w>
 
 highlight link CompeDocumentation NormalFloat
 
