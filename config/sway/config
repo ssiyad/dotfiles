@@ -169,3 +169,6 @@ gaps inner 5
 # misc
 bindsym $mod+b exec qutebrowser
 
+# required for xdg-desktop-portal-wlr
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
