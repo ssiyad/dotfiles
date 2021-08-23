@@ -16,6 +16,11 @@ function check_last_exit_code() {
 zstyle ':completion:*' menu select
 zstyle ':vcs_info:git*' formats "%F{yellow}%b%f "
 
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+
+setopt appendhistory
 setopt COMPLETE_ALIASES
 setopt PROMPT_SUBST
 
