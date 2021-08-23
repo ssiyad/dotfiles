@@ -1,7 +1,32 @@
-PROMPT='--- %F{226}%~%f -> '
+autoload -Uz compinit up-line-or-beginning-search down-line-or-beginning-search vcs_info
+compinit
 
-COMPLETION_WAITING_DOTS="true"
-DISABLE_UNTRACKED_FILES_DIRTY="true"
+precmd() {
+	vcs_info
+  print -Pn "\e]0;%~\a"
+}
+
+function check_last_exit_code() {
+  local LAST_EXIT_CODE=$?
+  if [[ $LAST_EXIT_CODE -ne 0 ]]; then
+    echo "%F{red}$LAST_EXIT_CODE%f"
+  fi
+}
+
+zstyle ':completion:*' menu select
+zstyle ':vcs_info:git*' formats "%F{yellow}%b%f "
+
+setopt COMPLETE_ALIASES
+setopt PROMPT_SUBST
+
+PROMPT='%B--- %2~%b ${vcs_info_msg_0_}%B%F{cyan}»%f%b '
+RPROMPT='$(check_last_exit_code)'
+
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+
+[[ -n "${key[Up]}"   ]] && bindkey -- "${key[Up]}"   up-line-or-beginning-search
+[[ -n "${key[Down]}" ]] && bindkey -- "${key[Down]}" down-line-or-beginning-search
 
 export ARCHFLAGS="-arch x86_64"
 export EDITOR=nvim
