@@ -2,7 +2,7 @@ window#waybar {
   font-family: 'Fira Code';
   font-size: 12px;
   color: whitesmoke;
-  background-color: #212121;
+  background-color: #1a1b26;
 }
 
 #workspaces button {
