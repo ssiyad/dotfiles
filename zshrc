@@ -27,12 +27,6 @@ setopt PROMPT_SUBST
 PROMPT='%B--- %2~%b ${vcs_info_msg_0_}%B%F{cyan}»%f%b '
 RPROMPT='$(check_last_exit_code)'
 
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-
-[[ -n "${key[Up]}"   ]] && bindkey -- "${key[Up]}"   up-line-or-beginning-search
-[[ -n "${key[Down]}" ]] && bindkey -- "${key[Down]}" down-line-or-beginning-search
-
 export ARCHFLAGS="-arch x86_64"
 export EDITOR=nvim
 export PIPENV_VENV_IN_PROJECT=1
