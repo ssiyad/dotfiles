@@ -27,6 +27,17 @@ setopt PROMPT_SUBST
 PROMPT='%B--- %2~%b ${vcs_info_msg_0_}%B%F{cyan}»%f%b '
 RPROMPT='$(check_last_exit_code)'
 
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+bindkey -e
+bindkey '\e[A' history-beginning-search-backward
+bindkey '\e[B' history-beginning-search-forward
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+[[ -n "${key[Control-Left]}"  ]] && bindkey -- "${key[Control-Left]}"  backward-word
+[[ -n "${key[Control-Right]}" ]] && bindkey -- "${key[Control-Right]}" forward-word
+
 export ARCHFLAGS="-arch x86_64"
 export EDITOR=nvim
 export PIPENV_VENV_IN_PROJECT=1
