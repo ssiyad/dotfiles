@@ -11,7 +11,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'airblade/vim-gitgutter'
 Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'kyazdani42/nvim-web-devicons'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'caenrique/nvim-toggle-terminal'
@@ -134,6 +133,7 @@ let g:nvim_tree_git_hl = 1
 let g:nvim_tree_group_empty = 1
 let g:nvim_tree_ignore = [ '.git', 'node_modules', '.vscode' ]
 let g:nvim_tree_lsp_diagnostics = 1
+let g:nvim_tree_show_icons = v:false
 
 let g:compe = {}
 let g:compe.enabled = v:true
