@@ -3,7 +3,7 @@
 TERM=kitty
 
 function bemenu_show_raw {
-    printf "$@" | bemenu -i -l 13 --fn "Fira Code 9" --nb "#201C1C" --nf "#dfdfdf" --tb "#444444" --tf "#dfdfdf" --ff "#ffcd1a" --hb "#242c34" --hf "#8734ff"
+    printf "$@" | bemenu -i -p "" -l 20 --fn "Fira Code 9" --nb "#1a1b26f2" --nf "#dfdfdf" --tb "#afff00" --tf "#1a1b26f2" --ff "#afff00" --fb "1a1b26f2" --hf "#1a1b26f2" --hb "#afff00"
 }
 
 function bemenu_show {
