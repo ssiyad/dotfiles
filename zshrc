@@ -24,7 +24,7 @@ setopt appendhistory
 setopt COMPLETE_ALIASES
 setopt PROMPT_SUBST
 
-PROMPT='%B--- %2~%b ${vcs_info_msg_0_}%B%F{cyan}»%f%b '
+PROMPT='%B%F{154}---%f %2~%b ${vcs_info_msg_0_}%B%F{cyan}»%f%b '
 RPROMPT='$(check_last_exit_code)'
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
