@@ -30,8 +30,8 @@ RPROMPT='$(check_last_exit_code)'
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 bindkey -e
-bindkey '\e[A' history-beginning-search-backward
-bindkey '\e[B' history-beginning-search-forward
+bindkey '\e[A' history-beginning-search-backward end-of-line
+bindkey '\e[B' history-beginning-search-forward end-of-line
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
