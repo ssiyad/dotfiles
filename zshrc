@@ -28,10 +28,11 @@ PROMPT='%B%F{154}---%f %2~%b ${vcs_info_msg_0_}%B%F{cyan}»%f%b '
 RPROMPT='$(check_last_exit_code)'
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 bindkey -e
-bindkey '\e[A' history-beginning-search-backward end-of-line
-bindkey '\e[B' history-beginning-search-forward end-of-line
+bindkey '\e[A' up-history
+bindkey '\e[B' down-history
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
