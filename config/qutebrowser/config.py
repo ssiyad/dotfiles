@@ -529,31 +529,31 @@ c.zoom.default = "100%"
 
 # Background color of the completion widget for odd rows.
 # Type: QssColor
-c.colors.completion.odd.bg = "#212121"
+c.colors.completion.odd.bg = "#1a1b26"
 
 # Background color of the completion widget for even rows.
 # Type: QssColor
-c.colors.completion.even.bg = "#212121"
+c.colors.completion.even.bg = "#1a1b26"
+
+c.colors.completion.category.bg = "#1a1b26"
+c.colors.completion.category.fg = "#afff00"
+c.colors.completion.item.selected.bg = "#afff00"
+c.colors.completion.item.selected.border.bottom = "#afff00"
+c.colors.completion.item.selected.border.top = "#afff00"
+c.colors.completion.scrollbar.fg = "#afff00"
+c.colors.completion.scrollbar.bg = "#1a1b26"
 
 # Foreground color of the matched text in the selected completion item.
 # Type: QtColor
 c.colors.completion.item.selected.match.fg = "#ff0000"
 
-# Color of the scrollbar handle in the completion view.
-# Type: QssColor
-c.colors.completion.scrollbar.fg = "#d898eb"
-
-# Color of the scrollbar in the completion view.
-# Type: QssColor
-c.colors.completion.scrollbar.bg = "#212121"
-
 # Background color of the statusbar.
 # Type: QssColor
-c.colors.statusbar.normal.bg = "#212121"
+c.colors.statusbar.normal.bg = "#1a1b26"
 
 # Background color of the statusbar in command mode.
 # Type: QssColor
-c.colors.statusbar.command.bg = "#212121"
+c.colors.statusbar.command.bg = "#1a1b26"
 
 # Background color of the progress bar.
 # Type: QssColor
