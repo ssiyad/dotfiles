@@ -102,24 +102,6 @@ function power-menu {
     $choice
 }
 
-function tasks {
-    function add-task {
-        choice=$(bemenu_show_raw "")
-        [[ -z $choice ]] && exit 0
-        echo $choice >> ~/.tasks
-        notify-send "tasks" "new task added: $choice"
-    }
-
-    function mark-current-as-done {
-        sed -i '1d' ~/.tasks
-        notify-send "tasks" "marked current task as done"
-    }
-
-    choice=$(bemenu_show "add task\nmark current as done")
-    [[ -z $choice ]] && exit 0
-    $choice
-}
-
 function calculator {
     choice=$(bemenu_show_raw "")
     [[ -z $choice ]] && exit 0

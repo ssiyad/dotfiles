@@ -56,7 +56,7 @@ window#waybar {
 }
 
 #network {
-  color: palegreen;
+  color: greenyellow;
 }
 
 #cpu {
@@ -69,10 +69,6 @@ window#waybar {
 
 #clock {
   color: lightgoldenrodyellow;
-}
-
-#custom-tasks {
-  color: greenyellow;
 }
 
 #custom-mail {

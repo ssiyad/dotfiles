@@ -50,11 +50,5 @@
   "cpu": {
     "interval": 2,
     "format": "CPU {usage:0>2}% "
-  },
-  "custom/tasks": {
-    "interval": 60,
-    "format": " {} ",
-    "exec": "head -n 1 ~/.tasks",
-    "tooltip": false
   }
 }
