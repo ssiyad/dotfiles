@@ -622,7 +622,7 @@ c.colors.webpage.darkmode.grayscale.all = False
 # font setting, it's replaced with the fonts listed here. If set to an
 # empty value, a system-specific monospace default is used.
 # Type: List of Font, or Font
-c.fonts.default_family = "Fira Code"
+c.fonts.default_family = "JetBrainsMono"
 
 # Default font size to use. Whenever "default_size" is used in a font
 # setting, it's replaced with the size listed here. Valid values are
@@ -650,7 +650,7 @@ c.fonts.web.size.default = 16
 # Bindings for normal mode
 config.bind(
     "\\",
-    'spawn --userscript qute-pass --mode gopass --dmenu-invocation \'bemenu -i -l 13 --fn "Fira Code 9" --nb "#201C1C" --nf "#dfdfdf" --tb "#444444" --tf "#dfdfdf" --ff "#ffcd1a" --hb "#242c34" --hf "#8734ff"\'',
+    'spawn --userscript qute-pass --mode gopass --dmenu-invocation \'bemenu -i -l 13 --fn "JetBrainsMono 9" --nb "#201C1C" --nf "#dfdfdf" --tb "#444444" --tf "#dfdfdf" --ff "#ffcd1a" --hb "#242c34" --hf "#8734ff"\'',
 )
 config.bind("pa", "spawn --detach mpv --no-video {url}")
 config.bind("pla", "hint links spawn --detach mpv --no-video {hint-url}")
