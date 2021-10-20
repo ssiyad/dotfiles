@@ -624,6 +624,8 @@ c.colors.webpage.darkmode.grayscale.all = False
 # Type: List of Font, or Font
 c.fonts.default_family = "JetBrainsMono"
 
+c.fonts.web.family.fixed = "JetBrains Mono"
+
 # Default font size to use. Whenever "default_size" is used in a font
 # setting, it's replaced with the size listed here. Valid values are
 # either a float value with a "pt" suffix, or an integer value with a
@@ -645,7 +647,7 @@ c.fonts.tabs.unselected = "10 default_family"
 
 # Default font size (in pixels) for regular text.
 # Type: Int
-c.fonts.web.size.default = 16
+c.fonts.web.size.default = 12
 
 # Bindings for normal mode
 config.bind("pa", "spawn --detach mpv --no-video {url}")
