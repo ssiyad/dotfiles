@@ -647,7 +647,7 @@ c.fonts.tabs.unselected = "10 default_family"
 
 # Default font size (in pixels) for regular text.
 # Type: Int
-c.fonts.web.size.default = 16
+c.fonts.web.size.default = 14
 
 # Bindings for normal mode
 config.bind("pa", "spawn --detach mpv --no-video {url}")
