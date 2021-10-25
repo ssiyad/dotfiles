@@ -142,6 +142,9 @@ bindsym XF86MonBrightnessDown exec light -U 2
 # Start mako
 exec mako &
 
+# Start swayidle
+exec swayidle -w &
+
 # udiskie for automatic usb management
 exec udiskie &
 

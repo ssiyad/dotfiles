@@ -1,0 +1,3 @@
+timeout 120 'light -s sysfs/leds/asus::kbd_backlight -O && light -s sysfs/leds/asus::kbd_backlight -S 0' resume 'light -s sysfs/leds/asus::kbd_backlight -I'
+timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
+timeout 600 'systemctl suspend'
