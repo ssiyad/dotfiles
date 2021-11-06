@@ -11,7 +11,7 @@
 #   qute://help/settings.html
 
 # Change the argument to True to still load settings configured via autoconfig.yml
-config.load_autoconfig(False)
+config.load_autoconfig(True)
 
 # Backend to use to display websites. qutebrowser supports two different
 # web rendering engines / backends, QtWebEngine and QtWebKit (not
