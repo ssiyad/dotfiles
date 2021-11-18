@@ -23,6 +23,7 @@ SAVEHIST=1000
 setopt appendhistory
 setopt COMPLETE_ALIASES
 setopt PROMPT_SUBST
+setopt histignoredups
 
 PROMPT='%B%F{154}---%f %2~%b ${vcs_info_msg_0_}%B%F{cyan}»%f%b '
 RPROMPT='$(check_last_exit_code)'
@@ -55,3 +56,9 @@ alias cp="cp -rv"
 alias ix.io="curl -F 'f:1=<-' ix.io"
 alias emacs="emacs -nw"
 alias code="code-oss --enable-features=UseOzonePlatform --ozone-platform=wayland"
+
+[ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
+source /usr/share/nvm/nvm.sh
+source /usr/share/nvm/bash_completion
+source /usr/share/nvm/install-nvm-exec
+
