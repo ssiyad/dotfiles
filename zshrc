@@ -28,8 +28,8 @@ setopt histignoredups
 PROMPT='%B%F{154}---%f %2~%b ${vcs_info_msg_0_}%B%F{cyan}»%f%b '
 RPROMPT='$(check_last_exit_code)'
 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 wd() {
     . /usr/share/wd/wd.sh
@@ -58,7 +58,5 @@ alias emacs="emacs -nw"
 alias code="code-oss --enable-features=UseOzonePlatform --ozone-platform=wayland"
 
 [ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
-source /usr/share/nvm/nvm.sh
-source /usr/share/nvm/bash_completion
-source /usr/share/nvm/install-nvm-exec
-
+source ~/.nvm/nvm.sh
+source ~/.nvm/bash_completion
