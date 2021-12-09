@@ -10,6 +10,7 @@ autoconf
 automake
 base
 bemenu
+bemenu-wayland
 binutils
 bison
 bitwarden
