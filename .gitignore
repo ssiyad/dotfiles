@@ -1,1 +1,3 @@
 config/qutebrowser/autoconfig.yml
+config/qutebrowser/qsettings/
+config/qutebrowser/bookmarks/
