@@ -7,6 +7,8 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
 Plug 'lukas-reineke/cmp-rg'
 Plug 'ray-x/cmp-treesitter'
 Plug 'onsails/lspkind-nvim'
@@ -41,6 +43,7 @@ Plug 'famiu/feline.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'ray-x/lsp_signature.nvim'
 
 call plug#end()
 
@@ -78,6 +81,7 @@ lua require('_feline')
 lua require('_fterm')
 lua require('_gitsigns')
 lua require('_gps')
+lua require('_signature')
 lua require('_stabilize')
 lua require('_telescope')
 lua require('_todo-comments')
