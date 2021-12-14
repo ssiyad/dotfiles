@@ -1,28 +1,52 @@
 call plug#begin(stdpath('data') . '/plugged')
+
 Plug 'joshdick/onedark.vim'
-Plug 'sheerun/vim-polyglot'
-Plug 'itchyny/lightline.vim'
 Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-compe'
-Plug 'tpope/vim-fugitive'
-Plug 'luochen1990/rainbow'
-Plug 'jiangmiao/auto-pairs'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'kyazdani42/nvim-tree.lua'
-Plug 'airblade/vim-gitgutter'
-Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'caenrique/nvim-toggle-terminal'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'lukas-reineke/cmp-rg'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'ray-x/cmp-treesitter'
+Plug 'onsails/lspkind-nvim'
+Plug 'windwp/nvim-autopairs'
+Plug 'andymass/vim-matchup'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'romgrk/barbar.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'ray-x/guihua.lua', {'do': 'cd lua/fzy && make' }
-Plug 'ray-x/navigator.lua'
-Plug 'ray-x/lsp_signature.nvim'
-Plug 'junegunn/fzf.vim'
+Plug 'p00f/nvim-ts-rainbow'
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+Plug 'romgrk/nvim-treesitter-context'
+Plug 'SmiteshP/nvim-gps'
+Plug 'mhinz/vim-startify'
+Plug 'luukvbaal/stabilize.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'folke/todo-comments.nvim'
+Plug 'numToStr/FTerm.nvim'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-dadbod'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-abolish'
+Plug 'chaoren/vim-wordmotion'
+Plug 'rhysd/committia.vim'
+Plug 'kdheepak/lazygit.nvim'
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'famiu/feline.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'kyazdani42/nvim-tree.lua'
+
 call plug#end()
 
-lua require('basic')
-
+set tabstop=4
+set shiftwidth=4
+set expandtab
 set number
 set autoindent
 set smartindent
@@ -39,9 +63,27 @@ set signcolumn=yes:1
 set autoread
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
+set foldlevel=99
 set ff=unix
 
 syntax on
+
+lua require('_autopairs')
+lua require('_barbar')
+lua require('_blankline')
+lua require('_cmp')
+lua require('_colorizer')
+lua require('_devicons')
+lua require('_feline')
+lua require('_fterm')
+lua require('_gitsigns')
+lua require('_gps')
+lua require('_stabilize')
+lua require('_telescope')
+lua require('_todo-comments')
+lua require('_tree')
+lua require('_treesitter')
+lua require('_treesitter-context')
 
 let g:onedark_terminal_italics=1
 let g:onedark_hide_endofbuffer=1
@@ -65,67 +107,12 @@ let g:lightline = {
   \ 
   \}
 
-let g:nvim_tree_auto_open = 1
-let g:nvim_tree_auto_close = 1
-let g:nvim_tree_highlight_opened_files = 1
-let g:nvim_tree_quit_on_open = 1
-let g:nvim_tree_root_folder_modifier = ':~:.'
-let g:nvim_tree_git_hl = 1
-let g:nvim_tree_group_empty = 1
-let g:nvim_tree_ignore = [ '.git', 'node_modules', '.vscode' ]
-let g:nvim_tree_lsp_diagnostics = 1
-let g:nvim_tree_show_icons = v:false
+nnoremap <C-n> :NvimTreeToggle<CR>
 
-let g:compe = {}
-let g:compe.enabled = v:true
-let g:compe.autocomplete = v:true
-let g:compe.debug = v:true
-let g:compe.min_length = 1
-let g:compe.preselect = 'enable'
-let g:compe.throttle_time = 80
-let g:compe.source_timeout = 200
-let g:compe.resolve_timeout = 800
-let g:compe.incomplete_delay = 400
-let g:compe.max_abbr_width = 100
-let g:compe.max_kind_width = 100
-let g:compe.max_menu_width = 100
-let g:compe.documentation = v:true
-
-let g:compe.source = {}
-let g:compe.source.path = v:true
-let g:compe.source.buffer = v:true
-let g:compe.source.calc = v:true
-let g:compe.source.nvim_lsp = v:true
-let g:compe.source.nvim_lua = v:true
-let g:compe.source.vsnip = v:true
-let g:compe.source.ultisnips = v:true
-let g:compe.source.luasnip = v:true
-let g:compe.source.emoji = v:true
-
-inoremap <silent><expr> <C-Space> compe#complete()
-inoremap <silent><expr> <CR>      compe#confirm('<CR>')
-inoremap <silent><expr> <C-e>     compe#close('<C-e>')
-inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
-inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
-
-" LSP config (the mappings used in the default file don't quite work right)
-nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
-nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
-nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
-nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
-nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
-nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
-
-nnoremap <silent> <C-l> :nohl<CR><C-l>
-nnoremap <silent> <C-s> :NvimTreeToggle<CR><C-s>
-
-nnoremap <silent> <C-q> :ToggleTerminal<Enter>
-tnoremap <silent> <C-q> <C-\><C-n>:ToggleTerminal<Enter>
-tnoremap <C-w> <C-\><C-n><C-w>
-
-highlight link CompeDocumentation NormalFloat
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " auto-format
 autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
