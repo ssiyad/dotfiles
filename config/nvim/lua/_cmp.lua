@@ -27,6 +27,7 @@ cmp.setup({
     },
     sources = {
         { name = "nvim_lsp" },
+        { name = "treesitter" },
         { name = "path" },
         { name = "rg" },
     },

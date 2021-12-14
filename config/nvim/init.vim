@@ -2,12 +2,12 @@ call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'joshdick/onedark.vim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'lukas-reineke/cmp-rg'
-Plug 'hrsh7th/nvim-cmp'
 Plug 'ray-x/cmp-treesitter'
 Plug 'onsails/lspkind-nvim'
 Plug 'windwp/nvim-autopairs'
@@ -17,8 +17,8 @@ Plug 'romgrk/barbar.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'p00f/nvim-ts-rainbow'
 Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'romgrk/nvim-treesitter-context'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'SmiteshP/nvim-gps'
 Plug 'mhinz/vim-startify'
 Plug 'luukvbaal/stabilize.nvim'
@@ -36,11 +36,12 @@ Plug 'chaoren/vim-wordmotion'
 Plug 'rhysd/committia.vim'
 Plug 'kdheepak/lazygit.nvim'
 Plug 'lewis6991/gitsigns.nvim'
-Plug 'norcalli/nvim-colorizer.lua'
+Plug 'crivotz/nvim-colorizer.lua'
 Plug 'famiu/feline.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'weilbith/nvim-code-action-menu'
 
 call plug#end()
 
@@ -89,12 +90,11 @@ let g:onedark_terminal_italics=1
 let g:onedark_hide_endofbuffer=1
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-nnoremap <C-n> :NvimTreeToggle<CR>
+nnoremap <C-e> :NvimTreeToggle<CR>
+nnoremap <leader>gg :LazyGit<CR>
+nnoremap <C-o> :lua vim.lsp.buf.code_action()<CR>
 
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>tf <cmd>Telescope find_files<cr>
 
 " auto-format
 autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
