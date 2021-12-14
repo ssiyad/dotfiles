@@ -89,24 +89,6 @@ let g:onedark_terminal_italics=1
 let g:onedark_hide_endofbuffer=1
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-let g:rainbow_active = 1
-let g:lightline = {
-  \ 'colorscheme': 'onedark',
-  \ 'active': {
-  \   'left': [ [ 'mode', 'paste' ],
-  \             [ 'readonly', 'filename'],
-  \             [ 'modified' ] ],
-  \   'right': [ [ 'lineinfo' ],
-  \              [ 'percent' ],
-  \              [ 'fileformat', 'fileencoding', 'filetype' ],
-  \              [ 'gitbranch' ] ]
-  \ },
-  \ 'component_function': {
-  \   'gitbranch': 'FugitiveHead'
-  \ },
-  \ 
-  \}
-
 nnoremap <C-n> :NvimTreeToggle<CR>
 
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
