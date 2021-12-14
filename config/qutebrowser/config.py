@@ -622,7 +622,7 @@ c.colors.webpage.darkmode.grayscale.all = False
 # font setting, it's replaced with the fonts listed here. If set to an
 # empty value, a system-specific monospace default is used.
 # Type: List of Font, or Font
-c.fonts.default_family = "JetBrainsMono"
+c.fonts.default_family = "JetBrainsMono Nerd Font"
 
 c.fonts.web.family.fixed = "JetBrains Mono"
 
