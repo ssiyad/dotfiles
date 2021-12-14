@@ -97,7 +97,7 @@ function clipboard {
 }
 
 function power-menu {
-    choice=$(bemenu_show "poweroff\nreboot\nsuspend\nhibernate")
+    choice=$(bemenu_show "poweroff\nreboot\nsuspend")
     [[ -z $choice ]] && exit 0
     systemctl $choice
 }
