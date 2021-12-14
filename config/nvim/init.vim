@@ -41,7 +41,6 @@ Plug 'famiu/feline.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
-Plug 'weilbith/nvim-code-action-menu'
 
 call plug#end()
 
