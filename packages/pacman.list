@@ -42,7 +42,6 @@ man-db
 man-pages
 mariadb
 mpv
-neovim
 networkmanager
 nmap
 nodejs
@@ -77,9 +76,11 @@ texinfo
 the_silver_searcher
 tree
 ttf-font-awesome
+ttf-jetbrains-mono
 udiskie
 ufw
 usbutils
+vim
 waybar
 wf-recorder
 wget
