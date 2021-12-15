@@ -104,19 +104,19 @@ scrolling:
 # Font configuration
 font:
   normal:
-    family: JetBrainsMono Nerd Font
+    family: JetBrainsMono
     style: Regular
 
   bold:
-    family: JetBrainsMono Nerd Font
+    family: JetBrainsMono
     style: Bold
 
   italic:
-    family: JetBrainsMono Nerd Font
+    family: JetBrainsMono
     style: Italic
 
   bold_italic:
-    family: JetBrainsMono Nerd Font
+    family: JetBrainsMono
     style: Bold Italic
 
   size: 9
