@@ -27,13 +27,13 @@
   "network": {
     "interval": 2,
     "tooltip": false,
-    "format-wifi": "  {essid} {signalStrength}% ",
+    "format-wifi": " {essid} {signalStrength}% ",
     "format-ethernet": " {ipaddr} "
   },
   "battery": {
     "interval": 2,
     "tooltip": false,
-    "format": "  {capacity}% ",
+    "format": " {capacity}% ",
     "states": {
       "warning": 30,
       "critical": 15
