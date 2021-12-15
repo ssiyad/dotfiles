@@ -45,7 +45,7 @@ bindkey "^[[1;5D" backward-word
 [[ -n "${key[Control-Right]}" ]] && bindkey -- "${key[Control-Right]}" forward-word
 
 export ARCHFLAGS="-arch x86_64"
-export EDITOR=vim
+export EDITOR=nvim
 export PIPENV_VENV_IN_PROJECT=1
 
 alias mkdir="mkdir -pv"
@@ -56,6 +56,7 @@ alias cp="cp -rv"
 alias ix.io="curl -F 'f:1=<-' ix.io"
 alias emacs="emacs -nw"
 alias code="code-oss --enable-features=UseOzonePlatform --ozone-platform=wayland"
+alias vim='nvim'
 
 [ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
 source /usr/share/nvm/nvm.sh
