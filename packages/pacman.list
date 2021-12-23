@@ -10,15 +10,13 @@ autoconf
 automake
 base
 bemenu
-bemenu-wayland
-binutils
 bison
 bitwarden
 bluez
 bluez-utils
-chromium
 code
 fakeroot
+firefox
 flex
 fzf
 gcc
