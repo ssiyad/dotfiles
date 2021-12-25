@@ -75,7 +75,7 @@ set $ws8 8
 set $ws9 9
 set $ws10 10
 
-# Assing some default workspaces
+# Adding some default workspaces
 assign [app_id="code-oss"] $ws2
 assign [app_id="qutebrowser"] $ws3
 assign [app_id="telegramdesktop"] $ws4
