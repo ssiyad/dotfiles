@@ -152,9 +152,6 @@ exec udiskie &
 # exec wl-paste -w wl-paste >> /tmp/clipboard &
 exec wl-paste -w ~/dotfiles/scripts/wl-cb.sh &
 
-# noisetorch for noise suppression on `input`
-exec noisetorch -i
-
 default_border pixel 1
 default_floating_border pixel 1
 smart_gaps on
