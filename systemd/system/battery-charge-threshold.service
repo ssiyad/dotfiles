@@ -1,4 +1,4 @@
-t]
+[Unit]
 Description=Set the battery charge threshold
 After=multi-user.target
 StartLimitBurst=0
