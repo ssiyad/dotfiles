@@ -1,4 +1,3 @@
-alacritty
 amd-ucode
 android-file-transfer
 android-tools
@@ -46,6 +45,7 @@ man-db
 man-pages
 mariadb
 mpv
+neovim
 networkmanager
 nim
 nimble
@@ -83,7 +83,6 @@ the_silver_searcher
 transmission-cli
 tree
 ttf-font-awesome
-ttf-jetbrains-mono
 udiskie
 ufw
 unrar
@@ -92,6 +91,7 @@ usbutils
 vim
 vulkan-radeon
 waybar
+wezterm
 wf-recorder
 wget
 which
