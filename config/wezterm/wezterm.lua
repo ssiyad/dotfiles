@@ -19,9 +19,9 @@ return {
                 bg_color = '#1a1b26',
                 fg_color = '#c5c8c6',
                 italic = true,
-            }
+            },
 
-,           inactive_tab = {
+            inactive_tab = {
                 bg_color = '#282b42',
                 fg_color = '#c5c8c6',
             },
@@ -30,7 +30,18 @@ return {
                 bg_color = '#282b42',
                 fg_color = '#c5c8c6',
             },
-        }
+        },
+
+        ansi = {
+            "black",
+            "#cc6666",
+            "#adff2f",
+            "#f0c674",
+            "#6495ed",
+            "#b294bb",
+            "#afeeee",
+            "#c5c8c6"
+        },
     },
 
     -- https://wezfurlong.org/wezterm/config/appearance.html
