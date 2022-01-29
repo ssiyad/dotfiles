@@ -14,7 +14,7 @@ floating_modifier $mod
 set $trueblack #000000
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec wezterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
