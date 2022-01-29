@@ -52,5 +52,7 @@ return {
     -- https://wezfurlong.org/wezterm/config/lua/config/enable_wayland.html
     enable_wayland = true,
 
+    -- https://wezfurlong.org/wezterm/config/lua/config/exit_behavior.html
+    exit_behavior = 'Close',
 }
 
