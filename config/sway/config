@@ -20,7 +20,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # j4-dmenu-desktop + bemenu (a program launcher)
-bindsym $mod+d exec j4-dmenu-desktop --dmenu='bemenu -i -p "" -l 20 --fn "JetBrainsMono 9" --nb "#1a1b26f2" --nf "#dfdfdf" --tb "#afff00" --tf "#1a1b26f2" --ff "#afff00" --fb "1a1b26f2" --hf "#1a1b26f2" --hb "#afff00"' --term=kitty
+bindsym $mod+d exec j4-dmenu-desktop --dmenu='bemenu -i -p "" -l 20 --fn "JetBrainsMono Nerd Font 9" --nb "#1a1b26f2" --nf "#dfdfdf" --tb "#afff00" --tf "#1a1b26f2" --ff "#afff00" --fb "1a1b26f2" --hf "#1a1b26f2" --hb "#afff00"' --term=kitty
 
 # helper script
 bindsym $mod+backslash exec ~/dotfiles/scripts/helper.sh
