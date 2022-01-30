@@ -42,6 +42,17 @@ return {
             "#afeeee",
             "#c5c8c6"
         },
+
+        brights = {
+            "black",
+            "#cc6666",
+            "#adff2f",
+            "#f0c674",
+            "#6495ed",
+            "#b294bb",
+            "#afeeee",
+            "#c5c8c6"
+        },
     },
 
     -- https://wezfurlong.org/wezterm/config/appearance.html
