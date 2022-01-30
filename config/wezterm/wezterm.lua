@@ -65,5 +65,13 @@ return {
 
     -- https://wezfurlong.org/wezterm/config/lua/config/exit_behavior.html
     exit_behavior = 'Close',
+
+    -- https://wezfurlong.org/wezterm/config/lua/config/window_padding.html
+    window_padding = {
+        left = 0,
+        right = 0,
+        top = 0,
+        bottom = 0,
+    },
 }
 
