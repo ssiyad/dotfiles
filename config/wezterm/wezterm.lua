@@ -44,7 +44,7 @@ return {
         },
 
         brights = {
-            "black",
+            "#445d66",
             "#cc6666",
             "#adff2f",
             "#f0c674",
