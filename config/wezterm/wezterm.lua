@@ -49,7 +49,7 @@ return {
     use_fancy_tab_bar = false,
 
     -- https://wezfurlong.org/wezterm/config/lua/config/audible_bell.html
-    audible_bell = Disabled,
+    audible_bell = 'Disabled',
 
     -- https://wezfurlong.org/wezterm/config/lua/config/check_for_updates.html
     check_for_updates = false,
