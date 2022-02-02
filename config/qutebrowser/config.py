@@ -650,6 +650,10 @@ c.fonts.tabs.unselected = "10 default_family"
 c.fonts.web.size.default = 14
 
 # Bindings for normal mode
+config.bind(
+    "\\",
+    'spawn --userscript qute-pass --mode gopass --dmenu-invocation \'bemenu -i -l 13 --fn "JetBrainsMono 9" --nb "#201C1C" --nf "#dfdfdf" --tb "#444444" --tf "#dfdfdf" --ff "#ffcd1a" --hb "#242c34" --hf "#8734ff"\'',
+)
 config.bind("pa", "spawn --detach mpv --no-video {url}")
 config.bind("pla", "hint links spawn --detach mpv --no-video {hint-url}")
 config.bind("plv", "hint links spawn --detach mpv {hint-url}")
