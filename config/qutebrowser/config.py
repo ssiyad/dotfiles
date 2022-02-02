@@ -652,12 +652,11 @@ c.fonts.web.size.default = 14
 # Bindings for normal mode
 config.bind(
     "\\",
-    'spawn --userscript qute-pass --mode gopass --dmenu-invocation \'bemenu -i -l 13 --fn "JetBrainsMono 9" --nb "#201C1C" --nf "#dfdfdf" --tb "#444444" --tf "#dfdfdf" --ff "#ffcd1a" --hb "#242c34" --hf "#8734ff"\'',
+    'spawn --userscript qute-pass --mode gopass --dmenu-invocation \'bemenu -i -p "" -l 20 --fn "JetBrainsMono Nerd Font 9" --nb "#1a1b26f2" --nf "#dfdfdf" --tb "#afff00" --tf "#1a1b26f2" --ff "#afff00" --fb "1a1b26f2" --hf "#1a1b26f2" --hb "#afff00"\'',
 )
 config.bind("pa", "spawn --detach mpv --no-video {url}")
 config.bind("pla", "hint links spawn --detach mpv --no-video {hint-url}")
 config.bind("plv", "hint links spawn --detach mpv {hint-url}")
 config.bind("pv", "spawn --detach mpv {url}")
-
 
 c.window.title_format = "{perc}{current_title}"
