@@ -10,17 +10,17 @@ automake
 base
 bemenu
 bison
-bitwarden
 bluez
 bluez-utils
+chromium
 code
 fakeroot
-firefox
 flex
 fzf
 gcc
 git
 go
+gopass
 grim
 groff
 helvum
@@ -82,7 +82,6 @@ texinfo
 the_silver_searcher
 transmission-cli
 tree
-ttf-font-awesome
 udiskie
 ufw
 unrar
@@ -91,6 +90,7 @@ usbutils
 vim
 vulkan-radeon
 waybar
+weechat
 wezterm
 wf-recorder
 wget
