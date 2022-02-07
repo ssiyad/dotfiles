@@ -5,6 +5,18 @@ local servers = {
 
 vim.g.coq_settings = {
     auto_start = true,
+    display = {
+        pum = {
+            kind_context = {'', ''},
+            source_context = {'', ''},
+        },
+        preview = {
+            border = 'solid',
+        },
+        icons = {
+            mode = 'short',
+        }
+    },
 }
 
 local coq = require('coq')
