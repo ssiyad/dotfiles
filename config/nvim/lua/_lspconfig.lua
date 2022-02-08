@@ -5,6 +5,14 @@ local servers = {
 
 vim.g.coq_settings = {
     auto_start = true,
+    clients = {
+        tabnine = {
+            enabled = true,
+        },
+    },
+    keymap = {
+        eval_snips = '<leader>j',
+    },
     display = {
         pum = {
             kind_context = {'', ''},
