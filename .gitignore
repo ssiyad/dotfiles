@@ -3,3 +3,5 @@ config/qutebrowser/qsettings/
 config/qutebrowser/bookmarks/
 
 .vscode/
+config/nvim/spell/
+
