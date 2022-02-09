@@ -16,6 +16,7 @@ chromium
 code
 fakeroot
 flex
+foot
 fzf
 gcc
 git
@@ -91,7 +92,6 @@ vim
 vulkan-radeon
 waybar
 weechat
-wezterm
 wf-recorder
 wget
 which
