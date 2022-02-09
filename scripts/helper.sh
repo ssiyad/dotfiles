@@ -11,8 +11,7 @@ function bemenu_show {
 }
 
 function go-pass {
-    wl-copy $(gopass show -o $(bemenu_show "$(gopass list --flat)"))
-    notify-send "gopass" "password copied to clipboard"
+    gopass -c $(bemenu_show "$(gopass list --flat)")
 }
 
 function screenshot {
