@@ -57,6 +57,7 @@ alias ix.io="curl -F 'f:1=<-' ix.io"
 alias emacs="emacs -nw"
 alias code="code-oss --enable-features=UseOzonePlatform --ozone-platform=wayland"
 alias vim='nvim'
+alias v='nvim'
 
 [ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
 source /usr/share/nvm/nvm.sh
