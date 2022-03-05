@@ -6,7 +6,6 @@
 window#waybar {
   color: whitesmoke;
   background-color: #1a1b26;
-  opacity: 0.95;
 }
 
 #workspaces button {

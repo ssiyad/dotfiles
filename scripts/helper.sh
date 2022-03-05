@@ -59,34 +59,6 @@ function screencapture {
     $choice
 }
 
-function music {
-    choice=$(bemenu_show "prev\nnext\npause\nplay")
-    res=$(mpc $choice)
-    echo $res
-    notify-send "music" "$res"
-}
-
-function movies {
-    choice=$(bemenu_show "$(ls ~/Movies | sed 's/.mkv//')")
-    [[ -z $choice ]] && exit 0
-    mpv "$HOME/Movies/$choice"
-}
-
-function manual {
-    choice=$(bemenu_show "")
-    $TERM man $choice
-}
-
-function public-ip {
-    notify-send "ip" "public ip is $(dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | tr -d '\"')"
-}
-
-function browser {
-    url=$(bemenu_show "")
-    [[ -z $url ]] && exit 0
-    qutebrowser --target window "$url"
-}
-
 function clipboard {
     choice=$(bemenu_show_raw "$(grep -m 1 -H '.' /tmp/clipboard/* | tac | sed -r 's/\/tmp\/clipboard\///g' | sed -r 's/:/ /')")
     read -ra array <<< $choice
@@ -101,13 +73,6 @@ function power-menu {
     systemctl $choice
 }
 
-function calculator {
-    choice=$(bemenu_show_raw "")
-    [[ -z $choice ]] && exit 0
-    result=$(echo $choice | bc -l)
-    notify-send "bc" "$choice = $(echo $choice | bc -l)"
-}
-
-choice=$(bemenu_show "go-pass\ncalculator\nscreenshot\nscreencapture\nclipboard\ntasks\nbrowser\nmusic\nmovies\nmanual\npublic-ip\npower-menu")
+choice=$(bemenu_show "go-pass\nscreenshot\nscreencapture\nclipboard\npower-menu")
 [[ -z $choice ]] && exit 0
 $choice

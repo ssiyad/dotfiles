@@ -18,13 +18,6 @@ require'nvim-tree'.setup({
         hide_root_folder = false,
         auto_resize = true,
         side = 'left',
-        mappings = {
-            custom_only = false,
-            list = {}
-        },
-        number = true,
-        relativenumber = true,
-        signcolumn = "yes"
     },
 })
 

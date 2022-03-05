@@ -6,7 +6,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 Plug 'windwp/nvim-autopairs'
 Plug 'andymass/vim-matchup'
-Plug 'romgrk/barbar.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'p00f/nvim-ts-rainbow'
 Plug 'lukas-reineke/indent-blankline.nvim'
@@ -59,7 +58,6 @@ set ff=unix
 syntax on
 
 lua require('_autopairs')
-lua require('_barbar')
 lua require('_blankline')
 lua require('_colorizer')
 lua require('_devicons')

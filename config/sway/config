@@ -1,5 +1,5 @@
 output * {
-    background ~/dotfiles/wallpaper.png fill
+    background ~/dotfiles/wallpaper fill
 }
 # set mod key
 set $mod Mod4
