@@ -13,7 +13,8 @@
     "format": " {} ",
   },
   "sway/window": {
-    "format": " {}"
+    "format": " {}",
+    "icon": false,
   },
   "clock": {
     "interval": 2,
