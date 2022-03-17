@@ -1,4 +1,5 @@
 local servers = {
+    'gopls',
     'pyright',
     'rust_analyzer',
     'tsserver',
