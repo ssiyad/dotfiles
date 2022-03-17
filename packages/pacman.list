@@ -23,6 +23,7 @@ gcc
 git
 go
 gopass
+gopls
 grim
 groff
 helvum
@@ -31,7 +32,6 @@ imv
 inetutils
 inkscape
 jq
-lazygit
 light
 linux
 linux-firmware
