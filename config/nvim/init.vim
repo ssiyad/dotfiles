@@ -11,7 +11,6 @@ Plug 'p00f/nvim-ts-rainbow'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'SmiteshP/nvim-gps'
 Plug 'mhinz/vim-startify'
-Plug 'luukvbaal/stabilize.nvim'
 Plug 'folke/todo-comments.nvim'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'tpope/vim-commentary'
@@ -65,7 +64,6 @@ lua require('_gitsigns')
 lua require('_gps')
 lua require('_lspconfig')
 lua require('_lualine')
-lua require('_stabilize')
 lua require('_telescope')
 lua require('_todo-comments')
 lua require('_tokyonight')
