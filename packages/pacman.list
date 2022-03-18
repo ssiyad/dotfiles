@@ -92,7 +92,6 @@ wget
 which
 whois
 wireplumber
-wireshark-cli
 wireshark-qt
 wl-clipboard
 xdg-desktop-portal
