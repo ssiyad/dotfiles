@@ -18,20 +18,20 @@ function screenshot {
     function full {
         dest="$HOME/Screenshots/$(date '+%F-%T-%a')_full.png"
         grim $dest
-        wl-copy $dest
+        wl-copy < $dest
         notify-send "grim" "full screenshot saved as $dest"
     }
 
     function window {
         dest="$HOME/Screenshots/$(date '+%F-%T-%a')_window.png"
         grim -g "$(swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp)" $dest
-        wl-copy $dest
+        wl-copy < $dest
         notify-send "grim" "window screenshot saved as $dest"
     }
     function partial {
         dest="$HOME/Screenshots/$(date '+%F-%T-%a')_partial.png"
         grim -g "$(slurp)" $dest
-        wl-copy $dest
+        wl-copy < $dest
         notify-send "grim" "partial screenshot saved as $dest"
     }
 
