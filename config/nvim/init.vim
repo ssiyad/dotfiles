@@ -16,7 +16,6 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'chaoren/vim-wordmotion'
 Plug 'rhysd/committia.vim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'nvim-lualine/lualine.nvim'
@@ -26,8 +25,6 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'ray-x/lsp_signature.nvim'
-Plug 'kamykn/spelunker.vim'
-Plug 'kamykn/popup-menu.nvim'
 
 call plug#end()
 
