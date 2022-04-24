@@ -212,86 +212,6 @@ config.set("content.javascript.enabled", True, "chrome://*/*")
 # Type: Bool
 config.set("content.javascript.enabled", True, "qute://*/*")
 
-# Allow websites to record audio.
-# Type: BoolAsk
-# Valid values:
-#   - true
-#   - false
-#   - ask
-config.set("content.media.audio_capture", True, "https://capture.kyc.idfy.com")
-
-# Allow websites to record video.
-# Type: BoolAsk
-# Valid values:
-#   - true
-#   - false
-#   - ask
-config.set("content.media.video_capture", True, "https://capture.kyc.idfy.com")
-
-# Allow websites to show notifications.
-# Type: BoolAsk
-# Valid values:
-#   - true
-#   - false
-#   - ask
-config.set("content.notifications.enabled", True, "https://app.element.io")
-
-# Allow websites to show notifications.
-# Type: BoolAsk
-# Valid values:
-#   - true
-#   - false
-#   - ask
-config.set("content.notifications.enabled", True, "https://app.slack.com")
-
-# Allow websites to show notifications.
-# Type: BoolAsk
-# Valid values:
-#   - true
-#   - false
-#   - ask
-config.set("content.notifications.enabled", False, "https://mdbootstrap.com")
-
-# Allow websites to show notifications.
-# Type: BoolAsk
-# Valid values:
-#   - true
-#   - false
-#   - ask
-config.set("content.notifications.enabled", False, "https://www.facebook.com")
-
-# Allow websites to show notifications.
-# Type: BoolAsk
-# Valid values:
-#   - true
-#   - false
-#   - ask
-config.set("content.notifications.enabled", False, "https://www.football.london")
-
-# Allow websites to show notifications.
-# Type: BoolAsk
-# Valid values:
-#   - true
-#   - false
-#   - ask
-config.set("content.notifications.enabled", False, "https://www.reddit.com")
-
-# Allow websites to show notifications.
-# Type: BoolAsk
-# Valid values:
-#   - true
-#   - false
-#   - ask
-config.set("content.notifications.enabled", False, "https://www.referralcode.info")
-
-# Allow websites to show notifications.
-# Type: BoolAsk
-# Valid values:
-#   - true
-#   - false
-#   - ask
-config.set("content.notifications.enabled", False, "https://www.youtube.com")
-
 # Allow pdf.js to view PDF files in the browser. Note that the files can
 # still be downloaded by clicking the download button in the pdf.js
 # viewer.
@@ -496,10 +416,6 @@ c.url.open_base_url = True
 c.url.searchengines = {
     "DEFAULT": "https://www.google.com/search?q={}",
     "aw": "https://wiki.archlinux.org/?search={}",
-    "d": "https://duckduckgo.com/?q={}",
-    "gh": "https://github.com/search?q={}",
-    "gl": "https://gitlab.com/search?utf8=%E2%9C%93&search={}",
-    "r": "https://old.reddit.com/search/?q={}",
     "s": "https://stackoverflow.com/search?q={}",
     "w": "https://en.wikipedia.org/wiki/Special:Search?search={}",
     "y": "https://www.youtube.com/results?search_query={}",
