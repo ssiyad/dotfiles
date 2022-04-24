@@ -2,4 +2,5 @@
     font: 'JetBrainsMono Nerd Font' 12px;
     font-family: 'JetBrainsMono Nerd Font';
     font-size: 12px;
+    text-rendering: optimizeLegibility;
 }
