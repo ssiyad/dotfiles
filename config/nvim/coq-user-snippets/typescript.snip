@@ -1,2 +1,12 @@
 snippet log
     console.log($1);
+
+snippet clsc
+    constructor(init?: Partial<$1>) {
+        Object.assign(this, init);
+    }
+
+snippet clsu
+    update(d: Partial<$1>) {
+        Object.assign(this, d);
+    }

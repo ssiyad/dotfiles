@@ -5,12 +5,9 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 Plug 'windwp/nvim-autopairs'
-Plug 'andymass/vim-matchup'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'p00f/nvim-ts-rainbow'
 Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'SmiteshP/nvim-gps'
-Plug 'mhinz/vim-startify'
 Plug 'folke/todo-comments.nvim'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'tpope/vim-commentary'
@@ -57,7 +54,6 @@ lua require('_blankline')
 lua require('_colorizer')
 lua require('_devicons')
 lua require('_gitsigns')
-lua require('_gps')
 lua require('_lspconfig')
 lua require('_lualine')
 lua require('_telescope')

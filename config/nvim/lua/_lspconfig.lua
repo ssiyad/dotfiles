@@ -1,3 +1,5 @@
+local remap = vim.api.nvim_set_keymap
+
 local servers = {
     'gopls',
     'pyright',
@@ -14,6 +16,7 @@ vim.g.coq_settings = {
     },
     keymap = {
         eval_snips = '<leader>j',
+        recommended = false,
     },
     display = {
         pum = {
@@ -51,4 +54,9 @@ for _, lsp in pairs(servers) do
         })
     )
 end
+
+remap('i', '<esc>', [[pumvisible() ? "<c-e><esc>" : "<esc>"]], { expr = true, noremap = true })
+remap('i', '<c-c>', [[pumvisible() ? "<c-e><c-c>" : "<c-c>"]], { expr = true, noremap = true })
+remap('i', '<tab>', [[pumvisible() ? "<c-n>" : "<tab>"]], { expr = true, noremap = true })
+remap('i', '<s-tab>', [[pumvisible() ? "<c-p>" : "<bs>"]], { expr = true, noremap = true })
 
