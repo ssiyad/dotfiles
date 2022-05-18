@@ -22,6 +22,8 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'ray-x/lsp_signature.nvim'
+Plug 'petertriho/nvim-scrollbar'
+Plug 'kevinhwang91/nvim-hlslens'
 
 call plug#end()
 
@@ -56,6 +58,7 @@ lua require('_devicons')
 lua require('_gitsigns')
 lua require('_lspconfig')
 lua require('_lualine')
+lua require('_scrollbar')
 lua require('_telescope')
 lua require('_todo-comments')
 lua require('_tokyonight')
