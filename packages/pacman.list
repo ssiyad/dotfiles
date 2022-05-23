@@ -15,8 +15,6 @@ bluez-utils
 chromium
 code
 dbeaver
-docker
-docker-compose
 fakeroot
 flex
 foot
@@ -47,7 +45,6 @@ mpv
 neovim
 networkmanager
 nim
-nimble
 nmap
 nodejs
 noto-fonts
@@ -64,7 +61,6 @@ pipewire
 pipewire-pulse
 pkgconf
 postgresql
-postgresql-old-upgrade
 pyright
 python-pipenv
 python-tldextract
