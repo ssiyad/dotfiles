@@ -20,7 +20,7 @@ set $up k
 set $right l
 
 # start a terminal
-bindsym $mod+Return exec foot
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill

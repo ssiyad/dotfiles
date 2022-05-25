@@ -1,3 +1,4 @@
+alacritty
 amd-ucode
 android-file-transfer
 android-tools
@@ -17,7 +18,6 @@ code
 dbeaver
 fakeroot
 flex
-foot
 fzf
 gcc
 git
@@ -73,6 +73,7 @@ rustup
 slurp
 sudo
 sway
+swaybg
 swayidle
 texinfo
 the_silver_searcher
