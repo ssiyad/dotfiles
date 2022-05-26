@@ -24,6 +24,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'ray-x/lsp_signature.nvim'
 Plug 'petertriho/nvim-scrollbar'
 Plug 'kevinhwang91/nvim-hlslens'
+Plug 'matze/vim-move'
 
 call plug#end()
 
