@@ -14,9 +14,9 @@ bison
 bluez
 bluez-utils
 chromium
-code
 dbeaver
 fakeroot
+fish
 flex
 fzf
 gcc
@@ -97,6 +97,3 @@ wireshark-qt
 wl-clipboard
 xdg-desktop-portal
 xorg-xwayland
-zsh
-zsh-autosuggestions
-zsh-syntax-highlighting
