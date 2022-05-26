@@ -13,3 +13,9 @@ alias ix.io="curl -F 'f:1=<-' ix.io"
 alias vim='nvim'
 alias v='nvim'
 
+if status is-login
+    if test -z "$DISPLAY" -a "$(tty)" = "/dev/tty1"
+        exec sway
+    end
+end
+
