@@ -1,7 +1,15 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export EDITOR:nvim
+SETUVAR ZO_CMD:zo
+SETUVAR Z_CMD:z
+SETUVAR Z_DATA:/home/ssiyad/\x2elocal/share/z/data
+SETUVAR Z_DATA_DIR:/home/ssiyad/\x2elocal/share/z
+SETUVAR Z_EXCLUDE:\x5e/home/ssiyad\x24
 SETUVAR __fish_initialized:3400
+SETUVAR _fisher_jethrokuan_2F_z_files:/home/ssiyad/\x2econfig/fish/functions/__z\x2efish\x1e/home/ssiyad/\x2econfig/fish/functions/__z_add\x2efish\x1e/home/ssiyad/\x2econfig/fish/functions/__z_clean\x2efish\x1e/home/ssiyad/\x2econfig/fish/functions/__z_complete\x2efish\x1e/home/ssiyad/\x2econfig/fish/conf\x2ed/z\x2efish
+SETUVAR _fisher_jorgebucaran_2F_fisher_files:/home/ssiyad/\x2econfig/fish/functions/fisher\x2efish\x1e/home/ssiyad/\x2econfig/fish/completions/fisher\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejethrokuan/z
 SETUVAR fish_color_autosuggestion:4D5566
 SETUVAR fish_color_cancel:\x2d\x2dreverse
 SETUVAR fish_color_command:ffff87
