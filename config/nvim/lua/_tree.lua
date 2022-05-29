@@ -1,5 +1,4 @@
 require'nvim-tree'.setup({
-    auto_close = true,
     git = {
         enable = true,
         ignore = true,
@@ -15,11 +14,17 @@ require'nvim-tree'.setup({
         }
     },
     view = {
-        hide_root_folder = false,
+        hide_root_folder = true,
         auto_resize = true,
         side = 'left',
     },
+    renderer = {
+        group_empty = true,
+        indent_markers = {
+            enable = true,
+        }
+    },
 })
 
-vim.api.nvim_set_keymap('n', '<C-\'>', ':NvimTreeToggle<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-o>', ':NvimTreeToggle<CR>', { noremap = true })
 
