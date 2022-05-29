@@ -68,6 +68,7 @@ qt5-wayland
 qutebrowser
 redis
 reflector
+ripgrep
 rust-analyzer
 rustup
 slurp
