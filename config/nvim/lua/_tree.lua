@@ -1,4 +1,5 @@
 require'nvim-tree'.setup({
+    hijack_cursor = true,
     git = {
         enable = true,
         ignore = true,
