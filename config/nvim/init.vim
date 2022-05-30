@@ -25,6 +25,7 @@ Plug 'ray-x/lsp_signature.nvim'
 Plug 'petertriho/nvim-scrollbar'
 Plug 'kevinhwang91/nvim-hlslens'
 Plug 'matze/vim-move'
+Plug 'NTBBloodbath/rest.nvim'
 
 call plug#end()
 
@@ -59,6 +60,7 @@ lua require('_devicons')
 lua require('_gitsigns')
 lua require('_lspconfig')
 lua require('_lualine')
+lua require('_rest')
 lua require('_scrollbar')
 lua require('_telescope')
 lua require('_todo-comments')
