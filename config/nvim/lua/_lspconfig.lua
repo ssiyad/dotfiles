@@ -90,8 +90,6 @@ for _, lsp in pairs(servers) do
                 vim.lsp.handlers["textDocument/definition"] = goto_definition('split')
 
                 if client.server_capabilities.documentHighlightProvider then
-                    vim.cmd [[
-                    ]]
                     vim.api.nvim_create_augroup('lsp_document_highlight', {
                         clear = false
                     })
