@@ -28,8 +28,8 @@
     "network": {
         "interval": 2,
         "tooltip": false,
-        "format-wifi": "Wi-Fi {essid} {signalStrength}%",
-        "format-ethernet": "ETH {ipaddr}"
+        "format-wifi": "NET {essid} {signalStrength}%",
+        "format-ethernet": "NET {ipaddr}"
     },
     "battery": {
         "interval": 2,
