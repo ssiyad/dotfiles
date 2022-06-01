@@ -4,81 +4,97 @@
 }
 
 window#waybar {
-  color: whitesmoke;
-  background-color: #1a1b26;
+    color: whitesmoke;
+    background-color: #1a1b26;
 }
 
 #workspaces button {
-  padding: 0;
-  margin: 0;
-  color: #777;
-  border: none;
-  border-radius: 0;
+    padding: 0;
+    margin: 0;
+    color: #777;
+    border: none;
+    border-radius: 0;
+    padding: 0 2px;
 }
 
 #workspaces button.focused {
-  background-color: #444;
-  color: #dfdfdf;
+    background-color: #444;
+    color: #dfdfdf;
 }
 
 #mode {
-  background: blueviolet;
-  color: #201C1C;
+    background: blueviolet;
+    color: #201C1C;
+    padding: 0 4px;
+}
+
+#window {
+    margin-left: 8px;
 }
 
 #pulseaudio {
-  color: paleturquoise;
+    color: paleturquoise;
+    margin-right: 8px;
 }
 
 #backlight {
-  color: khaki;
+    color: khaki;
+    margin-right: 8px;
 }
 
 #battery {
-  color: lightseagreen;
+    color: lightseagreen;
+    margin-right: 8px;
 }
 
 #battery.charging {
-  color: yellowgreen;
+    color: yellowgreen;
 }
 
 #battery.full {
-  color: yellow;
-  animation: blinker 1s linear infinite;
+    color: yellow;
+    animation: blinker 1s linear infinite;
 }
 
 #battery.discharging.warning {
-  color: orangered;
-  animation: blinker 1s linear infinite;
+    color: orangered;
+    animation: blinker 1s linear infinite;
 }
 
 #battery.discharging.critical {
-  color: red;
-  animation: blinker 1s linear infinite;
+    color: red;
+    animation: blinker 1s linear infinite;
 }
 
 #network {
-  color: greenyellow;
+    color: greenyellow;
+    margin-right: 8px;
 }
 
 #cpu {
-  color: cornflowerblue;
+    color: cornflowerblue;
+    margin-right: 8px;
 }
 
 #memory {
-  color: blueviolet;
+    color: blueviolet;
+    margin-right: 8px;
 }
 
 #clock {
-  color: lightgoldenrodyellow;
+    color: lightgoldenrodyellow;
+    margin-right: 8px;
 }
 
-#custom-mail {
-  color: mediumpurple;
+#tray {
+    background-color: #444;
+    color: #dfdfdf;
+    padding: 0 8px;
+    border-radius: 6px 0 0 8px;
 }
 
 @keyframes blinker {
-  50% {
+50% {
     opacity: 0.5;
-  }
+}
 }
