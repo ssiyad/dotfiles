@@ -1,55 +1,56 @@
 {
-  "position": "top",
-  "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
-  "modules-center": [],
-  "modules-right": ["pulseaudio", "backlight", "battery", "network", "cpu", "memory", "custom/tasks", "clock"],
+    "position": "top",
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
+    "modules-center": [],
+    "modules-right": ["pulseaudio", "backlight", "battery", "network", "cpu", "memory", "custom/tasks", "clock"],
 
-  "sway/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": true,
-    "format": " {name} "
-  },
-  "sway/mode": {
-    "format": " {} ",
-  },
-  "sway/window": {
-    "format": " {}",
-    "icon": false,
-  },
-  "clock": {
-    "interval": 2,
-    "format": "{:%d %A %I:%M} ",
-    "tooltip": false
-  },
-  "memory": {
-    "interval": 2,
-    "format": "MEM {percentage:0>2}% "
-  },
-  "network": {
-    "interval": 2,
-    "tooltip": false,
-    "format-wifi": "  {essid} {signalStrength}% ",
-    "format-ethernet": " {ipaddr} "
-  },
-  "battery": {
-    "interval": 2,
-    "tooltip": false,
-    "format": "  {capacity}% ",
-    "states": {
-      "warning": 30,
-      "critical": 15
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": " {name} "
     },
-  },
-  "backlight": {
-    "format": " {percent}% ",
-    "tooltip": false
-  },
-  "pulseaudio": {
-    "format": " {volume}% ",
-    "tooltip": false
-  },
-  "cpu": {
-    "interval": 2,
-    "format": "CPU {usage:0>2}% "
-  }
+    "sway/mode": {
+        "format": " {} ",
+    },
+    "sway/window": {
+        "format": " {}",
+        "icon": false,
+    },
+    "clock": {
+        "interval": 2,
+        "format": "{:%d %A %I:%M} ",
+        "tooltip": false
+    },
+    "memory": {
+        "interval": 2,
+        "format": "MEM {percentage:0>2}% "
+    },
+    "network": {
+        "interval": 2,
+        "tooltip": false,
+        "format-wifi": "Wi-Fi {essid} {signalStrength}% ",
+        "format-ethernet": "ETH {ipaddr} "
+    },
+    "battery": {
+        "interval": 2,
+        "tooltip": false,
+        "format": "BAT {capacity}% ",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+    },
+    "backlight": {
+        "format": "BRI {percent}% ",
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "format": "VOL {volume}% ",
+        "format-muted": "Muted ",
+        "tooltip": false
+    },
+    "cpu": {
+        "interval": 2,
+        "format": "CPU {usage:0>2}% "
+    }
 }
