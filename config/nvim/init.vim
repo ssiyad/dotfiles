@@ -38,7 +38,7 @@ set ignorecase
 set smartcase
 set incsearch
 set nocompatible
-set updatetime=100
+set updatetime=750
 set termguicolors
 set noshowmode
 set cursorline
