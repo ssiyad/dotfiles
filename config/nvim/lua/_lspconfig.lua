@@ -1,9 +1,11 @@
 local remap = vim.api.nvim_set_keymap
 
 local servers = {
+    'cssls',
     'gopls',
     'pyright',
     'rust_analyzer',
+    'tailwindcss',
     'tsserver',
 }
 
