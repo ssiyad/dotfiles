@@ -8,7 +8,6 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'p00f/nvim-ts-rainbow'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'folke/todo-comments.nvim'
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -42,6 +41,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set number
+set relativenumber
 set autoindent
 set smartindent
 set ignorecase
