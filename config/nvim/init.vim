@@ -3,7 +3,6 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 Plug 'windwp/nvim-autopairs'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'p00f/nvim-ts-rainbow'
@@ -21,10 +20,20 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
-Plug 'ray-x/lsp_signature.nvim'
 Plug 'petertriho/nvim-scrollbar'
 Plug 'kevinhwang91/nvim-hlslens'
 Plug 'NTBBloodbath/rest.nvim', { 'commit': 'e5f68db73276c4d4d255f75a77bbe6eff7a476ef' }
+
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+
+Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 
 call plug#end()
 
@@ -42,7 +51,7 @@ set updatetime=750
 set termguicolors
 set noshowmode
 set cursorline
-set completeopt=menuone,noselect
+set completeopt=menu,menuone,noselect
 set signcolumn=yes:1
 set autoread
 set foldmethod=expr
