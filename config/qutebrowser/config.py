@@ -11,7 +11,7 @@
 #   qute://help/settings.html
 
 # Change the argument to True to still load settings configured via autoconfig.yml
-config.load_autoconfig(True)
+config.load_autoconfig(False)
 
 # Backend to use to display websites. qutebrowser supports two different
 # web rendering engines / backends, QtWebEngine and QtWebKit (not
@@ -33,7 +33,7 @@ config.load_autoconfig(True)
 # Valid values:
 #   - webengine: Use QtWebEngine (based on Chromium - recommended).
 #   - webkit: Use QtWebKit (based on WebKit, similar to Safari - many known security issues!).
-c.backend = "webengine"
+c.backend = 'webengine'
 
 # Turn on Qt HighDPI scaling. This is equivalent to setting
 # QT_AUTO_SCREEN_SCALE_FACTOR=1 or QT_ENABLE_HIGHDPI_SCALING=1 (Qt >=
@@ -65,7 +65,7 @@ c.qt.highdpi = True
 #   - no-3rdparty: Accept cookies from the same origin only. This is known to break some sites, such as GMail.
 #   - no-unknown-3rdparty: Accept cookies from the same origin only, unless a cookie is already set for the domain. On QtWebEngine, this is the same as no-3rdparty.
 #   - never: Don't accept cookies at all.
-config.set("content.cookies.accept", "all", "chrome-devtools://*")
+config.set('content.cookies.accept', 'all', 'chrome-devtools://*')
 
 # Which cookies to accept. With QtWebEngine, this setting also controls
 # other features with tracking capabilities similar to those of cookies;
@@ -89,7 +89,31 @@ config.set("content.cookies.accept", "all", "chrome-devtools://*")
 #   - no-3rdparty: Accept cookies from the same origin only. This is known to break some sites, such as GMail.
 #   - no-unknown-3rdparty: Accept cookies from the same origin only, unless a cookie is already set for the domain. On QtWebEngine, this is the same as no-3rdparty.
 #   - never: Don't accept cookies at all.
-config.set("content.cookies.accept", "all", "devtools://*")
+config.set('content.cookies.accept', 'all', 'devtools://*')
+
+# Allow websites to share screen content.
+# Type: BoolAsk
+# Valid values:
+#   - true
+#   - false
+#   - ask
+config.set('content.desktop_capture', True, 'https://meet.google.com')
+
+# Allow websites to share screen content.
+# Type: BoolAsk
+# Valid values:
+#   - true
+#   - false
+#   - ask
+config.set('content.desktop_capture', True, 'https://mozilla.github.io')
+
+# Request websites to minimize non-essentials animations and motion.
+# This results in the `prefers-reduced-motion` CSS media query to
+# evaluate to `reduce` (rather than `no-preference`). On Windows, if
+# this setting is set to False, the system-wide animation setting is
+# considered.
+# Type: Bool
+c.content.prefers_reduced_motion = True
 
 # Allow websites to request geolocations.
 # Type: BoolAsk
@@ -97,7 +121,7 @@ config.set("content.cookies.accept", "all", "devtools://*")
 #   - true
 #   - false
 #   - ask
-config.set("content.geolocation", True, "https://capture.kyc.idfy.com")
+config.set('content.geolocation', True, 'https://capture.kyc.idfy.com')
 
 # Allow websites to request geolocations.
 # Type: BoolAsk
@@ -105,7 +129,7 @@ config.set("content.geolocation", True, "https://capture.kyc.idfy.com")
 #   - true
 #   - false
 #   - ask
-config.set("content.geolocation", True, "https://upstox.com")
+config.set('content.geolocation', True, 'https://upstox.com')
 
 # Allow websites to request geolocations.
 # Type: BoolAsk
@@ -113,7 +137,7 @@ config.set("content.geolocation", True, "https://upstox.com")
 #   - true
 #   - false
 #   - ask
-config.set("content.geolocation", False, "https://www.google.com")
+config.set('content.geolocation', False, 'https://www.google.com')
 
 # Allow websites to request geolocations.
 # Type: BoolAsk
@@ -121,12 +145,28 @@ config.set("content.geolocation", False, "https://www.google.com")
 #   - true
 #   - false
 #   - ask
-config.set("content.geolocation", False, "https://www.olx.in")
+config.set('content.geolocation', False, 'https://www.olx.in')
+
+# Allow websites to lock your mouse pointer.
+# Type: BoolAsk
+# Valid values:
+#   - true
+#   - false
+#   - ask
+config.set('content.mouse_lock', True, 'https://tankionline.com')
+
+# Allow websites to lock your mouse pointer.
+# Type: BoolAsk
+# Valid values:
+#   - true
+#   - false
+#   - ask
+config.set('content.mouse_lock', True, 'https://www.figma.com')
 
 # Value to send in the `Accept-Language` header. Note that the value
 # read from JavaScript is always the global value.
 # Type: String
-config.set("content.headers.accept_language", "", "https://matchmaker.krunker.io/*")
+config.set('content.headers.accept_language', '', 'https://matchmaker.krunker.io/*')
 
 # User agent to send.  The following placeholders are defined:  *
 # `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
@@ -142,11 +182,7 @@ config.set("content.headers.accept_language", "", "https://matchmaker.krunker.io
 # between 5.12 and 5.14 (inclusive), changing the value exposed to
 # JavaScript requires a restart.
 # Type: FormatString
-config.set(
-    "content.headers.user_agent",
-    "Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}",
-    "https://web.whatsapp.com/",
-)
+config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}', 'https://web.whatsapp.com/')
 
 # User agent to send.  The following placeholders are defined:  *
 # `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
@@ -162,11 +198,7 @@ config.set(
 # between 5.12 and 5.14 (inclusive), changing the value exposed to
 # JavaScript requires a restart.
 # Type: FormatString
-config.set(
-    "content.headers.user_agent",
-    "Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version} Edg/{upstream_browser_version}",
-    "https://accounts.google.com/*",
-)
+config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}; rv:90.0) Gecko/20100101 Firefox/90.0', 'https://accounts.google.com/*')
 
 # User agent to send.  The following placeholders are defined:  *
 # `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
@@ -182,39 +214,101 @@ config.set(
 # between 5.12 and 5.14 (inclusive), changing the value exposed to
 # JavaScript requires a restart.
 # Type: FormatString
-config.set(
-    "content.headers.user_agent",
-    "Mozilla/5.0 ({os_info}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99 Safari/537.36",
-    "https://*.slack.com/*",
-)
+config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99 Safari/537.36', 'https://*.slack.com/*')
 
 # Load images automatically in web pages.
 # Type: Bool
-config.set("content.images", True, "chrome-devtools://*")
+config.set('content.images', True, 'chrome-devtools://*')
 
 # Load images automatically in web pages.
 # Type: Bool
-config.set("content.images", True, "devtools://*")
+config.set('content.images', True, 'devtools://*')
 
 # Enable JavaScript.
 # Type: Bool
-config.set("content.javascript.enabled", True, "chrome-devtools://*")
+config.set('content.javascript.enabled', True, 'chrome-devtools://*')
 
 # Enable JavaScript.
 # Type: Bool
-config.set("content.javascript.enabled", True, "devtools://*")
+config.set('content.javascript.enabled', True, 'devtools://*')
 
 # Enable JavaScript.
 # Type: Bool
-config.set("content.javascript.enabled", True, "chrome://*/*")
+config.set('content.javascript.enabled', True, 'chrome://*/*')
 
 # Enable JavaScript.
 # Type: Bool
-config.set("content.javascript.enabled", True, "qute://*/*")
+config.set('content.javascript.enabled', True, 'qute://*/*')
 
-# Allow pdf.js to view PDF files in the browser. Note that the files can
-# still be downloaded by clicking the download button in the pdf.js
-# viewer.
+# Allow websites to record audio.
+# Type: BoolAsk
+# Valid values:
+#   - true
+#   - false
+#   - ask
+config.set('content.media.audio_capture', True, 'https://meet.google.com')
+
+# Allow websites to record audio.
+# Type: BoolAsk
+# Valid values:
+#   - true
+#   - false
+#   - ask
+config.set('content.media.audio_capture', True, 'https://mozilla.github.io')
+
+# Allow websites to record audio.
+# Type: BoolAsk
+# Valid values:
+#   - true
+#   - false
+#   - ask
+config.set('content.media.audio_capture', True, 'https://us02web.zoom.us')
+
+# Allow websites to record audio and video.
+# Type: BoolAsk
+# Valid values:
+#   - true
+#   - false
+#   - ask
+config.set('content.media.audio_video_capture', True, 'https://meet.google.com')
+
+# Allow websites to record audio and video.
+# Type: BoolAsk
+# Valid values:
+#   - true
+#   - false
+#   - ask
+config.set('content.media.audio_video_capture', True, 'https://us02web.zoom.us')
+
+# Allow websites to record video.
+# Type: BoolAsk
+# Valid values:
+#   - true
+#   - false
+#   - ask
+config.set('content.media.video_capture', True, 'https://meet.google.com')
+
+# Allow websites to show notifications.
+# Type: BoolAsk
+# Valid values:
+#   - true
+#   - false
+#   - ask
+config.set('content.notifications.enabled', True, 'https://mail.zoho.com')
+
+# Allow websites to show notifications.
+# Type: BoolAsk
+# Valid values:
+#   - true
+#   - false
+#   - ask
+config.set('content.notifications.enabled', True, 'https://meet.google.com')
+
+# Display PDF files via PDF.js in the browser without showing a download
+# prompt. Note that the files can still be downloaded by clicking the
+# download button in the pdf.js viewer. With this set to `false`, the
+# `:prompt-open-download --pdfjs` command (bound to `<Ctrl-p>` by
+# default) can be used in the download prompt.
 # Type: Bool
 c.content.pdfjs = True
 
@@ -225,9 +319,7 @@ c.content.pdfjs = True
 #   - true
 #   - false
 #   - ask
-config.set(
-    "content.register_protocol_handler", True, "https://mail.disroot.org?mailto&to=%25s"
-)
+config.set('content.register_protocol_handler', True, 'https://mail.disroot.org?mailto&to=%25s')
 
 # Allow websites to register protocol handlers via
 # `navigator.registerProtocolHandler`.
@@ -236,11 +328,7 @@ config.set(
 #   - true
 #   - false
 #   - ask
-config.set(
-    "content.register_protocol_handler",
-    False,
-    "https://mail.google.com?extsrc=mailto&url=%25s",
-)
+config.set('content.register_protocol_handler', False, 'https://mail.google.com?extsrc=mailto&url=%25s')
 
 # Enter insert mode if an editable element is clicked.
 # Type: Bool
@@ -250,19 +338,19 @@ c.input.insert_mode.auto_enter = False
 # Type: Bool
 c.input.insert_mode.auto_leave = False
 
+# When/how to show the scrollbar.
+# Type: String
+# Valid values:
+#   - always: Always show the scrollbar.
+#   - never: Never show the scrollbar.
+#   - when-searching: Show the scrollbar when searching for text in the webpage. With the QtWebKit backend, this is equal to `never`.
+#   - overlay: Show an overlay scrollbar. On macOS, this is unavailable and equal to `when-searching`; with the QtWebKit backend, this is equal to `never`. Enabling/disabling overlay scrollbars requires a restart.
+c.scrolling.bar = 'when-searching'
+
 # Enable smooth scrolling for web pages. Note smooth scrolling does not
 # work with the `:scroll-px` command.
 # Type: Bool
 c.scrolling.smooth = True
-
-# When/how to show the scrollbar.
-# Type: String
-# Valid values:
-# always: Always show the scrollbar.
-# never: Never show the scrollbar.
-# when-searching: Show the scrollbar when searching for text in the webpage. With the QtWebKit backend, this is equal to never.
-# Default: overlay
-c.scrolling.bar = "when-searching"
 
 # Languages to use for spell checking. You can check for available
 # languages and install dictionaries using scripts/dictcli.py. Run the
@@ -312,7 +400,7 @@ c.scrolling.bar = "when-searching"
 #   - tr-TR: Turkish (Turkey)
 #   - uk-UA: Ukrainian (Ukraine)
 #   - vi-VN: Vietnamese (Viet Nam)
-c.spellcheck.languages = ["en-US"]
+c.spellcheck.languages = ['en-US']
 
 # When to show the statusbar.
 # Type: String
@@ -320,20 +408,20 @@ c.spellcheck.languages = ["en-US"]
 #   - always: Always show the statusbar.
 #   - never: Always hide the statusbar.
 #   - in-mode: Show the statusbar when in modes other than normal mode.
-c.statusbar.show = "always"
+c.statusbar.show = 'always'
 
 # List of widgets displayed in the statusbar.
 # Type: List of StatusbarWidget
 # Valid values:
-# url: Current page URL.
-# scroll: Percentage of the current page position like 10%.
-# scroll_raw: Raw percentage of the current page position like 10.
-# history: Display an arrow when possible to go back/forward in history.
-# tabs: Current active tab, e.g. 2.
-# keypress: Display pressed keys when composing a vi command.
-# progress: Progress bar for the current page loading.
-# text: foo: Display the static text after the colon, foo in the example.
-c.statusbar.widgets = ["keypress", "url", "scroll", "history", "tabs"]
+#   - url: Current page URL.
+#   - scroll: Percentage of the current page position like `10%`.
+#   - scroll_raw: Raw percentage of the current page position like `10`.
+#   - history: Display an arrow when possible to go back/forward in history.
+#   - tabs: Current active tab, e.g. `2`.
+#   - keypress: Display pressed keys when composing a vi command.
+#   - progress: Progress bar for the current page loading.
+#   - text:foo: Display the static text after the colon, `foo` in the example.
+c.statusbar.widgets = ['keypress', 'url', 'scroll', 'history', 'tabs']
 
 # When to show favicons in the tab bar. When switching this from never
 # to always/pinned, note that favicons might not be loaded yet, thus
@@ -343,7 +431,7 @@ c.statusbar.widgets = ["keypress", "url", "scroll", "history", "tabs"]
 #   - always: Always show favicons.
 #   - never: Always hide favicons.
 #   - pinned: Show favicons only on pinned tabs.
-c.tabs.favicons.show = "pinned"
+c.tabs.favicons.show = 'pinned'
 
 # How to behave when the last tab is closed. If the
 # `tabs.tabs_are_windows` setting is set, this is ignored and the
@@ -355,7 +443,7 @@ c.tabs.favicons.show = "pinned"
 #   - startpage: Load the start page.
 #   - default-page: Load the default page.
 #   - close: Close the window.
-c.tabs.last_close = "startpage"
+c.tabs.last_close = 'startpage'
 
 # Position of the tab bar.
 # Type: Position
@@ -364,7 +452,7 @@ c.tabs.last_close = "startpage"
 #   - bottom
 #   - left
 #   - right
-c.tabs.position = "bottom"
+c.tabs.position = 'bottom'
 
 # When to show the tab bar.
 # Type: String
@@ -373,7 +461,7 @@ c.tabs.position = "bottom"
 #   - never: Always hide the tab bar.
 #   - multiple: Hide the tab bar if only one tab is open.
 #   - switching: Show the tab bar when switching tabs.
-c.tabs.show = "never"
+c.tabs.show = 'never'
 
 # Duration (in milliseconds) to show the tab bar before hiding it when
 # tabs.show is set to 'switching'.
@@ -387,7 +475,7 @@ c.tabs.indicator.width = 2
 # Page to open if :open -t/-b/-w is used without URL. Use `about:blank`
 # for a blank page.
 # Type: FuzzyUrl
-c.url.default_page = "https://google.com"
+c.url.default_page = 'https://google.com'
 
 # Open base URL of the searchengine if a searchengine shortcut is
 # invoked without parameters.
@@ -413,22 +501,21 @@ c.url.open_base_url = True
 # the search engine name to the search term, e.g. `:open google
 # qutebrowser`.
 # Type: Dict
-c.url.searchengines = {
-    "DEFAULT": "https://www.google.com/search?q={}",
-    "aw": "https://wiki.archlinux.org/?search={}",
-    "s": "https://stackoverflow.com/search?q={}",
-    "w": "https://en.wikipedia.org/wiki/Special:Search?search={}",
-    "y": "https://www.youtube.com/results?search_query={}",
-}
+c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?q={}', 'aw': 'https://wiki.archlinux.org/?search={}', 's': 'https://stackoverflow.com/search?q={}', 'w': 'https://en.wikipedia.org/wiki/Special:Search?search={}', 'y': 'https://www.youtube.com/results?search_query={}'}
 
 # Page(s) to open at the start.
 # Type: List of FuzzyUrl, or FuzzyUrl
-c.url.start_pages = "https://google.com"
+c.url.start_pages = 'https://google.com'
 
 # Hide the window decoration.  This setting requires a restart on
 # Wayland.
 # Type: Bool
 c.window.hide_decoration = True
+
+# Format to use for the window title. The same placeholders like for
+# `tabs.title.format` are defined.
+# Type: FormatString
+c.window.title_format = '{perc}{current_title}'
 
 # Set the main window background to transparent.  This allows having a
 # transparent tab- or statusbar (might require a compositor such as
@@ -441,68 +528,88 @@ c.window.transparent = True
 
 # Default zoom level.
 # Type: Perc
-c.zoom.default = "100%"
+c.zoom.default = '100%'
 
 # Background color of the completion widget for odd rows.
 # Type: QssColor
-c.colors.completion.odd.bg = "#1a1b26"
+c.colors.completion.odd.bg = '#1a1b26'
 
 # Background color of the completion widget for even rows.
 # Type: QssColor
-c.colors.completion.even.bg = "#1a1b26"
+c.colors.completion.even.bg = '#1a1b26'
 
-c.colors.completion.category.bg = "#1a1b26"
-c.colors.completion.category.fg = "#afff00"
-c.colors.completion.item.selected.bg = "#afff00"
-c.colors.completion.item.selected.border.bottom = "#afff00"
-c.colors.completion.item.selected.border.top = "#afff00"
-c.colors.completion.scrollbar.fg = "#afff00"
-c.colors.completion.scrollbar.bg = "#1a1b26"
+# Foreground color of completion widget category headers.
+# Type: QtColor
+c.colors.completion.category.fg = '#afff00'
+
+# Background color of the completion widget category headers.
+# Type: QssColor
+c.colors.completion.category.bg = '#1a1b26'
+
+# Background color of the selected completion item.
+# Type: QssColor
+c.colors.completion.item.selected.bg = '#afff00'
+
+# Top border color of the selected completion item.
+# Type: QssColor
+c.colors.completion.item.selected.border.top = '#afff00'
+
+# Bottom border color of the selected completion item.
+# Type: QssColor
+c.colors.completion.item.selected.border.bottom = '#afff00'
 
 # Foreground color of the matched text in the selected completion item.
 # Type: QtColor
-c.colors.completion.item.selected.match.fg = "#ff0000"
+c.colors.completion.item.selected.match.fg = '#ff0000'
+
+# Color of the scrollbar handle in the completion view.
+# Type: QssColor
+c.colors.completion.scrollbar.fg = '#afff00'
+
+# Color of the scrollbar in the completion view.
+# Type: QssColor
+c.colors.completion.scrollbar.bg = '#1a1b26'
 
 # Background color of the statusbar.
 # Type: QssColor
-c.colors.statusbar.normal.bg = "#1a1b26"
+c.colors.statusbar.normal.bg = '#1a1b26'
 
 # Background color of the statusbar in command mode.
 # Type: QssColor
-c.colors.statusbar.command.bg = "#1a1b26"
+c.colors.statusbar.command.bg = '#1a1b26'
 
 # Background color of the progress bar.
 # Type: QssColor
-c.colors.statusbar.progress.bg = "white"
+c.colors.statusbar.progress.bg = 'white'
 
 # Background color of the tab bar.
 # Type: QssColor
-c.colors.tabs.bar.bg = "#d898eb"
+c.colors.tabs.bar.bg = '#d898eb'
 
 # Foreground color of unselected odd tabs.
 # Type: QtColor
-c.colors.tabs.odd.fg = "darkgrey"
+c.colors.tabs.odd.fg = 'darkgrey'
 
 # Foreground color of unselected even tabs.
 # Type: QtColor
-c.colors.tabs.even.fg = "grey"
+c.colors.tabs.even.fg = 'grey'
 
 # Foreground color of selected odd tabs.
 # Type: QtColor
-c.colors.tabs.selected.odd.fg = "white"
+c.colors.tabs.selected.odd.fg = 'white'
 
 # Background color of selected odd tabs.
 # Type: QtColor
-c.colors.tabs.selected.odd.bg = "#212121"
+c.colors.tabs.selected.odd.bg = '#212121'
 
 # Background color of selected even tabs.
 # Type: QtColor
-c.colors.tabs.selected.even.bg = "#212121"
+c.colors.tabs.selected.even.bg = '#212121'
 
 # Background color for webpages if unset (or empty to use the theme's
 # color).
 # Type: QtColor
-c.colors.webpage.bg = "white"
+c.colors.webpage.bg = 'white'
 
 # Value to use for `prefers-color-scheme:` for websites. The "light"
 # value is only available with QtWebEngine 5.15.2+. On older versions,
@@ -514,7 +621,7 @@ c.colors.webpage.bg = "white"
 #   - auto: Use the system-wide color scheme setting.
 #   - light: Force a light theme.
 #   - dark: Force a dark theme.
-c.colors.webpage.preferred_color_scheme = "dark"
+c.colors.webpage.preferred_color_scheme = 'dark'
 
 # Render all web contents using a dark theme. Example configurations
 # from Chromium's `chrome://flags`:  - "With simple HSL/CIELAB/RGB-based
@@ -538,41 +645,38 @@ c.colors.webpage.darkmode.grayscale.all = False
 # font setting, it's replaced with the fonts listed here. If set to an
 # empty value, a system-specific monospace default is used.
 # Type: List of Font, or Font
-c.fonts.default_family = "JetBrainsMono Nerd Font"
-
-c.fonts.web.family.fixed = "JetBrainsMono Nerd Font"
+c.fonts.default_family = 'JetBrainsMono Nerd Font'
 
 # Default font size to use. Whenever "default_size" is used in a font
 # setting, it's replaced with the size listed here. Valid values are
 # either a float value with a "pt" suffix, or an integer value with a
 # "px" suffix.
 # Type: String
-c.fonts.default_size = "9pt"
+c.fonts.default_size = '9pt'
 
 # Font used in the statusbar.
 # Type: Font
-c.fonts.statusbar = "default_size default_family"
+c.fonts.statusbar = 'default_size default_family'
 
 # Font used for selected tabs.
 # Type: Font
-c.fonts.tabs.selected = "10 default_family"
+c.fonts.tabs.selected = '10 default_family'
 
 # Font used for unselected tabs.
 # Type: Font
-c.fonts.tabs.unselected = "10 default_family"
+c.fonts.tabs.unselected = '10 default_family'
+
+# Font family for fixed fonts.
+# Type: FontFamily
+c.fonts.web.family.fixed = 'JetBrainsMono Nerd Font'
 
 # Default font size (in pixels) for regular text.
 # Type: Int
 c.fonts.web.size.default = 14
 
 # Bindings for normal mode
-config.bind(
-    "\\",
-    'spawn --userscript qute-pass --mode gopass --dmenu-invocation \'bemenu -i -p "" -l 20 --fn "JetBrainsMono Nerd Font 9" --nb "#1a1b26f2" --nf "#dfdfdf" --tb "#afff00" --tf "#1a1b26f2" --ff "#afff00" --fb "1a1b26f2" --hf "#1a1b26f2" --hb "#afff00"\'',
-)
-config.bind("pa", "spawn --detach mpv --no-video {url}")
-config.bind("pla", "hint links spawn --detach mpv --no-video {hint-url}")
-config.bind("plv", "hint links spawn --detach mpv {hint-url}")
-config.bind("pv", "spawn --detach mpv {url}")
-
-c.window.title_format = "{perc}{current_title}"
+config.bind('\\', 'spawn --userscript qute-pass --mode gopass --dmenu-invocation \'bemenu -i -p "\uf101" -l 20 --fn "JetBrainsMono Nerd Font 9" --nb "#1a1b26f2" --nf "#dfdfdf" --tb "#afff00" --tf "#1a1b26f2" --ff "#afff00" --fb "1a1b26f2" --hf "#1a1b26f2" --hb "#afff00"\'')
+config.bind('pa', 'spawn --detach mpv --no-video {url}')
+config.bind('pla', 'hint links spawn --detach mpv --no-video {hint-url}')
+config.bind('plv', 'hint links spawn --detach mpv {hint-url}')
+config.bind('pv', 'spawn --detach mpv {url}')
