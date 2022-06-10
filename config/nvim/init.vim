@@ -21,7 +21,6 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'petertriho/nvim-scrollbar'
 Plug 'kevinhwang91/nvim-hlslens'
-Plug 'NTBBloodbath/rest.nvim', { 'commit': 'e5f68db73276c4d4d255f75a77bbe6eff7a476ef' }
 
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
@@ -68,7 +67,6 @@ lua require('_devicons')
 lua require('_gitsigns')
 lua require('_lspconfig')
 lua require('_lualine')
-lua require('_rest')
 lua require('_scrollbar')
 lua require('_telescope')
 lua require('_todo-comments')
