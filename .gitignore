@@ -1,6 +1,5 @@
-config/qutebrowser/autoconfig.yml
-config/qutebrowser/qsettings/
-config/qutebrowser/bookmarks/
+config/qutebrowser/*
+!config/qutebrowser/config.py
 
 .vscode/
 config/nvim/spell/
