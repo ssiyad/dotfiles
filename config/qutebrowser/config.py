@@ -216,6 +216,18 @@ config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}; rv:90.0) Gecko
 # Type: FormatString
 config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99 Safari/537.36', 'https://*.slack.com/*')
 
+# List of URLs to host blocklists for the host blocker.  Only used when
+# the simple host-blocker is used (see `content.blocking.method`).  The
+# file can be in one of the following formats:  - An `/etc/hosts`-like
+# file - One host per line - A zip-file of any of the above, with either
+# only one file, or a file   named `hosts` (with any extension).  It's
+# also possible to add a local file or directory via a `file://` URL. In
+# case of a directory, all files in the directory are read as adblock
+# lists.  The file `~/.config/qutebrowser/blocked-hosts` is always read
+# if it exists.
+# Type: List of Url
+c.content.blocking.hosts.lists = ['https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts', 'https://raw.githubusercontent.com/Ewpratten/youtube_ad_blocklist/master/blocklist.txt']
+
 # Load images automatically in web pages.
 # Type: Bool
 config.set('content.images', True, 'chrome-devtools://*')
