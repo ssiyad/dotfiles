@@ -29,5 +29,5 @@ function f(split_cmd)
     return handler
 end
 
-return f
+vim.lsp.handlers["textDocument/definition"] = f('split')
 

@@ -1,5 +1,6 @@
 require('nvim-treesitter.configs').setup({
-    ensure_installed = { "lua" }, 
+    ensure_installed = {
+    }, 
     sync_install = true, 
     highlight = {
         enable = true, 

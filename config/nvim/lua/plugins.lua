@@ -83,7 +83,7 @@ local function init()
             -- https://github.com/nvim-lua/plenary.nvim/
             'nvim-lua/plenary.nvim'
         },
-        -- opt = true,
+        disabled = true,
         config = function() require('neogit').setup {} end
     }
 
