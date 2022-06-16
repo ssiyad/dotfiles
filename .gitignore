@@ -3,4 +3,5 @@ config/qutebrowser/*
 
 .vscode/
 config/nvim/spell/
+config/nvim/plugin
 
