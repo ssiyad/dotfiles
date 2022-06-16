@@ -39,6 +39,12 @@ local function init()
     -- https://github.com/neovim/nvim-lspconfig
     use 'neovim/nvim-lspconfig' 
 
+    -- L3MON4D3/LuaSnip: Snippet Engine for Neovim written in Lua
+    -- https://github.com/L3MON4D3/LuaSnip
+    use {
+        'L3MON4D3/LuaSnip'
+    }
+
     -- A completion plugin for neovim coded in Lua.
     -- https://github.com/hrsh7th/nvim-cmp
     use {
@@ -60,9 +66,9 @@ local function init()
             -- https://github.com/hrsh7th/cmp-cmdline
             'hrsh7th/cmp-cmdline',
 
-            -- nvim-cmp source for vim-vsnip
-            -- https://github.com/hrsh7th/cmp-vsnip
-            'hrsh7th/cmp-vsnip',
+            -- luasnip completion source for nvim-cmp
+            -- https://github.com/saadparwaiz1/cmp_luasnip
+            'saadparwaiz1/cmp_luasnip',
 
             -- Snippet plugin for vim/nvim that supports LSP/VSCode's snippet format.
             -- https://github.com/hrsh7th/vim-vsnip
