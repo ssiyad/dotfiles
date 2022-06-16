@@ -71,7 +71,7 @@ local function init()
             -- https://github.com/hrsh7th/cmp-nvim-lsp-signature-help
             'hrsh7th/cmp-nvim-lsp-signature-help'
         },
-        config = function() require 'config.lspconfig' end
+        config = function() require 'config.cmp' end
     }
 
     -- magit for neovim
@@ -93,7 +93,7 @@ local function init()
         'tpope/vim-fugitive',
         cmd = {
             'G',
-        },
+        }
     }
 
     -- comment stuff out
