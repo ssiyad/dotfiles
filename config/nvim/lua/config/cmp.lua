@@ -1,7 +1,14 @@
+-- Setup nvim-cmp.
+cmp = require('cmp')
+
+-- import luasnip
+luasnip = require('luasnip')
+
+-- utils
 has_words_before = require('utils.has_words_before')
 
--- Setup nvim-cmp.
-local cmp = require('cmp')
+-- update capabilities
+require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 cmp.setup({
     snippet = {
@@ -62,6 +69,4 @@ cmp.setup.cmdline(':', {
             { name = 'cmdline' }
         })
 })
-
-require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
