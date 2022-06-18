@@ -149,7 +149,7 @@ local function init()
             -- https://github.com/kyazdani42/nvim-web-devicons
             {
                 'kyazdani42/nvim-web-devicons',
-                config = function() require 'config.devicons' end
+                config = function() require 'nvim-web-devicons' .setup {} end
             }
         },
         config = function() require 'config.tree' end

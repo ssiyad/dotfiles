@@ -18,7 +18,7 @@ local snippet = {
 
 local mapping = cmp.mapping.preset.insert({
     -- scroll doc up
-    ['<C-b>'] = cmp.mapping.scroll_docs(-5),
+    ['<C-d>'] = cmp.mapping.scroll_docs(-5),
 
     -- scroll doc down
     ['<C-f>'] = cmp.mapping.scroll_docs(5),
