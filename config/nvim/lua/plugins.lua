@@ -198,7 +198,19 @@ local function init()
             'css',
             'html'
         },
-        config = function() require 'config.colorizer' end
+        config = function() require 'colorizer' setup {} end
+    }
+
+    -- Highlight, list and search todo comments
+    -- https://github.com/folke/todo-comments.nvim
+    use {
+        "folke/todo-comments.nvim",
+        requires = {
+            -- lua utils
+            -- https://github.com/nvim-lua/plenary.nvim/
+            'nvim-lua/plenary.nvim'
+        },
+        config = function() require "todo-comments" .setup {} end
     }
 end
 
