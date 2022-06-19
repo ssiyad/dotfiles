@@ -1,9 +1,17 @@
+-- basic settings
 require 'settings.base'
+
+-- keymaps
 require 'settings.keymaps'
 
+-- lsp config
 require 'lsp'
 
-vim.cmd [[ command! WhatHighlight :call util#syntax_stack() ]]
+-- snippets
+require 'snippets'
+
+-- vim.cmd [[ command! WhatHighlight :call util#syntax_stack() ]]
+-- packer commands
 vim.cmd [[ command! PackerInstall packadd packer.nvim | lua require('plugins').install() ]]
 vim.cmd [[ command! PackerUpdate packadd packer.nvim | lua require('plugins').update() ]]
 vim.cmd [[ command! PackerSync packadd packer.nvim | lua require('plugins').sync() ]]

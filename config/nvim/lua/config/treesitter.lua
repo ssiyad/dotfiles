@@ -15,7 +15,7 @@ require('nvim-treesitter.configs').setup({
         enable = true
     },
     matchup = {
-        enable = true,              
+        enable = true
     },
     indent = {
         enable = true

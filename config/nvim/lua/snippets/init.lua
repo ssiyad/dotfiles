@@ -1,0 +1,2 @@
+require('snippets.typescript')
+
