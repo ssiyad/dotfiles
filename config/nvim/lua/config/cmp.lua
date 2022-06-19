@@ -64,7 +64,7 @@ local sources = cmp.config.sources({
         group_index = 2
     },
     {
-        name = 'luansip',
+        name = 'luasnip',
         group_index = 3
     },
     {
