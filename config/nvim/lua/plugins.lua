@@ -17,14 +17,7 @@ local function init()
     if packer == nil then
         packer = require 'packer'
         packer.init {
-            disable_commands = true,
-            display = {
-                open_fn = function()
-                    return require('packer.util').float {
-                        border = 'none',
-                    }
-                end
-            }
+            disable_commands = true
         }
     end
 
