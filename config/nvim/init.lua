@@ -1,3 +1,6 @@
+-- cache
+require 'impatient'
+
 -- settings
 require 'settings'
 

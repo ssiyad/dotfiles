@@ -29,6 +29,14 @@ local function init()
     -- https://github.com/wbthomason/packer.nvim
     use 'wbthomason/packer.nvim'
 
+    -- Improve startup time for Neovim
+    -- https://github.com/lewis6991/impatient.nvim
+    use 'lewis6991/impatient.nvim'
+
+    -- A faster version of filetype.vim
+    -- https://github.com/nathom/filetype.nvim
+    use "nathom/filetype.nvim" 
+
     -- Quickstart configs for Nvim LSP
     -- https://github.com/neovim/nvim-lspconfig
     use 'neovim/nvim-lspconfig' 
@@ -128,6 +136,14 @@ local function init()
         run = ':exec doge#install()'
     }
 
+    -- Neovim plugin to preview the contents of the registers
+    -- https://github.com/tversteeg/registers.nvim
+    use 'tversteeg/registers.nvim'
+
+    -- The undo history visualizer for VIM
+    -- https://github.com/mbbill/undotree#usage
+    use 'mbbill/undotree'
+
     -- A file explorer tree for neovim written in lua
     -- https://github.com/kyazdani42/nvim-tree.lua
     use {
@@ -141,6 +157,13 @@ local function init()
             }
         },
         config = function() require 'config.tree' end
+    }
+
+    -- autopairs for neovim
+    -- https://github.com/windwp/nvim-autopairs
+    use {
+        'windwp/nvim-autopairs',
+        config = function() require 'config.autopairs' end
     }
 
     -- Extensible Neovim Scrollbar
