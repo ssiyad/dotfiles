@@ -1,23 +1,24 @@
 local packer = nil
-local function init()
-    -- install packer if not present
-    local git_repo = 'https://github.com/wbthomason/packer.nvim'
-    local install_path = vim.fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-    if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-        packer_bootstrap = vim.fn.system {
-            'git',
-            'clone',
-            '--depth',
-            '1',
-            git_repo,
-            install_path
-        }
-    end
 
+local function init()
     if packer == nil then
+        -- install packer if not present
+        local git_repo = 'https://github.com/wbthomason/packer.nvim'
+        local install_path = vim.fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+        if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
+            packer_bootstrap = vim.fn.system {
+                'git',
+                'clone',
+                '--depth',
+                '1',
+                git_repo,
+                install_path
+            }
+        end
+
         packer = require 'packer'
         packer.init {
-            disable_commands = true
+            auto_clean = true
         }
     end
 
@@ -34,9 +35,7 @@ local function init()
 
     -- L3MON4D3/LuaSnip: Snippet Engine for Neovim written in Lua
     -- https://github.com/L3MON4D3/LuaSnip
-    use {
-        'L3MON4D3/LuaSnip'
-    }
+    use 'L3MON4D3/LuaSnip'
 
     -- A completion plugin for neovim coded in Lua.
     -- https://github.com/hrsh7th/nvim-cmp
@@ -63,10 +62,6 @@ local function init()
             -- https://github.com/saadparwaiz1/cmp_luasnip
             'saadparwaiz1/cmp_luasnip',
 
-            -- Snippet plugin for vim/nvim that supports LSP/VSCode's snippet format.
-            -- https://github.com/hrsh7th/vim-vsnip
-            'hrsh7th/vim-vsnip',
-
             -- https://github.com/hrsh7th/cmp-nvim-lsp-signature-help
             'hrsh7th/cmp-nvim-lsp-signature-help'
         },
@@ -86,14 +81,13 @@ local function init()
         config = function() require('neogit').setup {} end
     }
 
+    -- Delete/change/add parentheses/quotes/XML-tags/much more with ease
+    -- https://github.com/tpope/vim-surround
+    use 'tpope/vim-surround'
+
     -- Git wrapper
     -- https://github.com/tpope/vim-fugitive
-    use {
-        'tpope/vim-fugitive',
-        cmd = {
-            'G',
-        }
-    }
+    use 'tpope/vim-fugitive'
 
     -- comment stuff out
     -- https://github.com/tpope/vim-commentary
@@ -123,6 +117,7 @@ local function init()
             -- https://github.com/nvim-lua/plenary.nvim/
             'nvim-lua/plenary.nvim'
         },
+        cmd = 'Telescope',
         config = function() require 'config.telescope' end
     }
 
@@ -164,10 +159,7 @@ local function init()
 
     -- Hlsearch Lens for Neovim
     -- https://github.com/kevinhwang91/nvim-hlslens
-    use {
-        'kevinhwang91/nvim-hlslens',
-        config = function() require 'config.hlslens' end
-    }
+    use 'kevinhwang91/nvim-hlslens'
 
     -- A clean, dark Neovim theme written in Lua
     -- https://github.com/folke/tokyonight.nvim

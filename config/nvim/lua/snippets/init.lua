@@ -1,2 +1,0 @@
-require('snippets.typescript')
-
