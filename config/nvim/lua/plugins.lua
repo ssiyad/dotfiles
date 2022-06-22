@@ -182,17 +182,19 @@ local function init()
     -- https://github.com/mbbill/undotree#usage
     use 'mbbill/undotree'
 
+    -- lua `fork` of vim-web-devicons for neovim
+    -- https://github.com/kyazdani42/nvim-web-devicons
+    {
+        'kyazdani42/nvim-web-devicons',
+        config = function() require 'nvim-web-devicons' .setup {} end
+    }
+
     -- A file explorer tree for neovim written in lua
     -- https://github.com/kyazdani42/nvim-tree.lua
     use {
         'kyazdani42/nvim-tree.lua',
         requires = {
-            -- lua `fork` of vim-web-devicons for neovim
-            -- https://github.com/kyazdani42/nvim-web-devicons
-            {
-                'kyazdani42/nvim-web-devicons',
-                config = function() require 'nvim-web-devicons' .setup {} end
-            }
+            'kyazdani42/nvim-web-devicons',
         },
         config = function() require 'config.tree' end
     }
