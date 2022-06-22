@@ -246,7 +246,7 @@ local function init()
             'css',
             'html'
         },
-        config = function() require 'colorizer' setup {} end
+        config = function() require 'config.colorizer' end
     }
 
     -- Highlight, list and search todo comments
