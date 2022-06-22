@@ -1,4 +1,10 @@
 require'nvim-tree'.setup({
+    hijack_unnamed_buffer_when_opening = true,
+    update_focused_file = {
+        enable = true,
+        update_cwd = true,
+        update_root = false,
+    },
     hijack_cursor = true,
     git = {
         enable = true,
@@ -7,6 +13,7 @@ require'nvim-tree'.setup({
     },
     diagnostics = {
         enable = true,
+        show_on_dirs = true,
         icons = {
             hint = "",
             info = "",
@@ -15,15 +22,24 @@ require'nvim-tree'.setup({
         }
     },
     view = {
-        hide_root_folder = true,
+        adaptive_size = true,
         auto_resize = true,
+        centralize_selection = true,
+        hide_root_folder = true,
         side = 'left',
+        signcolumn = "yes"
     },
     renderer = {
         group_empty = true,
+        highlight_git = true,
+        highlight_opened_files = "icon",
         indent_markers = {
             enable = true,
         }
+    },
+    filesystem_watchers = {
+        enable = true,
+        interval = 500,
     },
 })
 
