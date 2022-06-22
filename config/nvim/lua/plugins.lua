@@ -35,7 +35,7 @@ local function init()
 
     -- A faster version of filetype.vim
     -- https://github.com/nathom/filetype.nvim
-    use "nathom/filetype.nvim" 
+    use 'nathom/filetype.nvim' 
 
     -- Quickstart configs for Nvim LSP
     -- https://github.com/neovim/nvim-lspconfig
@@ -119,14 +119,52 @@ local function init()
     -- Find/List
     -- https://github.com/nvim-telescope/telescope.nvim
     use {
-        'nvim-telescope/telescope.nvim',
-        requires = {
-            -- lua utils
-            -- https://github.com/nvim-lua/plenary.nvim/
-            'nvim-lua/plenary.nvim'
+        {
+            'nvim-telescope/telescope.nvim',
+            requires = {
+                -- lua utils
+                -- https://github.com/nvim-lua/plenary.nvim/
+                'nvim-lua/plenary.nvim'
+            },
+            cmd = 'Telescope',
+            config = function() require 'config.telescope' end
         },
-        cmd = 'Telescope',
-        config = function() require 'config.telescope' end
+
+        -- Telescope.nvim extension that offers intelligent prioritization when
+        -- selecting files from editing history
+        -- https://github.com/nvim-telescope/telescope-frecency.nvim
+        {
+            'nvim-telescope/telescope-frecency.nvim',
+            requires = {
+                'nvim-telescope/telescope.nvim',
+                'tami5/sqlite.lua'
+            },
+            after = 'telescope.nvim',
+            config = function() require('telescope').load_extension('frecency') end
+        },
+
+        -- FZF sorter for telescope written in c
+        -- https://github.com/nvim-telescope/telescope-fzf-native.nvim
+        {
+            'nvim-telescope/telescope-fzf-native.nvim',
+            requires = {
+                'nvim-telescope/telescope.nvim'
+            },
+            run = 'make',
+            after = 'telescope.nvim',
+            config = function() require('telescope').load_extension('fzf') end
+        },
+
+        -- File Browser extension for telescope.nvim
+        -- https://github.com/nvim-telescope/telescope-file-browser.nvim
+        {
+            'nvim-telescope/telescope-file-browser.nvim',
+            requires = {
+                'nvim-telescope/telescope.nvim'
+            },
+            after = 'telescope.nvim',
+            config = function() require('telescope').load_extension('file_browser') end
+        }
     }
 
     -- (Do)cumentation (Ge)nerator 10+ languages
@@ -212,13 +250,13 @@ local function init()
     -- Highlight, list and search todo comments
     -- https://github.com/folke/todo-comments.nvim
     use {
-        "folke/todo-comments.nvim",
+        'folke/todo-comments.nvim',
         requires = {
             -- lua utils
             -- https://github.com/nvim-lua/plenary.nvim/
             'nvim-lua/plenary.nvim'
         },
-        config = function() require "todo-comments" .setup {} end
+        config = function() require 'todo-comments' .setup {} end
     }
 end
 
