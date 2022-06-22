@@ -35,5 +35,5 @@ set('n', '<Leader>fr', ':Telescope lsp_references<CR>', opts)
 set('n', '<Leader>ft', ':TodoTelescope<CR>', opts)
 set('n', '<Leader>gc', ':Telescope git_commits<CR>', opts)
 
-set('n', '<C-o>', ':NvimTreeToggle<CR>', opts)
+set('n', '<C-\\>', ':NvimTreeToggle<CR>', opts)
 
