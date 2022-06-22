@@ -184,7 +184,7 @@ local function init()
 
     -- lua `fork` of vim-web-devicons for neovim
     -- https://github.com/kyazdani42/nvim-web-devicons
-    {
+    use {
         'kyazdani42/nvim-web-devicons',
         config = function() require 'nvim-web-devicons' .setup {} end
     }
