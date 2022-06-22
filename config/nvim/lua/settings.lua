@@ -12,6 +12,7 @@ opt.foldmethod = 'expr'
 opt.guicursor = ''
 opt.ignorecase = true
 opt.incsearch = true
+opt.laststatus = 3
 opt.number = true
 opt.relativenumber = true
 opt.shiftwidth = 4
