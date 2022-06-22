@@ -1,30 +1,32 @@
+@import 'tokyonight.css';
+
 * {
     font-family: 'JetBrainsMono Nerd Font';
     font-size: 12px;
 }
 
 window#waybar {
-    color: whitesmoke;
-    background-color: #1a1b26;
+    color: @bright_yellow;
+    background-color: @background;
 }
 
 #workspaces button {
     padding: 0;
     margin: 0;
-    color: #777;
+    color: @bright_black;
     border: none;
     border-radius: 0;
     padding: 0 2px;
 }
 
 #workspaces button.focused {
-    background-color: #444;
-    color: #dfdfdf;
+    background-color: @bright_black;
+    color: @foreground;
 }
 
 #mode {
-    background: blueviolet;
-    color: #201C1C;
+    background: @foreground;
+    color: @background;
     padding: 0 4px;
 }
 
@@ -33,62 +35,62 @@ window#waybar {
 }
 
 #pulseaudio {
-    color: paleturquoise;
+    color: @cyan;
     margin-right: 8px;
 }
 
 #backlight {
-    color: khaki;
+    color: @yellow;
     margin-right: 8px;
 }
 
 #battery {
-    color: lightseagreen;
+    color: @white;
     margin-right: 8px;
 }
 
 #battery.charging {
-    color: yellowgreen;
+    color: @bright_green;
 }
 
 #battery.full {
-    color: yellow;
+    color: @yellow;
     animation: blinker 1s linear infinite;
 }
 
 #battery.discharging.warning {
-    color: orangered;
+    color: @red;
     animation: blinker 1s linear infinite;
 }
 
 #battery.discharging.critical {
-    color: red;
+    color: @bright_red;
     animation: blinker 1s linear infinite;
 }
 
 #network {
-    color: greenyellow;
+    color: @green;
     margin-right: 8px;
 }
 
 #cpu {
-    color: cornflowerblue;
+    color: @blue;
     margin-right: 8px;
 }
 
 #memory {
-    color: blueviolet;
+    color: @magenta;
     margin-right: 8px;
 }
 
 #clock {
-    color: lightgoldenrodyellow;
+    color: @bright_yellow;
     margin-right: 8px;
 }
 
 #tray {
-    background-color: #444;
-    color: #dfdfdf;
+    background-color: @bright_black;
+    color: @foreground;
     padding: 0 8px;
     border-radius: 6px 0 0 8px;
 }
