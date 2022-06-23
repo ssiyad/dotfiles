@@ -44,7 +44,7 @@ pdfjs
 pipewire
 pipewire-media-session
 pipewire-pulse
-postgresql
+pyenv
 pyright
 python-pipenv
 python-tldextract
