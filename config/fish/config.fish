@@ -19,6 +19,8 @@ if status is-login
     end
 end
 
+set fish_greeting
+
 # TokyoNight Color Palette
 set -l foreground c0caf5
 set -l selection 33467C
