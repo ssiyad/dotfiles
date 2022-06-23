@@ -64,9 +64,9 @@ bindsym $mod+p focus parent
 # focus the child container
 bindsym $mod+c focus child
 
-client.focused          #78b3bd #23252e #78b3bd #bcc3d2 #78b3bd
-client.unfocused        #242c34 #23252e #242c34 #bcc3d2 #242c34
-client.focused_inactive #78b3bd #23252e #242c34 #bcc3d2 #242c34
+client.focused          #9d7cd8 #1a1b26 #9d7cd8 #7dcfff #9d7cd8
+client.unfocused        #33467c #1a1b26 #33467c #7dcfff #33467c
+client.focused_inactive #9d7cd8 #1a1b26 #33467c #7dcfff #33467c
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
