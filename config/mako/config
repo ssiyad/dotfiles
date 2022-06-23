@@ -1,8 +1,21 @@
-icons=0
-max-visible=7
-font=JetBrainsMono Nerd Font 9
-width=400
-padding=10
+background-color=#1a1b26
+border-color=#9ece6a
 default-timeout=10000
-background-color=#1a1b26f2
-border-color=#afff00
+font=JetBrainsMono Nerd Font 9
+group-by=app-name,urgency,body,summary
+icons=0
+layer=overlay
+max-visible=7
+padding=10
+sort=-priority
+text-color=#c0caf5
+width=400
+
+[urgency=low]
+border-color=#e0af68
+
+[urgency=critical]
+border-color=#f7768e
+
+[mode=do-not-disturb]
+invisible=1
