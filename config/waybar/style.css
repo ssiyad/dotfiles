@@ -6,7 +6,7 @@
 }
 
 window#waybar {
-    color: @bright_yellow;
+    color: @foreground;
     background-color: @background;
 }
 
