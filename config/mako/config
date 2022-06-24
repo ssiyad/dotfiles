@@ -6,6 +6,7 @@ group-by=app-name,urgency,body,summary
 icons=0
 layer=overlay
 max-visible=7
+on-notify=exec mpv ~/dotfiles/notification.oga
 padding=10
 sort=-priority
 text-color=#c0caf5
