@@ -6,7 +6,7 @@ group-by=app-name,urgency,body,summary
 icons=0
 layer=overlay
 max-visible=7
-on-notify=exec mpv ~/dotfiles/notification.oga
+on-notify=exec mpv ~/dotfiles/sounds/notification-normal.oga
 padding=10
 sort=-priority
 text-color=#c0caf5
@@ -14,9 +14,11 @@ width=400
 
 [urgency=low]
 border-color=#e0af68
+on-notify=exec mpv ~/dotfiles/sounds/notification-low.oga
 
 [urgency=critical]
 border-color=#f7768e
+on-notify=exec mpv ~/dotfiles/sounds/notification-critical.oga
 
 [mode=do-not-disturb]
 invisible=1
