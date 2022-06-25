@@ -11,6 +11,6 @@ alacritty \
             --use-xdg-de \
             --no-generic \
             --display-binary \
-            --dmenu 'fzf --reverse' \
+            --dmenu 'fzf' \
             --wrapper 'sway exec' \
 

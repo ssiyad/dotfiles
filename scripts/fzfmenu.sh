@@ -18,7 +18,7 @@ alacritty \
     --option 'window.dimensions.columns=100' \
     --option 'window.dimensions.lines=13' \
     --command \
-        bash -c "cat $input | fzf --reverse $(printf -- " '%s'" "$@" | sed "s/^ ''$//") | tee $output" & disown
+        bash -c "cat $input | fzf $(printf -- " '%s'" "$@" | sed "s/^ ''$//") | tee $output" & disown
 
 # handle ctrl+c outside child terminal window
 trap "kill $! 2>/dev/null; rm -f $input $output" EXIT

@@ -3,6 +3,15 @@ if status is-interactive
 end
 
 set -Ux EDITOR nvim
+set -Ux TERM xterm
+set -Ux MOZ_ENABLE_WAYLAND 1
+set -Ux XDG_SESSION_TYPE wayland
+set -Ux XDG_CURRENT_DESKTOP sway
+set -Ux QT_QPA_PLATFORM wayland
+set -Ux QT_WAYLAND_DISABLE_WINDOWDECORATION 1
+set -Ux J2D_UISCALE 1
+set -Ux _JAVA_AWT_WM_NONREPARENTING 1
+set -Ux FZF_DEFAULT_OPTS "--reverse --color bg+:magenta --color fg+:black --color prompt:cyan --color info:green --color pointer:magenta --color hl:red --color hl+:bright-black --prompt ' » '"
 
 alias mkdir="mkdir -pv"
 alias ls="ls -aFGh --color=always"
