@@ -15,6 +15,8 @@ chmod 600 $input $output
 alacritty \
     --title fzfmenu \
     --class term_float \
+    --option 'window.dimensions.columns=100' \
+    --option 'window.dimensions.lines=13' \
     --command \
         bash -c "cat $input | fzf --reverse $(printf -- " '%s'" "$@" | sed "s/^ ''$//") | tee $output" & disown
 

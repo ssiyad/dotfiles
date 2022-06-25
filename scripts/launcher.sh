@@ -3,6 +3,8 @@
 alacritty \
     --title Applications \
     --class term_float \
+    --option 'window.dimensions.columns=100' \
+    --option 'window.dimensions.lines=13' \
     --command  \
         j4-dmenu-desktop \
             --term alacritty \
