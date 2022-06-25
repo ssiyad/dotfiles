@@ -552,7 +552,7 @@ c.colors.completion.even.bg = '#1a1b26'
 
 # Foreground color of completion widget category headers.
 # Type: QtColor
-c.colors.completion.category.fg = '#afff00'
+c.colors.completion.category.fg = '#bb9af7'
 
 # Background color of the completion widget category headers.
 # Type: QssColor
@@ -560,23 +560,23 @@ c.colors.completion.category.bg = '#1a1b26'
 
 # Background color of the selected completion item.
 # Type: QssColor
-c.colors.completion.item.selected.bg = '#afff00'
+c.colors.completion.item.selected.bg = '#bb9af7'
 
 # Top border color of the selected completion item.
 # Type: QssColor
-c.colors.completion.item.selected.border.top = '#afff00'
+c.colors.completion.item.selected.border.top = '#bb9af7'
 
 # Bottom border color of the selected completion item.
 # Type: QssColor
-c.colors.completion.item.selected.border.bottom = '#afff00'
+c.colors.completion.item.selected.border.bottom = '#bb9af7'
 
 # Foreground color of the matched text in the selected completion item.
 # Type: QtColor
-c.colors.completion.item.selected.match.fg = '#ff0000'
+c.colors.completion.item.selected.match.fg = '#414868'
 
 # Color of the scrollbar handle in the completion view.
 # Type: QssColor
-c.colors.completion.scrollbar.fg = '#afff00'
+c.colors.completion.scrollbar.fg = '#bb9af7'
 
 # Color of the scrollbar in the completion view.
 # Type: QssColor
@@ -592,7 +592,7 @@ c.colors.statusbar.command.bg = '#1a1b26'
 
 # Background color of the progress bar.
 # Type: QssColor
-c.colors.statusbar.progress.bg = 'white'
+c.colors.statusbar.progress.bg = '#a9b1d6'
 
 # Background color of the tab bar.
 # Type: QssColor
@@ -608,7 +608,7 @@ c.colors.tabs.even.fg = 'grey'
 
 # Foreground color of selected odd tabs.
 # Type: QtColor
-c.colors.tabs.selected.odd.fg = 'white'
+c.colors.tabs.selected.odd.fg = '#a9b1d6'
 
 # Background color of selected odd tabs.
 # Type: QtColor
@@ -621,7 +621,7 @@ c.colors.tabs.selected.even.bg = '#212121'
 # Background color for webpages if unset (or empty to use the theme's
 # color).
 # Type: QtColor
-c.colors.webpage.bg = 'white'
+c.colors.webpage.bg = '#1a1b26'
 
 # Value to use for `prefers-color-scheme:` for websites. The "light"
 # value is only available with QtWebEngine 5.15.2+. On older versions,
