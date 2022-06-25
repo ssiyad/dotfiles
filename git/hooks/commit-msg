@@ -1,0 +1,13 @@
+#!/bin/sh
+
+test "" = "$(grep '^Signed-off-by: ' "$1" |
+    sort | uniq -c | sed -e '/^[ 	]*1[ 	]/d')" || {
+    echo >&2 Duplicate Signed-off-by lines.
+    exit 1
+}
+
+WORDS=$(aspell --mode=email --add-email-quote='#' list < "$1" | sort -u)
+if [ -n "$WORDS" ]; then
+    printf "\e[1;33mPossible spelling errors found in commit message:\n\e[0m\e[0;31m%s\n\e[0m\e[1;33m" "$WORDS" >&2
+fi
+
