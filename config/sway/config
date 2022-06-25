@@ -149,10 +149,6 @@ exec swayidle -w &
 # udiskie for automatic usb management
 exec udiskie &
 
-# Clipboard
-# exec wl-paste -w wl-paste >> /tmp/clipboard &
-exec wl-paste -w ~/dotfiles/scripts/wl-cb.sh &
-
 default_border pixel 1
 default_floating_border pixel 1
 smart_gaps on

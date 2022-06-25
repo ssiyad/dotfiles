@@ -1,17 +1,11 @@
 #!/bin/bash
 
-TERM=kitty
-
-function bemenu_show_raw {
-    printf "$@" | bemenu -i -p "" -l 20 --fn "JetBrainsMono Nerd Font 9" --nb "#1a1b26f2" --nf "#dfdfdf" --tb "#afff00" --tf "#1a1b26f2" --ff "#afff00" --fb "1a1b26f2" --hf "#1a1b26f2" --hb "#afff00"
-}
-
-function bemenu_show {
-    bemenu_show_raw "$@" | sed -r 's/ /-/g'
+function show_menu {
+    printf "$@" | ~/dotfiles/scripts/fzfmenu.sh
 }
 
 function go-pass {
-    gopass -c $(bemenu_show "$(gopass list --flat)")
+    gopass -c $(show_menu "$(gopass list --flat | sed 's/\n/\\n/g')")
 }
 
 function screenshot {
@@ -28,6 +22,7 @@ function screenshot {
         wl-copy < $dest
         notify-send "grim" "window screenshot saved as $dest"
     }
+
     function partial {
         dest="$HOME/Screenshots/$(date '+%F-%T-%a')_partial.png"
         grim -g "$(slurp)" $dest
@@ -35,7 +30,7 @@ function screenshot {
         notify-send "grim" "partial screenshot saved as $dest"
     }
 
-    choice=$(bemenu_show "full\nwindow\npartial")
+    choice=$(show_menu "full\nwindow\npartial")
     $choice
 }
 
@@ -55,24 +50,17 @@ function screencapture {
         notify-send "screencapture" "screen capturing stopped"
     }
 
-    choice=$(bemenu_show "start\nstop")
+    choice=$(show_menu "start\nstop")
     $choice
 }
 
-function clipboard {
-    choice=$(bemenu_show_raw "$(grep -m 1 -H '.' /tmp/clipboard/* | tac | sed -r 's/\/tmp\/clipboard\///g' | sed -r 's/:/ /')")
-    read -ra array <<< $choice
-    [[ -z $choice ]] && exit 0
-    wl-copy < /tmp/clipboard/${array[0]}
-    rm /tmp/clipboard/${array[0]}
-}
-
 function power-menu {
-    choice=$(bemenu_show "poweroff\nreboot\nsuspend\nhibernate")
+    choice=$(show_menu "poweroff\nreboot\nsuspend\nhibernate")
     [[ -z $choice ]] && exit 0
     systemctl $choice
 }
 
-choice=$(bemenu_show "go-pass\nscreenshot\nscreencapture\nclipboard\npower-menu")
-[[ -z $choice ]] && exit 0
+choices="go-pass\nscreenshot\nscreencapture\npower-menu"
+choice=$(show_menu $choices)
 $choice
+
