@@ -6,6 +6,7 @@ return require('lspconfig').tsserver.setup {
         'typescript',
         'typescriptreact',
         'typescript.tsx' 
-    }
+    },
+    on_attach = require 'lsp.on_attach'
 }
 
