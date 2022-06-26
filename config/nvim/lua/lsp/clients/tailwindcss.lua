@@ -3,6 +3,7 @@ return require('lspconfig').tailwindcss.setup {
         "javascriptreact",
         "typescriptreact",
     },
-    on_attach = require 'lsp.on_attach'
+    on_attach = require 'lsp.on_attach',
+    handlers = require 'lsp.handlers'
 }
 
