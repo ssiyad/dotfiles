@@ -1,4 +1,4 @@
-function f(split_cmd)
+function f()
     local util = vim.lsp.util
     local log = require("vim.lsp.log")
     local api = vim.api
@@ -9,10 +9,13 @@ function f(split_cmd)
             return nil
         end
 
-        if split_cmd then
-            vim.cmd(split_cmd)
+        -- (v)split depending on window orientation
+        if vim.api.nvim_win_get_width(0) > (vim.api.nvim_win_get_height(0) * 3) then
+            vim.cmd('vsplit')
+        else
+            vim.cmd('split')
         end
-
+        
         if vim.tbl_islist(result) then
             util.jump_to_location(result[1])
 
@@ -29,5 +32,5 @@ function f(split_cmd)
     return handler
 end
 
-vim.lsp.handlers["textDocument/definition"] = f('split')
+vim.lsp.handlers["textDocument/definition"] = f()
 
