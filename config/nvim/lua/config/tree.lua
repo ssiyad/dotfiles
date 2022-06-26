@@ -23,7 +23,6 @@ require'nvim-tree'.setup({
     },
     view = {
         adaptive_size = true,
-        auto_resize = true,
         centralize_selection = true,
         hide_root_folder = true,
         side = 'left',
