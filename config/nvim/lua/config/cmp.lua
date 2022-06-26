@@ -27,12 +27,18 @@ local mapping = cmp.mapping.preset.insert({
     ['<C-e>'] = cmp.mapping.abort(),
 
     -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-    ['<C-Space>'] = cmp.mapping.confirm({ select = true }), 
-    
+    ['<C-Space>'] = cmp.mapping.confirm({
+        select = true
+    }), 
+
     -- scroll down with luasnip
     ["<Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
-            cmp.select_next_item()
+            cmp.select_next_item({
+                behavior = {
+                    select = false
+                }
+            })
         elseif luasnip.expand_or_jumpable() then
             luasnip.expand_or_jump()
         elseif has_words_before() then
@@ -45,7 +51,11 @@ local mapping = cmp.mapping.preset.insert({
     -- scroll up with luasnip
     ["<S-Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
-            cmp.select_prev_item()
+            cmp.select_prev_item({
+                behavior = {
+                    select = false
+                }
+            })
         elseif luasnip.jumpable(-1) then
             luasnip.jump(-1)
         else
@@ -73,10 +83,24 @@ local sources = cmp.config.sources({
     }
 })
 
+local window = {
+    completion = {
+        border = 'solid',
+        col_offset = 2
+    },
+    documentation = {
+        border = 'solid'
+    }
+}
+
 cmp.setup({
-    snippet = snippet,
     mapping = mapping,
-    sources = sources
+    snippet = snippet,
+    sources = sources,
+    window = window,
+    experimental = {
+        ghost_text = true
+    }
 })
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
