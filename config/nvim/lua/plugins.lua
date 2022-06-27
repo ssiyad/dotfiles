@@ -95,7 +95,14 @@ local function init()
 
     -- Git wrapper
     -- https://github.com/tpope/vim-fugitive
-    use 'tpope/vim-fugitive'
+    use {
+        'tpope/vim-fugitive',
+        requires = {
+            -- GitHub extension for fugitive.vim
+            -- https://github.com/tpope/vim-rhubarb
+            'https://github.com/tpope/vim-rhubarb'
+        }
+    }
 
     -- comment stuff out
     -- https://github.com/tpope/vim-commentary
