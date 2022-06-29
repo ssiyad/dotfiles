@@ -11,7 +11,6 @@ vim.api.nvim_create_autocmd('CursorHold', {
             },
             focusable = true,
             header = '',
-            max_width = vim.api.nvim_win_get_width(0) / 2,
             prefix = '',
             scope = 'line',
             source = 'if_many',
