@@ -1,5 +1,7 @@
 #!/bin/sh
 
+~/dotfiles/git/hooks/run-local-hook prepare-commit-msg
+
 COMMIT_MSG_FILE=$1
 COMMIT_SOURCE=$2
 SHA1=$3
