@@ -1,6 +1,8 @@
 alacritty
 amd-ucode
 android-file-transfer
+aspell
+aspell-en
 aurpublish
 base
 bluez
@@ -40,9 +42,9 @@ npm
 obs-studio
 pamixer
 parted
+pavucontrol
 pdfjs
 pipewire
-pipewire-media-session
 pipewire-pulse
 pyenv
 pyright
@@ -60,8 +62,10 @@ swaybg
 swayidle
 task
 the_silver_searcher
+timew
 transmission-cli
 tree
+ttf-jetbrains-mono
 typescript-language-server
 udiskie
 ufw
@@ -72,6 +76,7 @@ waybar
 wf-recorder
 wget
 whois
+wireplumber
 wl-clipboard
 xdg-desktop-portal
 xorg-xwayland
