@@ -1,18 +1,19 @@
 require('telescope').setup {
     defaults = require('telescope.themes').get_dropdown({
-        borderchars = { '─',
-            '│',
-            '─',
-            '│',
-            '┌',
-            '┐',
-            '┘',
-            '└'
+        borderchars = {
+            ' ',
+            ' ',
+            ' ',
+            ' ',
+            ' ',
+            ' ',
+            ' ',
+            ' '
         },
         width = 0.8,
         previewer = false,
         prompt_title = false,
-        prompt_prefix = '   ',
+        prompt_prefix = '» ',
         selection_caret = '  ',
         entry_prefix = '  ',
         initial_mode = 'insert',
