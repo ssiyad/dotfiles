@@ -623,7 +623,7 @@ c.colors.tabs.selected.even.bg = '#212121'
 # Background color for webpages if unset (or empty to use the theme's
 # color).
 # Type: QtColor
-c.colors.webpage.bg = '#1a1b26'
+c.colors.webpage.bg = 'white'
 
 # Value to use for `prefers-color-scheme:` for websites. The "light"
 # value is only available with QtWebEngine 5.15.2+. On older versions,
@@ -659,7 +659,7 @@ c.colors.webpage.darkmode.grayscale.all = False
 # font setting, it's replaced with the fonts listed here. If set to an
 # empty value, a system-specific monospace default is used.
 # Type: List of Font, or Font
-c.fonts.default_family = 'JetBrainsMono Nerd Font'
+c.fonts.default_family = 'JetBrains Mono'
 
 # Default font size to use. Whenever "default_size" is used in a font
 # setting, it's replaced with the size listed here. Valid values are
@@ -682,7 +682,7 @@ c.fonts.tabs.unselected = '10 default_family'
 
 # Font family for fixed fonts.
 # Type: FontFamily
-c.fonts.web.family.fixed = 'JetBrainsMono Nerd Font'
+c.fonts.web.family.fixed = 'JetBrains Mono'
 
 # Default font size (in pixels) for regular text.
 # Type: Int

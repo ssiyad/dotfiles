@@ -2,7 +2,7 @@ local wezterm = require 'wezterm';
 
 return {
     -- https://wezfurlong.org/wezterm/config/fonts.html
-    font = wezterm.font('JetBrainsMono Nerd Font'),
+    font = wezterm.font('JetBrains Mono'),
     font_size = 9,
 
     -- https://wezfurlong.org/wezterm/config/appearance.html
