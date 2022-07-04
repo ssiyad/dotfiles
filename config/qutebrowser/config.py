@@ -690,6 +690,8 @@ c.fonts.web.size.default = 14
 
 # Bindings for normal mode
 config.bind('\\', 'spawn --userscript qute-pass --mode gopass --dmenu-invocation "' + os.environ['HOME'] + '/dotfiles/scripts/fzfmenu.sh"')
+config.bind('ta', 'spawn --userscript taskadd')
+
 config.bind('pa', 'spawn --detach mpv --no-video {url}')
 config.bind('pla', 'hint links spawn --detach mpv --no-video {hint-url}')
 config.bind('plv', 'hint links spawn --detach mpv {hint-url}')
