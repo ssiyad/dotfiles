@@ -4,6 +4,35 @@ function show_menu {
     echo -e "$@" | ~/dotfiles/scripts/fzfmenu.sh | sed -e 's/\(.*\)/\L\1/' | sed -e 's/ /-/g'
 }
 
+function network {
+    net=$(show_menu "$(nmcli connection show | tail -n +2)" | cut -d "-" -f 1)
+    res=$(nmcli connection up $net)
+    notify-send "network" "$res"
+}
+
+function bluetooth {
+    function connect {
+        choice=$(show_menu "$(bluetoothctl devices)" | cut -d "-" -f 2)
+        res=$(bluetoothctl connect $choice) 
+        notify-send "bluetooth" "$res"
+    }
+
+    function scan {
+        choice=$(show_menu "On\nOff")
+        res=$(bluetoothctl scan $choice) 
+        notify-send "bluetooth" "$res" 
+    }
+
+    function power {
+        choice=$(show_menu "On\nOff")
+        res=$(bluetoothctl power $choice)
+        notify-send "bluetooth" "$res" 
+    }
+
+    choice=$(show_menu "Connect\nScan\nPower")
+    $choice
+}
+
 function go-pass {
     gopass -c $(show_menu "$(gopass list --flat | sed 's/\n/\\n/g')")
 }
@@ -60,7 +89,7 @@ function power-menu {
     systemctl $choice
 }
 
-choices="Go Pass\nScreenshot\nScreencapture\nPower Menu"
+choices="Network\nBluetooth\nGo Pass\nScreenshot\nScreencapture\nPower Menu"
 choice=$(show_menu $choices)
 $choice
 
