@@ -1,12 +1,20 @@
 [user]
-	email = hello@ssiyad.com
-	name = Sabu Siyad
-	signingkey = BA37A2A8DD8C37EE
+    email = hello@ssiyad.com
+    name = Sabu Siyad
+    signingkey = BA37A2A8DD8C37EE
 [commit]
-	gpgsign = true
+    gpgsign = true
 [init]
-	defaultBranch = master
+    defaultBranch = master
 [core]
-	hooksPath = /home/ssiyad/dotfiles/git/hooks/
+    hooksPath = /home/ssiyad/dotfiles/git/hooks/
 [fetch]
-	prune = true
+    prune = true
+
+[alias]
+	hs = log --pretty=\"format:%C(auto,yellow)%h%C(auto,magenta)% G? %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(7,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D\" --date=relative
+	co = checkout
+	p = push
+	last = log -1 HEAD --stat
+	cob = checkout -b
+	cl = clean -df
