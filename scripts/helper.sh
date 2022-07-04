@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function show_menu {
-    printf "$@" | ~/dotfiles/scripts/fzfmenu.sh
+    echo -e "$@" | ~/dotfiles/scripts/fzfmenu.sh | sed -e 's/\(.*\)/\L\1/' | sed -e 's/ /-/g'
 }
 
 function go-pass {
@@ -30,7 +30,7 @@ function screenshot {
         notify-send "grim" "partial screenshot saved as $dest"
     }
 
-    choice=$(show_menu "full\nwindow\npartial")
+    choice=$(show_menu "Full\nWindow\nPartial")
     $choice
 }
 
@@ -50,17 +50,17 @@ function screencapture {
         notify-send "screencapture" "screen capturing stopped"
     }
 
-    choice=$(show_menu "start\nstop")
+    choice=$(show_menu "Start\nStop")
     $choice
 }
 
 function power-menu {
-    choice=$(show_menu "poweroff\nreboot\nsuspend\nhibernate")
+    choice=$(show_menu "Poweroff\nReboot\nSuspend\nHibernate")
     [[ -z $choice ]] && exit 0
     systemctl $choice
 }
 
-choices="go-pass\nscreenshot\nscreencapture\npower-menu"
+choices="Go Pass\nScreenshot\nScreencapture\nPower Menu"
 choice=$(show_menu $choices)
 $choice
 
