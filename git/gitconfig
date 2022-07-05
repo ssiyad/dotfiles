@@ -18,3 +18,5 @@
 	cob = checkout -b
 	cl = clean -df
     l = log --oneline
+    m = merge
+    r = rebase
