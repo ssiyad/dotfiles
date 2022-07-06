@@ -2,7 +2,6 @@ require'nvim-tree'.setup({
     hijack_unnamed_buffer_when_opening = true,
     update_focused_file = {
         enable = true,
-        update_cwd = false,
         update_root = false,
     },
     hijack_cursor = true,
@@ -13,13 +12,7 @@ require'nvim-tree'.setup({
     },
     diagnostics = {
         enable = true,
-        show_on_dirs = true,
-        icons = {
-            hint = "",
-            info = "",
-            warning = "",
-            error = "",
-        }
+        show_on_dirs = true
     },
     view = {
         adaptive_size = true,
@@ -40,5 +33,10 @@ require'nvim-tree'.setup({
         enable = true,
         interval = 500,
     },
+    filters = {
+        custom = {
+            '^\\.git'
+        }
+    }
 })
 
