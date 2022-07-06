@@ -1,6 +1,7 @@
 u = c.url
 
 u.default_page = 'https://google.com'
+u.start_pages = 'https://google.com'
 u.searchengines = {
     'DEFAULT': 'https://www.google.com/search?q={}',
     'aw': 'https://wiki.archlinux.org/?search={}',
