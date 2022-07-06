@@ -1,8 +1,8 @@
-function f()
+function f(client, bufnr)
     require 'lsp.functions.float_diagnostics'
     require 'lsp.functions.goto_definition'
     require 'lsp.functions.signs'
-    require 'lsp.functions.symbol_highlight'
+    require 'lsp.functions.symbol_highlight' (client)
 end
 
 return f
