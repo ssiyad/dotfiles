@@ -162,3 +162,5 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 for_window [app_id="pinentry-qt"] floating enable
 for_window [app_id="term_float"] floating enable
 
+seat * hide_cursor when-typing enable
+
