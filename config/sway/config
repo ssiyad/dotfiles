@@ -128,7 +128,8 @@ input type:touchpad {
     dwt enabled
     middle_emulation enabled
     tap_button_map lrm
-    natural_scroll disabled
+    natural_scroll enabled
+    events disabled_on_external_mouse
 }
 
 # audio
