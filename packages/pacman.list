@@ -48,6 +48,7 @@ pipewire
 pipewire-pulse
 pyenv
 pyright
+python-adblock
 python-pipenv
 python-tldextract
 qt5-wayland
