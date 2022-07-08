@@ -13,10 +13,12 @@
 
 [alias]
 	co = checkout
-	p = push
-	last = log -1 HEAD --stat
 	cob = checkout -b
+	p = push
+	pl = pull
+	last = log -1 HEAD --stat
 	cl = clean -df
     l = log --oneline
     m = merge
     r = rebase
+    s = status
