@@ -8,3 +8,5 @@ config/qutebrowser/conf/*
 config/nvim/spell/
 config/nvim/plugin
 
+config/fish/fish_variables
+
