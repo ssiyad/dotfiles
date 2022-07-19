@@ -31,7 +31,6 @@ require'nvim-tree'.setup({
     },
     filesystem_watchers = {
         enable = true,
-        interval = 500,
     },
     filters = {
         custom = {
