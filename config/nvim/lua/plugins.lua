@@ -213,6 +213,13 @@ local function init()
         config = function() require 'config.autopairs' end
     }
 
+    -- Automatic indentation style detection
+    -- https://github.com/NMAC427/guess-indent.nvim
+    use {
+        'nmac427/guess-indent.nvim',
+        config = function() require 'guess-indent' .setup {} end,
+    }
+
     -- Extensible Neovim Scrollbar
     -- https://github.com/petertriho/nvim-scrollbar
     use {
