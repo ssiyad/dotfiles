@@ -19,6 +19,8 @@ on-notify=exec mpv ~/dotfiles/sounds/notification-low.oga
 [urgency=critical]
 border-color=#f7768e
 on-notify=exec mpv ~/dotfiles/sounds/notification-critical.oga
+default-timeout=0
+ignore-timeout=1
 
 [mode=do-not-disturb]
 invisible=1
