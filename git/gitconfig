@@ -10,6 +10,8 @@
     hooksPath = /home/ssiyad/dotfiles/git/hooks/
 [fetch]
     prune = true
+[push]
+    autoSetupRemote = true
 
 [alias]
 	co = checkout
