@@ -66,6 +66,17 @@ local function init()
             -- https://github.com/hrsh7th/cmp-cmdline
             'hrsh7th/cmp-cmdline',
 
+            -- nvim-cmp source for dictionary.
+            -- https://github.com/uga-rosa/cmp-dictionary
+            {
+                'uga-rosa/cmp-dictionary',
+                config = function() require 'config.dictionary' end,
+                ft = {
+                    'gitcommit',
+                    'markdown'
+                }
+            },
+
             -- luasnip completion source for nvim-cmp
             -- https://github.com/saadparwaiz1/cmp_luasnip
             'saadparwaiz1/cmp_luasnip',
