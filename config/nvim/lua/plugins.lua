@@ -285,6 +285,12 @@ local function init()
         },
         config = function() require 'todo-comments' .setup {} end
     }
+
+    -- A powerful grammar checker for Vim using LanguageTool.
+    -- https://github.com/rhysd/vim-grammarous
+    use {
+        'rhysd/vim-grammarous'
+    }
 end
 
 local plugins = setmetatable({}, {
