@@ -18,6 +18,7 @@ gopls
 grim
 helvum
 htop
+hugo
 imagemagick
 imv
 inetutils
@@ -45,7 +46,9 @@ parted
 pavucontrol
 pdfjs
 pipewire
+pipewire-media-session
 pipewire-pulse
+powertop
 pyenv
 pyright
 python-adblock
@@ -78,8 +81,8 @@ waybar
 wf-recorder
 wget
 whois
-wireplumber
 wl-clipboard
+words
 xdg-desktop-portal
 xorg-xwayland
 yt-dlp
