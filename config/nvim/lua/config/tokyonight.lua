@@ -1,9 +1,11 @@
 require('tokyonight').setup({
     lualine_bold = true,
-    style = "night",
+    style = 'night',
     terminal_colors = true,
     transparent = true,
-    transparent_sidebar = true
+    styles = {
+        sidebars = 'transparent'
+    }
 })
 
 vim.cmd [[ colorscheme tokyonight ]]
