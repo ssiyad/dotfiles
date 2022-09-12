@@ -291,6 +291,13 @@ local function init()
     use {
         'rhysd/vim-grammarous'
     }
+
+    -- markdown preview plugin for (neo)vim
+    -- https://github.com/iamcco/markdown-preview.nvim
+    use {
+        'iamcco/markdown-preview.nvim',
+        run = function() vim.fn['mkdp#util#install']() end,
+    }
 end
 
 local plugins = setmetatable({}, {
