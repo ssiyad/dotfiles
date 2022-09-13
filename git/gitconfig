@@ -14,12 +14,13 @@
     autoSetupRemote = true
 
 [alias]
-	co = checkout
-	cob = checkout -b
-	p = push
-	pl = pull
-	last = log -1 HEAD --stat
-	cl = clean -df
+    cl = clean -df
+    co = checkout
+    cob = checkout -b
+    last = log -1 HEAD --stat
+    p = push
+    pl = pull
+    d = diff
     l = log --oneline
     m = merge
     r = rebase
