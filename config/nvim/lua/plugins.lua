@@ -6,7 +6,7 @@ local function init()
         local git_repo = 'https://github.com/wbthomason/packer.nvim'
         local install_path = vim.fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
         if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-            packer_bootstrap = vim.fn.system {
+            vim.fn.system {
                 'git',
                 'clone',
                 '--depth',
@@ -35,11 +35,11 @@ local function init()
 
     -- A faster version of filetype.vim
     -- https://github.com/nathom/filetype.nvim
-    use 'nathom/filetype.nvim' 
+    use 'nathom/filetype.nvim'
 
     -- Quickstart configs for Nvim LSP
     -- https://github.com/neovim/nvim-lspconfig
-    use 'neovim/nvim-lspconfig' 
+    use 'neovim/nvim-lspconfig'
 
     -- L3MON4D3/LuaSnip: Snippet Engine for Neovim written in Lua
     -- https://github.com/L3MON4D3/LuaSnip
@@ -85,19 +85,6 @@ local function init()
             'hrsh7th/cmp-nvim-lsp-signature-help'
         },
         config = function() require 'config.cmp' end
-    }
-
-    -- magit for neovim
-    -- https://github.com/TimUntersberger/neogit
-    use {
-        'TimUntersberger/neogit',
-        requires = {
-            -- lua utils
-            -- https://github.com/nvim-lua/plenary.nvim/
-            'nvim-lua/plenary.nvim'
-        },
-        disabled = true,
-        config = function() require('neogit').setup {} end
     }
 
     -- Delete/change/add parentheses/quotes/XML-tags/much more with ease
@@ -172,17 +159,6 @@ local function init()
             after = 'telescope.nvim',
             config = function() require('telescope').load_extension('fzf') end
         },
-
-        -- File Browser extension for telescope.nvim
-        -- https://github.com/nvim-telescope/telescope-file-browser.nvim
-        {
-            'nvim-telescope/telescope-file-browser.nvim',
-            requires = {
-                'nvim-telescope/telescope.nvim'
-            },
-            after = 'telescope.nvim',
-            config = function() require('telescope').load_extension('file_browser') end
-        }
     }
 
     -- (Do)cumentation (Ge)nerator 10+ languages
@@ -195,10 +171,6 @@ local function init()
     -- Neovim plugin to preview the contents of the registers
     -- https://github.com/tversteeg/registers.nvim
     use 'tversteeg/registers.nvim'
-
-    -- The undo history visualizer for VIM
-    -- https://github.com/mbbill/undotree#usage
-    use 'mbbill/undotree'
 
     -- lua `fork` of vim-web-devicons for neovim
     -- https://github.com/kyazdani42/nvim-web-devicons
