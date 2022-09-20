@@ -28,6 +28,7 @@ jq
 light
 linux
 linux-firmware
+lua-language-server
 mako
 man-db
 man-pages
@@ -44,10 +45,9 @@ npm
 obs-studio
 pamixer
 parted
-pavucontrol
 pdfjs
 pipewire
-pipewire-media-session
+pipewire-jack
 pipewire-pulse
 powertop
 pyenv
@@ -71,7 +71,7 @@ timew
 transmission-cli
 tree
 ttf-jetbrains-mono
-ttf-nerd-fonts-symbols
+ttf-nerd-fonts-symbols-2048-em
 typescript-language-server
 udiskie
 ufw
@@ -82,6 +82,7 @@ waybar
 wf-recorder
 wget
 whois
+wireplumber
 wl-clipboard
 words
 xdg-desktop-portal
