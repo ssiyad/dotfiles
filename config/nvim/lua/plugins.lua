@@ -33,10 +33,6 @@ local function init()
     -- https://github.com/lewis6991/impatient.nvim
     use 'lewis6991/impatient.nvim'
 
-    -- A faster version of filetype.vim
-    -- https://github.com/nathom/filetype.nvim
-    use 'nathom/filetype.nvim'
-
     -- Quickstart configs for Nvim LSP
     -- https://github.com/neovim/nvim-lspconfig
     use 'neovim/nvim-lspconfig'
