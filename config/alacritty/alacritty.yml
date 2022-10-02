@@ -9,6 +9,9 @@ scrolling:
   # Scrolling distance multiplier.
   multiplier: 3
 
+window:
+  opacity: 0.95
+
 # Font configuration
 font:
   normal:
