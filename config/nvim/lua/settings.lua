@@ -21,6 +21,7 @@ opt.showmode = false
 opt.signcolumn = 'yes:1'
 opt.smartcase = true
 opt.smartindent = true
+opt.spell = true
 opt.tabstop = 4
 opt.termguicolors = true
 opt.updatetime = 750
