@@ -30,6 +30,7 @@ set('n', 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]], opts)
 set('n', '<Leader>l', ':noh<CR>', opts)
 
 set('n', '<Leader>ff', ':Telescope find_files<CR>', opts)
+set('n', '<Leader>fe', ':Telescope frecency<CR>', opts)
 set('n', '<Leader>fg', ':Telescope live_grep<CR>', opts)
 set('n', '<Leader>fr', ':Telescope lsp_references<CR>', opts)
 set('n', '<Leader>ft', ':TodoTelescope<CR>', opts)
