@@ -2,14 +2,19 @@
     email = hello@ssiyad.com
     name = Sabu Siyad
     signingkey = BA37A2A8DD8C37EE
+
 [commit]
     gpgsign = true
+
 [init]
     defaultBranch = master
+
 [core]
     hooksPath = /home/ssiyad/dotfiles/git/hooks/
+
 [fetch]
     prune = true
+
 [push]
     autoSetupRemote = true
 
