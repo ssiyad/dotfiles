@@ -10,7 +10,7 @@
     defaultBranch = master
 
 [core]
-    hooksPath = /home/ssiyad/dotfiles/git/hooks/
+    hooksPath = /Users/ssiyad/dotfiles/git/hooks/
 
 [fetch]
     prune = true

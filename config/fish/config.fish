@@ -8,7 +8,6 @@ if status is-interactive
 
     abbr v "nvim"
     abbr g "git"
-    abbr t "task"
 
     set fish_greeting
 
@@ -45,31 +44,5 @@ if status is-interactive
     set -g fish_pager_color_prefix $cyan
     set -g fish_pager_color_completion $foreground
     set -g fish_pager_color_description $comment
-end
-
-if status is-login
-    set -x EDITOR nvim
-    set -x FZF_DEFAULT_OPTS "\
-        --reverse
-        --color bg+:magenta 
-        --color fg+:black 
-        --color prompt:cyan 
-        --color info:green 
-        --color pointer:magenta 
-        --color hl:red 
-        --color hl+:bright-black 
-        --prompt ' » '"
-
-    if test -z "$DISPLAY" -a "$(tty)" = "/dev/tty1"
-        set -x MOZ_ENABLE_WAYLAND 1
-        set -x XDG_SESSION_TYPE wayland
-        set -x XDG_CURRENT_DESKTOP sway
-        set -x QT_QPA_PLATFORM wayland
-        set -x QT_WAYLAND_DISABLE_WINDOWDECORATION 1
-        set -x J2D_UISCALE 1
-        set -x _JAVA_AWT_WM_NONREPARENTING 1
-
-        exec sway
-    end
 end
 
