@@ -178,9 +178,9 @@ local function init()
     -- A file explorer tree for neovim written in lua
     -- https://github.com/kyazdani42/nvim-tree.lua
     use {
-        'kyazdani42/nvim-tree.lua',
+        'nvim-tree/nvim-tree.lua',
         requires = {
-            'kyazdani42/nvim-web-devicons',
+            'nvim-tree/nvim-web-devicons',
         },
         config = function() require 'config.tree' end
     }
