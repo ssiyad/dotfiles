@@ -1,8 +1,8 @@
 require 'cmp_dictionary' .setup({
     dic = {
-        ['*'] = { '/usr/share/dict/american-english' }
+        ['*'] = { '~/dotfiles/en.dict' }
     },
-    async = true, 
+    async = true,
     capacity = 5,
     debug = false,
 })
