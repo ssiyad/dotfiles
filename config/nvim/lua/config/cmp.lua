@@ -7,9 +7,6 @@ local luasnip = require('luasnip')
 -- util
 local has_words_before = require('utils.has_words_before')
 
--- update capabilities
-require('cmp_nvim_lsp').default_capabilities()
-
 local snippet = {
     expand = function(args)
         require('luasnip').lsp_expand(args.body)

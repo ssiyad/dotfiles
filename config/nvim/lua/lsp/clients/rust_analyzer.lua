@@ -1,6 +1,7 @@
 require('lspconfig').rust_analyzer.setup {
-    on_attach = require 'lsp.on_attach',
+    capabilities = require 'lsp.capabilites' (),
+    cmd = { 'rustup', 'run', 'stable', 'rust-analyzer' },
     handlers = require 'lsp.handlers',
-    cmd = { 'rustup', 'run', 'stable', 'rust-analyzer' }
+    on_attach = require 'lsp.on_attach',
 }
 

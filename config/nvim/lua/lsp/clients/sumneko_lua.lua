@@ -1,4 +1,5 @@
 require 'lspconfig' .sumneko_lua.setup {
+    capabilities = require 'lsp.capabilites' (),
     on_attach = require 'lsp.on_attach',
     handlers = require 'lsp.handlers',
     settings = {

@@ -1,4 +1,5 @@
 return require('lspconfig').tsserver.setup {
+    capabilities = require 'lsp.capabilites' (),
     filetypes = { 
         'javascript',
         'javascriptreact',

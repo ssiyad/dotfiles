@@ -1,4 +1,5 @@
 return require('lspconfig').tailwindcss.setup {
+    capabilities = require 'lsp.capabilites' (),
     filetypes = { 
         "javascriptreact",
         "typescriptreact",
