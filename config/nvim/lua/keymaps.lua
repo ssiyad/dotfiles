@@ -38,3 +38,5 @@ set('n', '<Leader>gc', ':Telescope git_commits<CR>', opts)
 
 set('n', '<C-\\>', ':NvimTreeToggle<CR>', opts)
 
+set('n', '<Leader>d', ':lua require("neogen").generate()<CR>', opts)
+

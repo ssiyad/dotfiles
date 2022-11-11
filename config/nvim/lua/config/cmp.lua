@@ -4,6 +4,9 @@ local cmp = require('cmp')
 -- import luasnip
 local luasnip = require('luasnip')
 
+-- import neogen, documentation generator
+local neogen = require('neogen')
+
 -- util
 local has_words_before = require('utils.has_words_before')
 
@@ -30,7 +33,9 @@ local mapping = cmp.mapping.preset.insert({
 
     -- scroll down with luasnip
     ["<Tab>"] = cmp.mapping(function(fallback)
-        if cmp.visible() then
+        if neogen.jumpable() then
+            neogen.jump_next()
+        elseif cmp.visible() then
             cmp.select_next_item({
                 behavior = {
                     select = false
@@ -47,7 +52,9 @@ local mapping = cmp.mapping.preset.insert({
 
     -- scroll up with luasnip
     ["<S-Tab>"] = cmp.mapping(function(fallback)
-        if cmp.visible() then
+        if neogen.jumpable(true) then
+            neogen.jump_prev()
+        elseif cmp.visible() then
             cmp.select_prev_item({
                 behavior = {
                     select = false

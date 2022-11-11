@@ -157,11 +157,14 @@ local function init()
         },
     }
 
-    -- (Do)cumentation (Ge)nerator 10+ languages
-    -- https://github.com/kkoomen/vim-doge
+    -- A better annotation generator. Supports multiple languages and annotation conventions
+    -- https://github.com/danymat/neogen
     use {
-        'kkoomen/vim-doge',
-        run = ':exec doge#install()'
+        "danymat/neogen",
+        requires = {
+            "nvim-treesitter/nvim-treesitter"
+        },
+        config = function() require('config.neogen') end,
     }
 
     -- Neovim plugin to preview the contents of the registers
