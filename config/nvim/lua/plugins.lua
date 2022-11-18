@@ -202,13 +202,6 @@ local function init()
         config = function() require 'guess-indent' .setup {} end,
     }
 
-    -- Extensible Neovim Scrollbar
-    -- https://github.com/petertriho/nvim-scrollbar
-    use {
-        'petertriho/nvim-scrollbar',
-        config = function() require 'config.scrollbar' end
-    }
-
     -- Indent guides
     -- https://github.com/lukas-reineke/indent-blankline.nvim
     use {
