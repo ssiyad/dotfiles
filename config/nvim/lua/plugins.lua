@@ -220,11 +220,11 @@ local function init()
     -- https://github.com/kevinhwang91/nvim-hlslens
     use 'kevinhwang91/nvim-hlslens'
 
-    -- A clean, dark Neovim theme written in Lua
-    -- https://github.com/folke/tokyonight.nvim
+    -- A good theme, I guess
+    -- https://github.com/catppuccin/nvim
     use {
-        'folke/tokyonight.nvim',
-        config = function() require 'config.tokyonight' end
+        'catppuccin/nvim',
+        config = function() require 'config.theme' end
     }
 
     -- fast and easy to configure neovim statusline plugin
