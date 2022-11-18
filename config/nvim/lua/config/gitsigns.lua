@@ -1,12 +1,10 @@
 require('gitsigns').setup({
-    numhl = true,
+    attach_to_untracked = false,
     preview_config = {
         -- Options passed to nvim_open_win
-        border = 'none',
+        border = 'shadow',
         style = 'minimal',
         relative = 'cursor',
-        row = 1,
-        col = 0,
     },
 })
 
