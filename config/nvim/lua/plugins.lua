@@ -117,6 +117,15 @@ local function init()
         config = function() require 'config.treesitter' end,
     }
 
+    -- Rainbow parentheses for neovim using treesitter
+    -- https://github.com/p00f/nvim-ts-rainbow
+    use {
+        'p00f/nvim-ts-rainbow',
+        requires = {
+            'nvim-treesitter/nvim-treesitter',
+        }
+    }
+
     -- Find/List
     -- https://github.com/nvim-telescope/telescope.nvim
     use {
