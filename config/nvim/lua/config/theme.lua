@@ -9,6 +9,11 @@ require('catppuccin').setup({
         treesitter_context = true,
         ts_rainbow = true,
     },
+    custom_highlights = function(colors)
+        return {
+            FloatBorder = { bg = colors.mantle },
+        }
+    end
 })
 
 vim.cmd.colorscheme('catppuccin')
