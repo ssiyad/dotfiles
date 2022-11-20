@@ -44,7 +44,7 @@ local function init()
     -- A completion plugin for neovim coded in Lua.
     -- https://github.com/hrsh7th/nvim-cmp
     use {
-        'hrsh7th/nvim-cmp',
+        '/Users/ssiyad/sources/nvim-cmp',
         requires = {
             -- nvim-cmp source for neovim builtin LSP client
             -- https://github.com/hrsh7th/cmp-nvim-lsp
@@ -67,10 +67,10 @@ local function init()
             {
                 'uga-rosa/cmp-dictionary',
                 config = function() require 'config.dictionary' end,
-                ft = {
-                    'gitcommit',
-                    'markdown'
-                }
+                -- ft = {
+                --     'gitcommit',
+                --     'markdown'
+                -- }
             },
 
             -- luasnip completion source for nvim-cmp
@@ -220,7 +220,10 @@ local function init()
 
     -- Hlsearch Lens for Neovim
     -- https://github.com/kevinhwang91/nvim-hlslens
-    use 'kevinhwang91/nvim-hlslens'
+    use {
+        'kevinhwang91/nvim-hlslens',
+        config = function() require 'hlslens' .setup() end,
+    }
 
     -- A good theme, I guess
     -- https://github.com/catppuccin/nvim
