@@ -243,10 +243,6 @@ local function init()
     -- https://github.com/norcalli/nvim-colorizer.lua
     use {
         'norcalli/nvim-colorizer.lua',
-        ft = {
-            'css',
-            'html'
-        },
         config = function() require 'config.colorizer' end
     }
 
