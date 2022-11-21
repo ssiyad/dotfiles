@@ -12,6 +12,7 @@ require('catppuccin').setup({
     custom_highlights = function(colors)
         return {
             FloatBorder = { bg = colors.mantle },
+            NvimTreeNormal = { bg = colors.none },
         }
     end
 })
