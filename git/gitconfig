@@ -20,6 +20,7 @@
 
 [alias]
     cl = clean -df
+    c = commit
     co = checkout
     cob = checkout -b
     last = log -1 HEAD --stat
