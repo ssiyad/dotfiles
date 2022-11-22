@@ -1,4 +1,4 @@
-function f(client)
+local function f(client, bufnr)
     if client.server_capabilities.documentHighlightProvider then
         vim.api.nvim_create_augroup('lsp_document_highlight', {
             clear = false

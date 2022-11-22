@@ -1,4 +1,4 @@
-function f()
+local function f()
     local util = vim.lsp.util
     local log = require("vim.lsp.log")
     local api = vim.api
@@ -15,7 +15,7 @@ function f()
         else
             vim.cmd('split')
         end
-        
+
         if vim.tbl_islist(result) then
             util.jump_to_location(result[1])
 
