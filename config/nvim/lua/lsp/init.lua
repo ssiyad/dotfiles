@@ -1,5 +1,6 @@
 require('lsp.clients.cssls')
 require('lsp.clients.gopls')
+require('lsp.clients.html')
 require('lsp.clients.prismals')
 require('lsp.clients.pyright')
 require('lsp.clients.rust_analyzer')
