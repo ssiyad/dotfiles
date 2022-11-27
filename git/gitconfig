@@ -19,15 +19,16 @@
     autoSetupRemote = true
 
 [alias]
-    cl = clean -df
     c = commit
+    cl = clean -df
     co = checkout
     cob = checkout -b
+    d = diff
+    f = fetch
+    l = log --oneline
     last = log -1 HEAD --stat
+    m = merge
     p = push
     pl = pull
-    d = diff
-    l = log --oneline
-    m = merge
     r = rebase
     s = status
