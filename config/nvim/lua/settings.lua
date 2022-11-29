@@ -2,7 +2,7 @@ local opt = vim.opt
 
 opt.autoindent = true
 opt.autoread = true
-opt.cmdheight = 0
+opt.cmdheight = 1
 opt.completeopt = 'menu,menuone,noselect'
 opt.cursorline = true
 opt.expandtab = true
