@@ -7,5 +7,5 @@ require('lsp.clients.rust_analyzer')
 require('lsp.clients.sumneko_lua')
 require('lsp.clients.tailwindcss')
 require('lsp.clients.tsserver')
-require('lsp.clients.vls')
+require('lsp.clients.vuels')
 
