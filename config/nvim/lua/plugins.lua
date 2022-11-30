@@ -98,9 +98,13 @@ local function init()
         }
     }
 
-    -- comment stuff out
-    -- https://github.com/tpope/vim-commentary
-    use 'tpope/vim-commentary'
+    -- Smart and powerful comment plugin for neovim. Supports treesitter,
+    -- dot repeat, left-right/up-down motions, hooks, and more
+    -- https://github.com/numToStr/Comment.nvim
+    use {
+        'https://github.com/numToStr/Comment.nvim',
+        config = function() require 'Comment' .setup() end,
+    }
 
     -- Git integration for buffers
     -- https://github.com/lewis6991/gitsigns.nvim
