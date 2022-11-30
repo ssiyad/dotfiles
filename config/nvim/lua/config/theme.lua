@@ -15,6 +15,8 @@ require('catppuccin').setup({
             NvimTreeNormal = { bg = colors.none },
             TelescopeBorder = { bg = colors.mantle },
             TelescopeNormal = { bg = colors.mantle },
+            TelescopePreviewTitle = { bg = colors.blue , fg = colors.base },
+            TelescopePromptTitle = { bg = colors.red, fg = colors.base },
         }
     end
 })
