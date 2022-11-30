@@ -13,6 +13,8 @@ require('catppuccin').setup({
         return {
             FloatBorder = { bg = colors.mantle },
             NvimTreeNormal = { bg = colors.none },
+            TelescopeBorder = { bg = colors.mantle },
+            TelescopeNormal = { bg = colors.mantle },
         }
     end
 })
