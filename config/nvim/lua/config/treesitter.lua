@@ -16,10 +16,11 @@ require('nvim-treesitter.configs').setup({
         'regex',
         'rust',
         'tsx',
-        'typescript'
-    }, 
+        'typescript',
+        'vue',
+    },
     highlight = {
-        enable = true, 
+        enable = true,
         additional_vim_regex_highlighting = false
     },
     incremental_selection = {
@@ -27,8 +28,8 @@ require('nvim-treesitter.configs').setup({
     },
     rainbow = {
         enable = true,
-        extended_mode = true, 
-        max_file_lines = nil 
+        extended_mode = true,
+        max_file_lines = nil,
     },
     context_commentstring = {
         enable = true
