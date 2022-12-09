@@ -146,7 +146,7 @@ local function init()
         -- Live grep with args
         -- https://github.com/nvim-telescope/telescope-live-grep-args.nvim
         {
-            'https://github.com/nvim-telescope/telescope-live-grep-args.nvim',
+            'nvim-telescope/telescope-live-grep-args.nvim',
             requires = {
                 'nvim-telescope/telescope.nvim'
             },
