@@ -144,6 +144,16 @@ local function init()
             config = function() require 'config.telescope' end
         },
 
+        -- Live grep with args
+        -- https://github.com/nvim-telescope/telescope-live-grep-args.nvim
+        {
+            'https://github.com/nvim-telescope/telescope-live-grep-args.nvim',
+            requires = {
+                'nvim-telescope/telescope.nvim'
+            },
+            config = function() require('telescope').load_extension('live_grep_args') end
+        },
+
         -- Telescope.nvim extension that offers intelligent prioritization when
         -- selecting files from editing history
         -- https://github.com/nvim-telescope/telescope-frecency.nvim

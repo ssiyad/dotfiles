@@ -1,11 +1,9 @@
+local lsp = vim.lsp
 local set = vim.keymap.set
-
 local opts = {
     noremap = true,
     silent = true,
 }
-
-local lsp = vim.lsp
 
 set('n', 'K', lsp.buf.hover, opts)
 set('n', '<Leader>gD', lsp.buf.declaration, opts)
@@ -29,14 +27,6 @@ set('n', 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]], opts)
 
 set('n', '<Leader>l', ':noh<CR>', opts)
 
-set('n', '<Leader>ff', ':Telescope find_files<CR>', opts)
-set('n', '<Leader>fe', ':Telescope frecency<CR>', opts)
-set('n', '<Leader>fg', ':Telescope live_grep<CR>', opts)
-set('n', '<Leader>fr', ':Telescope lsp_references<CR>', opts)
-set('n', '<Leader>ft', ':TodoTelescope<CR>', opts)
-set('n', '<Leader>gc', ':Telescope git_commits<CR>', opts)
-
 set('n', '<C-\\>', ':NvimTreeToggle<CR>', opts)
 
 set('n', '<Leader>d', ':lua require("neogen").generate()<CR>', opts)
-
