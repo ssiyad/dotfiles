@@ -140,7 +140,6 @@ local function init()
                 -- https://github.com/nvim-lua/plenary.nvim/
                 'nvim-lua/plenary.nvim'
             },
-            cmd = 'Telescope',
             config = function() require 'config.telescope' end
         },
 
