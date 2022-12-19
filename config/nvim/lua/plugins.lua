@@ -44,7 +44,7 @@ local function init()
     -- A completion plugin for neovim coded in Lua.
     -- https://github.com/hrsh7th/nvim-cmp
     use {
-        '/Users/ssiyad/sources/nvim-cmp',
+        'hrsh7th/nvim-cmp',
         requires = {
             -- nvim-cmp source for neovim builtin LSP client
             -- https://github.com/hrsh7th/cmp-nvim-lsp
