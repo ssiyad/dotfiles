@@ -70,16 +70,16 @@ local mapping = cmp.mapping.preset.insert({
 
 local sources = cmp.config.sources({
     {
+        name = 'luasnip',
+        group_index = 1,
+    },
+    {
         name = 'nvim_lsp',
-        group_index = 1
+        group_index = 2,
     },
     {
         name = 'nvim_lsp_signature_help',
-        group_index = 2
-    },
-    {
-        name = 'luasnip',
-        group_index = 3
+        group_index = 3,
     },
     {
         name = 'buffer',
