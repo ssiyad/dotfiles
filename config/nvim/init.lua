@@ -1,6 +1,9 @@
 -- settings
 require 'settings'
 
+-- plugins
+require 'plugins'
+
 -- keymaps
 require 'keymaps'
 
@@ -9,6 +12,3 @@ require 'lsp'
 
 -- snippets
 require 'snippets'
-
--- plugins
-require 'plugins'
