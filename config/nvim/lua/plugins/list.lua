@@ -56,9 +56,12 @@ return {
         config = function() require 'config.cmp' end
     },
 
-    -- Delete/change/add parentheses/quotes/XML-tags/much more with ease
-    -- https://github.com/tpope/vim-surround
-    'tpope/vim-surround',
+    -- Add/change/delete surrounding delimiter pairs with ease
+    -- https://github.com/kylechui/nvim-surround
+    {
+        'kylechui/nvim-surround',
+        config = function () require('nvim-surround').setup({}) end,
+    },
 
     -- Git wrapper
     -- https://github.com/tpope/vim-fugitive
