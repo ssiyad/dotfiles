@@ -3,7 +3,7 @@ return {
     -- https://github.com/catppuccin/nvim
     {
         'catppuccin/nvim',
-        config = function() require 'config.theme' end
+        config = function() require('config.theme') end
     },
 
     -- Quickstart configs for Nvim LSP
@@ -39,7 +39,7 @@ return {
             -- https://github.com/uga-rosa/cmp-dictionary
             {
                 'uga-rosa/cmp-dictionary',
-                config = function() require 'config.dictionary' end,
+                config = function() require('config.dictionary') end,
                 -- ft = {
                 --     'gitcommit',
                 --     'markdown'
@@ -53,7 +53,7 @@ return {
             -- https://github.com/hrsh7th/cmp-nvim-lsp-signature-help
             'hrsh7th/cmp-nvim-lsp-signature-help'
         },
-        config = function() require 'config.cmp' end
+        config = function() require('config.cmp') end
     },
 
     -- Add/change/delete surrounding delimiter pairs with ease
@@ -79,14 +79,14 @@ return {
     -- https://github.com/numToStr/Comment.nvim
     {
         'numToStr/Comment.nvim',
-        config = function() require 'Comment' .setup() end,
+        config = function() require('Comment').setup() end,
     },
 
     -- Git integration for buffers
     -- https://github.com/lewis6991/gitsigns.nvim
     {
         'lewis6991/gitsigns.nvim',
-        config = function() require 'config.gitsigns' end
+        config = function() require('config.gitsigns') end
     },
 
     -- Nvim Treesitter configurations and abstraction layer
@@ -94,7 +94,7 @@ return {
     {
         'nvim-treesitter/nvim-treesitter',
         build = ':TSUpdate',
-        config = function() require 'config.treesitter' end,
+        config = function() require('config.treesitter') end,
     },
 
     -- Rainbow parentheses for neovim using treesitter
@@ -116,7 +116,7 @@ return {
                 -- https://github.com/nvim-lua/plenary.nvim/
                 'nvim-lua/plenary.nvim'
             },
-            config = function() require 'config.telescope' end
+            config = function() require('config.telescope') end
         },
 
         -- Live grep with args
@@ -173,7 +173,7 @@ return {
     -- https://github.com/nvim-tree/nvim-web-devicons
     {
         'nvim-tree/nvim-web-devicons',
-        config = function() require 'nvim-web-devicons' .setup {} end
+        config = function() require('nvim-web-devicons').setup({}) end
     },
 
     -- A file explorer tree for neovim written in lua
@@ -183,49 +183,49 @@ return {
         dependencies = {
             'nvim-tree/nvim-web-devicons',
         },
-        config = function() require 'config.tree' end
+        config = function() require('config.tree') end
     },
 
     -- autopairs for neovim
     -- https://github.com/windwp/nvim-autopairs
     {
         'windwp/nvim-autopairs',
-        config = function() require 'config.autopairs' end
+        config = function() require('config.autopairs') end
     },
 
     -- Automatic indentation style detection
     -- https://github.com/NMAC427/guess-indent.nvim
     {
         'nmac427/guess-indent.nvim',
-        config = function() require 'guess-indent' .setup {} end,
+        config = function() require('guess-indent').setup({}) end,
     },
 
     -- Indent guides
     -- https://github.com/lukas-reineke/indent-blankline.nvim
     {
         'lukas-reineke/indent-blankline.nvim',
-        config = function() require 'config.blankline' end
+        config = function() require('config.blankline') end
     },
 
     -- Hlsearch Lens for Neovim
     -- https://github.com/kevinhwang91/nvim-hlslens
     {
         'kevinhwang91/nvim-hlslens',
-        config = function() require 'hlslens' .setup() end,
+        config = function() require('hlslens').setup() end,
     },
 
     -- fast and easy to configure neovim statusline plugin
     -- https://github.com/nvim-lualine/lualine.nvim
     {
         'nvim-lualine/lualine.nvim',
-        config = function() require 'config.lualine' end
+        config = function() require('config.lualine') end
     },
 
     -- display hex colors
     -- https://github.com/norcalli/nvim-colorizer.lua
     {
         'norcalli/nvim-colorizer.lua',
-        config = function() require 'config.colorizer' end
+        config = function() require('config.colorizer') end
     },
 
     -- Highlight, list and search todo comments
@@ -237,7 +237,7 @@ return {
             -- https://github.com/nvim-lua/plenary.nvim/
             'nvim-lua/plenary.nvim'
         },
-        config = function() require 'todo-comments' .setup {} end
+        config = function() require('todo-comments').setup({}) end
     },
 
     -- A powerful grammar checker for Vim using LanguageTool.
