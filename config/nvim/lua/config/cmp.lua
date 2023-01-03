@@ -33,14 +33,14 @@ local mapping = cmp.mapping.preset.insert({
 
     -- scroll down with luasnip
     ["<Tab>"] = cmp.mapping(function(fallback)
-        if neogen.jumpable() then
-            neogen.jump_next()
-        elseif cmp.visible() then
+        if cmp.visible() then
             cmp.select_next_item({
                 behavior = {
                     select = false
                 }
             })
+        elseif neogen.jumpable() then
+            neogen.jump_next()
         elseif luasnip.expand_or_jumpable() then
             luasnip.expand_or_jump()
         elseif has_words_before() then
@@ -52,14 +52,14 @@ local mapping = cmp.mapping.preset.insert({
 
     -- scroll up with luasnip
     ["<S-Tab>"] = cmp.mapping(function(fallback)
-        if neogen.jumpable(true) then
-            neogen.jump_prev()
-        elseif cmp.visible() then
+        if cmp.visible() then
             cmp.select_prev_item({
                 behavior = {
                     select = false
                 }
             })
+        elseif neogen.jumpable(true) then
+            neogen.jump_prev()
         elseif luasnip.jumpable(-1) then
             luasnip.jump(-1)
         else

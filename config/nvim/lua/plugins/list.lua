@@ -159,6 +159,7 @@ return {
     -- https://github.com/danymat/neogen
     {
         "danymat/neogen",
+        version = "*",
         dependencies = {
             "nvim-treesitter/nvim-treesitter"
         },

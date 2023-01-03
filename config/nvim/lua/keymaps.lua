@@ -1,32 +1,26 @@
 local lsp = vim.lsp
-local set = vim.keymap.set
-local opts = {
-    noremap = true,
-    silent = true,
-}
+local keymap_set = require('utils.keymap_set')
 
-set('n', 'K', lsp.buf.hover, opts)
-set('n', '<Leader>gD', lsp.buf.declaration, opts)
-set('n', '<Leader>gd', lsp.buf.definition, opts)
-set('n', '<Leader>gi', lsp.buf.implementation, opts)
-set('n', '<Leader>gr', lsp.buf.references, opts)
-set('n', '<Leader>rn', lsp.buf.rename, opts)
-set('n', '<Leader>ca', lsp.buf.code_action, opts)
+keymap_set('n', 'K', lsp.buf.hover)
+keymap_set('n', '<Leader>gD', lsp.buf.declaration)
+keymap_set('n', '<Leader>gd', lsp.buf.definition)
+keymap_set('n', '<Leader>gi', lsp.buf.implementation)
+keymap_set('n', '<Leader>gr', lsp.buf.references)
+keymap_set('n', '<Leader>rn', lsp.buf.rename)
+keymap_set('n', '<Leader>ca', lsp.buf.code_action)
 
-set('n', '<Leader>hs', ':Gitsigns stage_hunk<CR>', opts)
-set('n', '<Leader>hu', ':Gitsigns undo_stage_hunk<CR>', opts)
-set('n', '<Leader>hp', ':Gitsigns preview_hunk<CR>', opts)
-set('n', '<Leader>hr', ':Gitsigns reset_hunk<CR>', opts)
+keymap_set('n', '<Leader>hs', ':Gitsigns stage_hunk<CR>')
+keymap_set('n', '<Leader>hu', ':Gitsigns undo_stage_hunk<CR>')
+keymap_set('n', '<Leader>hp', ':Gitsigns preview_hunk<CR>')
+keymap_set('n', '<Leader>hr', ':Gitsigns reset_hunk<CR>')
 
-set('n', 'n', [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]], opts)
-set('n', 'N', [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]], opts)
-set('n', '*', [[*<Cmd>lua require('hlslens').start()<CR>]], opts)
-set('n', '#', [[#<Cmd>lua require('hlslens').start()<CR>]], opts)
-set('n', 'g*', [[g*<Cmd>lua require('hlslens').start()<CR>]], opts)
-set('n', 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]], opts)
+keymap_set('n', 'n', [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]])
+keymap_set('n', 'N', [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]])
+keymap_set('n', '*', [[*<Cmd>lua require('hlslens').start()<CR>]])
+keymap_set('n', '#', [[#<Cmd>lua require('hlslens').start()<CR>]])
+keymap_set('n', 'g*', [[g*<Cmd>lua require('hlslens').start()<CR>]])
+keymap_set('n', 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]])
 
-set('n', '<Leader>l', ':noh<CR>', opts)
+keymap_set('n', '<Leader>l', ':noh<CR>')
 
-set('n', '<C-\\>', ':NvimTreeToggle<CR>', opts)
-
-set('n', '<Leader>d', ':lua require("neogen").generate()<CR>', opts)
+keymap_set('n', '<C-\\>', ':NvimTreeToggle<CR>')
