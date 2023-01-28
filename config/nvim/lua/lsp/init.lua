@@ -1,11 +1,7 @@
-require('lsp.clients.cssls')
-require('lsp.clients.gopls')
-require('lsp.clients.html')
-require('lsp.clients.prismals')
-require('lsp.clients.pyright')
-require('lsp.clients.rust_analyzer')
-require('lsp.clients.sumneko_lua')
-require('lsp.clients.tailwindcss')
-require('lsp.clients.tsserver')
-require('lsp.clients.vuels')
+local clients_path = vim.fn.stdpath('config')..'/lua/lsp/clients'
+local dir_content = vim.fn.readdir(clients_path, [[v:val =~ '\.lua$']])
 
+for _, file in pairs(dir_content) do
+	local m = vim.fn.split(file, '\\.')
+	require('lsp.clients.' .. m[1])
+end
