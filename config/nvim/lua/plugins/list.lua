@@ -51,14 +51,14 @@ return {
     {
         -- https://github.com/dcampos/nvim-snippy
         -- Snippet plugin for Neovim written in Lua
-        'dcampos/nvim-snippy',
+        {
+            'dcampos/nvim-snippy',
+            config = function() require('config.snippy') end,
+        },
 
         -- https://github.com/dcampos/cmp-snippy
         -- nvim-snippy completion source for nvim-cmp
-        {
-            'dcampos/cmp-snippy',
-            config = function () require('snippy').setup({}) end,
-        },
+        'dcampos/cmp-snippy',
     },
 
     -- Add/change/delete surrounding delimiter pairs with ease
