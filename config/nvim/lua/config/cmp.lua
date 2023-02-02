@@ -1,8 +1,8 @@
 -- Setup nvim-cmp.
 local cmp = require('cmp')
 
--- import luasnip
-local luasnip = require('luasnip')
+-- import snippy
+local snippy = require('snippy')
 
 -- import neogen, documentation generator
 local neogen = require('neogen')
@@ -12,7 +12,7 @@ local has_words_before = require('utils.has_words_before')
 
 local snippet = {
     expand = function(args)
-        require('luasnip').lsp_expand(args.body)
+        snippy.expand_snippet(args.body)
     end
 }
 
@@ -29,9 +29,8 @@ local mapping = cmp.mapping.preset.insert({
     -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     ['<C-Space>'] = cmp.mapping.confirm({
         select = true
-    }), 
+    }),
 
-    -- scroll down with luasnip
     ["<Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
             cmp.select_next_item({
@@ -41,8 +40,8 @@ local mapping = cmp.mapping.preset.insert({
             })
         elseif neogen.jumpable() then
             neogen.jump_next()
-        elseif luasnip.expand_or_jumpable() then
-            luasnip.expand_or_jump()
+        elseif snippy.can_jump(1) then
+            snippy.next()
         elseif has_words_before() then
             cmp.complete()
         else
@@ -50,7 +49,6 @@ local mapping = cmp.mapping.preset.insert({
         end
     end, { "i", "s" }),
 
-    -- scroll up with luasnip
     ["<S-Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
             cmp.select_prev_item({
@@ -60,8 +58,8 @@ local mapping = cmp.mapping.preset.insert({
             })
         elseif neogen.jumpable(true) then
             neogen.jump_prev()
-        elseif luasnip.jumpable(-1) then
-            luasnip.jump(-1)
+        elseif snippy.can_jump(-1) then
+            snippy.previous()
         else
             fallback()
         end
@@ -70,7 +68,7 @@ local mapping = cmp.mapping.preset.insert({
 
 local sources = cmp.config.sources({
     {
-        name = 'luasnip',
+        name = 'snippy',
         group_index = 1,
     },
     {

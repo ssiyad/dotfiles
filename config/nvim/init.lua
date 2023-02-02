@@ -9,6 +9,3 @@ require 'keymaps'
 
 -- lsp config
 require 'lsp'
-
--- snippets
-require 'snippets'

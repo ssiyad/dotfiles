@@ -10,10 +10,6 @@ return {
     -- https://github.com/neovim/nvim-lspconfig
     'neovim/nvim-lspconfig',
 
-    -- L3MON4D3/LuaSnip: Snippet Engine for Neovim written in Lua
-    -- https://github.com/L3MON4D3/LuaSnip
-    'L3MON4D3/LuaSnip',
-
     -- A completion plugin for neovim coded in Lua.
     -- https://github.com/hrsh7th/nvim-cmp
     {
@@ -46,14 +42,23 @@ return {
                 -- },
             },
 
-            -- luasnip completion source for nvim-cmp
-            -- https://github.com/saadparwaiz1/cmp_luasnip
-            'saadparwaiz1/cmp_luasnip',
-
             -- https://github.com/hrsh7th/cmp-nvim-lsp-signature-help
             'hrsh7th/cmp-nvim-lsp-signature-help'
         },
         config = function() require('config.cmp') end
+    },
+
+    {
+        -- https://github.com/dcampos/nvim-snippy
+        -- Snippet plugin for Neovim written in Lua
+        'dcampos/nvim-snippy',
+
+        -- https://github.com/dcampos/cmp-snippy
+        -- nvim-snippy completion source for nvim-cmp
+        {
+            'dcampos/cmp-snippy',
+            config = function () require('snippy').setup({}) end,
+        },
     },
 
     -- Add/change/delete surrounding delimiter pairs with ease
