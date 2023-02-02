@@ -72,16 +72,20 @@ local sources = cmp.config.sources({
         group_index = 1,
     },
     {
-        name = 'nvim_lsp',
+        name = "codeium",
         group_index = 2,
     },
     {
-        name = 'nvim_lsp_signature_help',
+        name = 'nvim_lsp',
         group_index = 3,
     },
     {
-        name = 'buffer',
+        name = 'nvim_lsp_signature_help',
         group_index = 4,
+    },
+    {
+        name = 'buffer',
+        group_index = 5,
         option = {
             get_bufnrs = function()
                 local bufs = {}

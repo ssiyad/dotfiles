@@ -61,6 +61,20 @@ return {
         'dcampos/cmp-snippy',
     },
 
+    -- https://github.com/jcdickinson/codeium.nvim
+    -- A native neovim extension for Codeium (Unofficial)
+    {
+        'jcdickinson/codeium.nvim',
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+
+            -- https://github.com/MunifTanjim/nui.nvim
+            -- Needed for auth only
+            'MunifTanjim/nui.nvim',
+        },
+        config = function() require('codeium').setup({}) end,
+    },
+
     -- Add/change/delete surrounding delimiter pairs with ease
     -- https://github.com/kylechui/nvim-surround
     {
