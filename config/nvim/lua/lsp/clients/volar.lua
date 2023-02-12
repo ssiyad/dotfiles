@@ -1,17 +1,17 @@
-require('lspconfig').volar.setup({
+local M = {
 	filetypes = {
-		'typescript',
 		'javascript',
 		'javascriptreact',
+		'json',
+		'typescript',
 		'typescriptreact',
 		'vue',
-		'json',
 	},
 	init_options = {
 		typescript = {
 			tsdk = "/opt/homebrew/lib/node_modules/typescript/lib/"
 		},
 	},
-    on_attach = require 'lsp.on_attach',
-    handlers = require 'lsp.handlers',
-})
+}
+
+return M

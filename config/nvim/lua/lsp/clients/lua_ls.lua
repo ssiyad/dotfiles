@@ -1,11 +1,9 @@
-require('lspconfig').lua_ls.setup({
-    capabilities = require('lsp.capabilites')(),
-    on_attach = require('lsp.on_attach'),
-    handlers = require('lsp.handlers'),
+local M = {
     settings = {
         Lua = {
             runtime = {
-                -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+                -- Tell the language server which version of Lua you're
+                -- using (most likely LuaJIT in the case of Neovim)
                 version = 'LuaJIT',
             },
             diagnostics = {
@@ -18,10 +16,13 @@ require('lspconfig').lua_ls.setup({
                 -- Make the server aware of Neovim runtime files
                 library = vim.api.nvim_get_runtime_file('', true),
             },
-            -- Do not send telemetry data containing a randomized but unique identifier
+            -- Do not send telemetry data containing a randomized but
+            -- unique identifier
             telemetry = {
                 enable = false,
             },
         },
     },
-})
+}
+
+return M
