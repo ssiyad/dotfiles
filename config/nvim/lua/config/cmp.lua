@@ -7,6 +7,9 @@ local snippy = require('snippy')
 -- import neogen, documentation generator
 local neogen = require('neogen')
 
+-- import autopairs
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+
 -- util
 local has_words_before = require('utils.has_words_before')
 
@@ -151,3 +154,6 @@ cmp.setup.filetype(
         })
     }
 )
+
+-- listen for confirmation
+cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
