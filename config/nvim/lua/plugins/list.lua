@@ -216,13 +216,6 @@ return {
         config = function() require('nvim-autopairs').setup({}) end,
     },
 
-    -- Automatic indentation style detection
-    -- https://github.com/NMAC427/guess-indent.nvim
-    {
-        'nmac427/guess-indent.nvim',
-        config = function() require('guess-indent').setup({}) end,
-    },
-
     -- Indent guides
     -- https://github.com/lukas-reineke/indent-blankline.nvim
     {
