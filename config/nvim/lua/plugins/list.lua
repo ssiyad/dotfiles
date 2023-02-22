@@ -187,7 +187,10 @@ return {
 
     -- Neovim plugin to preview the contents of the registers
     -- https://github.com/tversteeg/registers.nvim
-    'tversteeg/registers.nvim',
+    {
+        'tversteeg/registers.nvim',
+        config = function() require('config.registers') end,
+    },
 
     -- lua `fork` of vim-web-devicons for neovim
     -- https://github.com/nvim-tree/nvim-web-devicons
