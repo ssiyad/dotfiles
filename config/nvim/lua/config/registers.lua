@@ -1,6 +1,4 @@
-local registers = require('registers')
-
-registers.setup({
+require('registers').setup({
 	window = {
 		-- Don't draw a border around the registers window
 		border = 'solid',
