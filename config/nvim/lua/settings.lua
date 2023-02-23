@@ -24,4 +24,3 @@ opt.spell = true
 opt.tabstop = 4
 opt.termguicolors = true
 opt.updatetime = 750
-
