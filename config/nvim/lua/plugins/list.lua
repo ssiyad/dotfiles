@@ -117,9 +117,9 @@ return {
     },
 
     -- Rainbow parentheses for neovim using treesitter
-    -- https://github.com/p00f/nvim-ts-rainbow
+    -- https://github.com/mrjones2014/nvim-ts-rainbow
     {
-        'p00f/nvim-ts-rainbow',
+        'mrjones2014/nvim-ts-rainbow',
         dependencies = {
             'nvim-treesitter/nvim-treesitter',
         },
