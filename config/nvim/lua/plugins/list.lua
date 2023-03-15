@@ -67,10 +67,6 @@ return {
         'jcdickinson/codeium.nvim',
         dependencies = {
             'nvim-lua/plenary.nvim',
-
-            -- https://github.com/MunifTanjim/nui.nvim
-            -- Needed for auth only
-            'MunifTanjim/nui.nvim',
         },
         config = function() require('codeium').setup({}) end,
     },
