@@ -3,12 +3,15 @@ return {
     -- https://github.com/catppuccin/nvim
     {
         'catppuccin/nvim',
-        config = function() require('config.theme') end
+        config = function() require('config.theme') end,
     },
 
     -- Quickstart configs for Nvim LSP
     -- https://github.com/neovim/nvim-lspconfig
-    'neovim/nvim-lspconfig',
+    {
+        'neovim/nvim-lspconfig',
+        config = function() require('lsp') end,
+    },
 
     -- A completion plugin for neovim coded in Lua.
     -- https://github.com/hrsh7th/nvim-cmp
