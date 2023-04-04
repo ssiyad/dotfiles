@@ -140,6 +140,16 @@ return {
 		},
 	},
 
+	-- The Refactoring library based off the Refactoring book by Martin Fowler
+	-- https://github.com/ThePrimeagen/refactoring.nvim
+	{
+		"ThePrimeagen/refactoring.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
+		},
+	},
+
 	-- Find/List
 	-- https://github.com/nvim-telescope/telescope.nvim
 	{

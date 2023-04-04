@@ -4,6 +4,7 @@ local b = null_ls.builtins
 local sources = {
 	b.code_actions.eslint,
 	b.code_actions.gitsigns,
+	b.code_actions.refactoring,
 	b.completion.spell,
 	b.diagnostics.eslint,
 	b.formatting.black,
