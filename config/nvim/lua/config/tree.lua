@@ -21,7 +21,6 @@ nvim_tree.setup({
     view = {
         adaptive_size = true,
         centralize_selection = true,
-        hide_root_folder = true,
         side = "left",
         signcolumn = "yes",
     },
@@ -32,6 +31,7 @@ nvim_tree.setup({
         indent_markers = {
             enable = true,
         },
+        root_folder_label = false,
     },
     filesystem_watchers = {
         enable = true,
