@@ -10,4 +10,6 @@ config/fish/*
 config/fish/config.fish
 config/fish/fish_plugins
 
+config/tmux/plugins
+
 **/.luarc.json
