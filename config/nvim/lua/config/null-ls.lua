@@ -1,5 +1,7 @@
 local null_ls = require("null-ls")
 local b = null_ls.builtins
+local lsp = vim.lsp
+local keymap_set = require("utils.keymap_set")
 
 local sources = {
 	b.code_actions.eslint,
@@ -14,6 +16,8 @@ local sources = {
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local on_attach = function(client, bufnr)
+	keymap_set("n", "K", lsp.buf.hover)
+
 	if client.supports_method("textDocument/formatting") then
 		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
 		vim.api.nvim_create_autocmd("BufWritePre", {
