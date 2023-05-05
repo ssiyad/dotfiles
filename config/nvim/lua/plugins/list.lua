@@ -77,6 +77,7 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 		},
+		enabled = false,
 		config = function()
 			require("codeium").setup({})
 		end,
@@ -177,21 +178,6 @@ return {
 			end,
 		},
 
-		-- Telescope.nvim extension that offers intelligent prioritization when
-		-- selecting files from editing history
-		-- https://github.com/nvim-telescope/telescope-frecency.nvim
-		{
-			"nvim-telescope/telescope-frecency.nvim",
-			dependencies = {
-				"nvim-telescope/telescope.nvim",
-				"tami5/sqlite.lua",
-			},
-			after = "telescope.nvim",
-			config = function()
-				require("telescope").load_extension("frecency")
-			end,
-		},
-
 		-- FZF sorter for telescope written in c
 		-- https://github.com/nvim-telescope/telescope-fzf-native.nvim
 		{
@@ -217,15 +203,6 @@ return {
 		},
 		config = function()
 			require("config.neogen")
-		end,
-	},
-
-	-- Neovim plugin to preview the contents of the registers
-	-- https://github.com/tversteeg/registers.nvim
-	{
-		"tversteeg/registers.nvim",
-		config = function()
-			require("config.registers")
 		end,
 	},
 
@@ -316,12 +293,6 @@ return {
 		config = function()
 			require("todo-comments").setup({})
 		end,
-	},
-
-	-- A powerful grammar checker for Vim using LanguageTool.
-	-- https://github.com/rhysd/vim-grammarous
-	{
-		"rhysd/vim-grammarous",
 	},
 
 	-- markdown preview plugin for (neo)vim
