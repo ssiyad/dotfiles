@@ -303,4 +303,14 @@ return {
 			vim.fn["mkdp#util#install"]()
 		end,
 	},
+
+	-- New org-mode, I guess?
+	-- https://github.com/nvim-neorg/neorg
+	{
+		"nvim-neorg/neorg",
+		run = ":Neorg sync-parsers",
+		config = function()
+			require("config.neorg")
+		end,
+	},
 }
