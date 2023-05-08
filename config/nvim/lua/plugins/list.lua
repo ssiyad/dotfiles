@@ -313,4 +313,14 @@ return {
 			require("config.neorg")
 		end,
 	},
+
+	-- Edit filesystem like a buffer
+	-- https://github.com/stevearc/oil.nvim
+	{
+		"stevearc/oil.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("config.oil")
+		end,
+	},
 }
