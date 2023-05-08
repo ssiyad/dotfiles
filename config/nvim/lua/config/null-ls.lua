@@ -25,6 +25,7 @@ local on_attach = function(client, bufnr)
 			buffer = bufnr,
 			callback = function()
 				vim.lsp.buf.format({ bufnr = bufnr })
+				vim.cmd("GuessIndent")
 			end,
 		})
 	end
