@@ -1,7 +1,7 @@
 local oil = require("oil")
 local keymap_set = require("utils.keymap_set")
 
-require("oil").setup({
+oil.setup({
 	columns = {
 		"icon",
 		"permissions",
@@ -15,6 +15,7 @@ require("oil").setup({
 })
 
 keymap_set("n", "<C-\\>", function()
+	local dir = vim.fn.expand("%:p:h")
 	vim.cmd("tabnew")
-	oil.open()
+	oil.open(dir)
 end)
