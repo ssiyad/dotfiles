@@ -1,3 +1,4 @@
+local keymap_set = require("utils.keymap_set")
 local workspace = "neorg"
 local workspace_dir = "~/neorg"
 
@@ -29,3 +30,8 @@ require("neorg").setup({
 		},
 	},
 })
+
+keymap_set("n", "<Leader>j", function()
+	vim.cmd("tabnew")
+	vim.cmd("Neorg journal today")
+end)
