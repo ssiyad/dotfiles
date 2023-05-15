@@ -23,6 +23,3 @@ opt.spell = true
 opt.tabstop = 4
 opt.termguicolors = true
 opt.updatetime = 750
-
--- https://github.com/neovim/neovim/pull/22668
-vim.loader.enable()

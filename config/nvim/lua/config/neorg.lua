@@ -1,3 +1,6 @@
+local workspace = "neorg"
+local workspace_dir = "~/neorg"
+
 require("neorg").setup({
 	load = {
 		["core.defaults"] = {},
@@ -9,15 +12,19 @@ require("neorg").setup({
 		["core.dirman"] = {
 			config = {
 				workspaces = {
-					diary = "~/neorg-diary",
-					work = "~/neorg-work",
+					[workspace] = workspace_dir,
 				},
-				index = "index.norg",
+				default_workspace = workspace,
 			},
 		},
 		["core.completion"] = {
 			config = {
 				engine = "nvim-cmp",
+			},
+		},
+		["core.journal"] = {
+			config = {
+				workspace = workspace,
 			},
 		},
 	},

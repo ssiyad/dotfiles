@@ -1,3 +1,6 @@
+-- https://github.com/neovim/neovim/pull/22668
+vim.loader.enable()
+
 -- settings
 require("settings")
 
