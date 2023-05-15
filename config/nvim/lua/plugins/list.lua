@@ -185,7 +185,6 @@ return {
 				"nvim-telescope/telescope.nvim",
 			},
 			build = "make",
-			after = "telescope.nvim",
 			config = function()
 				require("telescope").load_extension("fzf")
 			end,
@@ -307,7 +306,7 @@ return {
 	-- https://github.com/nvim-neorg/neorg
 	{
 		"nvim-neorg/neorg",
-		run = ":Neorg sync-parsers",
+		build = ":Neorg sync-parsers",
 		config = function()
 			require("config.neorg")
 		end,
