@@ -204,27 +204,6 @@ return {
 		end,
 	},
 
-	-- lua `fork` of vim-web-devicons for neovim
-	-- https://github.com/nvim-tree/nvim-web-devicons
-	{
-		"nvim-tree/nvim-web-devicons",
-		config = function()
-			require("nvim-web-devicons").setup({})
-		end,
-	},
-
-	-- A file explorer tree for neovim written in lua
-	-- https://github.com/nvim-tree/nvim-tree.lua
-	{
-		"nvim-tree/nvim-tree.lua",
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
-		},
-		config = function()
-			require("config.tree")
-		end,
-	},
-
 	-- autopairs for neovim
 	-- https://github.com/windwp/nvim-autopairs
 	{
