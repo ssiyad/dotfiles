@@ -139,14 +139,14 @@ cmp.setup.cmdline(":", {
 
 -- Dictionary suggestions for markdown and gitcommit
 cmp.setup.filetype({
-	"markdown",
 	"gitcommit",
+	"markdown",
+	"norg",
 }, {
 	sources = cmp.config.sources({
 		{
 			name = "dictionary",
 			keyword_length = 3,
-			max_item_count = 7,
 		},
 	}),
 })
