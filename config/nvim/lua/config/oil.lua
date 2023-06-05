@@ -14,4 +14,8 @@ oil.setup({
 	},
 })
 
-keymap_set("n", "<C-\\>", ":vert bo Oil<CR>")
+keymap_set("n", "<C-\\>", function()
+	local dir = vim.fn.expand("%:p:h")
+	vim.cmd("tabnew")
+	oil.open(dir)
+end)
