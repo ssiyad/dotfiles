@@ -3,19 +3,28 @@ local keymap_set = require("utils.keymap_set")
 
 oil.setup({
 	columns = {
+		"type",
 		"icon",
 		"permissions",
 		"size",
 		"mtime",
 	},
-	skip_confirm_for_simple_edits = true,
+	float = {
+		padding = 10,
+		max_height = 20,
+		border = "solid",
+		win_options = {
+			winblend = 0,
+		},
+	},
 	preview = {
 		border = "solid",
 	},
+	default_file_explorer = true,
+	restore_win_options = true,
+	skip_confirm_for_simple_edits = true,
+	delete_to_trash = false,
+	trash_command = "trash",
 })
 
-keymap_set("n", "<C-\\>", function()
-	local dir = vim.fn.expand("%:p:h")
-	vim.cmd("tabnew")
-	oil.open(dir)
-end)
+keymap_set("n", "-", oil.toggle_float)
