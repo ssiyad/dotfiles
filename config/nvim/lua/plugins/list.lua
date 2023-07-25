@@ -131,15 +131,6 @@ return {
 		end,
 	},
 
-	-- Rainbow parentheses for neovim using treesitter
-	-- https://github.com/mrjones2014/nvim-ts-rainbow
-	{
-		"mrjones2014/nvim-ts-rainbow",
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-		},
-	},
-
 	-- The Refactoring library based off the Refactoring book by Martin Fowler
 	-- https://github.com/ThePrimeagen/refactoring.nvim
 	{
