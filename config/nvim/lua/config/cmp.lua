@@ -30,7 +30,7 @@ local mapping = cmp.mapping.preset.insert({
 	["<C-Space>"] = cmp.mapping.confirm({
 		select = true,
 	}),
-	["<Tab>"] = cmp.mapping(function(fallback)
+	["<C-j>"] = cmp.mapping(function(fallback)
 		if cmp.visible() then
 			cmp.select_next_item({
 				behavior = {
@@ -47,7 +47,7 @@ local mapping = cmp.mapping.preset.insert({
 			fallback()
 		end
 	end, { "i", "s" }),
-	["<S-Tab>"] = cmp.mapping(function(fallback)
+	["<C-k>"] = cmp.mapping(function(fallback)
 		if cmp.visible() then
 			cmp.select_prev_item({
 				behavior = {
@@ -78,7 +78,7 @@ local sources = cmp.config.sources({
 		group_index = 3,
 	},
 	{
-		name = "codeium",
+		name = "copilot",
 		group_index = 4,
 	},
 	{

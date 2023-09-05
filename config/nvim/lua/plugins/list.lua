@@ -70,16 +70,10 @@ return {
 		"dcampos/cmp-snippy",
 	},
 
-	-- https://github.com/jcdickinson/codeium.nvim
-	-- A native neovim extension for Codeium (Unofficial)
+	-- https://github.com/github/copilot.vim
+	-- GitHub Copilot for Vim
 	{
-		"jcdickinson/codeium.nvim",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
-		config = function()
-			require("codeium").setup({})
-		end,
+		"github/copilot.vim",
 	},
 
 	-- Add/change/delete surrounding delimiter pairs with ease
