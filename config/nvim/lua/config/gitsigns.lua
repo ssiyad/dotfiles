@@ -1,4 +1,7 @@
-require("gitsigns").setup({
+local gitsigns = require("gitsigns")
+local keymap_set = require("utils.keymap_set")
+
+gitsigns.setup({
 	attach_to_untracked = false,
 	preview_config = {
 		-- Options passed to nvim_open_win
@@ -6,4 +9,10 @@ require("gitsigns").setup({
 		style = "minimal",
 		relative = "cursor",
 	},
+	word_diff = true,
 })
+
+keymap_set("n", "<leader>hp", gitsigns.preview_hunk_inline)
+keymap_set("n", "<leader>hr", gitsigns.reset_hunk)
+keymap_set("n", "<leader>hs", gitsigns.stage_hunk)
+keymap_set("n", "<leader>hu", gitsigns.undo_stage_hunk)
