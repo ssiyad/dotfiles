@@ -17,12 +17,12 @@ return {
 		end,
 	},
 
-	--
-	-- https://github.com/jose-elias-alvarez/null-ls.nvim
+	-- Autoformat
+	-- https://github.com/stevearc/conform.nvim
 	{
-		"jose-elias-alvarez/null-ls.nvim",
+		"stevearc/conform.nvim",
 		config = function()
-			require("config.null-ls")
+			require("config.conform")
 		end,
 	},
 
@@ -126,16 +126,6 @@ return {
 		config = function()
 			require("config.treesitter")
 		end,
-	},
-
-	-- The Refactoring library based off the Refactoring book by Martin Fowler
-	-- https://github.com/ThePrimeagen/refactoring.nvim
-	{
-		"ThePrimeagen/refactoring.nvim",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-treesitter/nvim-treesitter",
-		},
 	},
 
 	-- Find/List
