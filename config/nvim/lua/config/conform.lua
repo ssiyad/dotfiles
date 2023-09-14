@@ -1,6 +1,6 @@
 local conform = require("conform")
 local js = {
-	"eslint",
+	"eslint_d",
 }
 
 conform.setup({
