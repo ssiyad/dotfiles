@@ -9,7 +9,6 @@ gitsigns.setup({
 		style = "minimal",
 		relative = "cursor",
 	},
-	word_diff = true,
 })
 
 keymap_set("n", "<leader>hp", gitsigns.preview_hunk_inline)
