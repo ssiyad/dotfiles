@@ -210,15 +210,6 @@ return {
 		end,
 	},
 
-	-- Hlsearch Lens for Neovim
-	-- https://github.com/kevinhwang91/nvim-hlslens
-	{
-		"kevinhwang91/nvim-hlslens",
-		config = function()
-			require("hlslens").setup()
-		end,
-	},
-
 	-- fast and easy to configure neovim statusline plugin
 	-- https://github.com/nvim-lualine/lualine.nvim
 	{
@@ -228,45 +219,12 @@ return {
 		end,
 	},
 
-	-- display hex colors
-	-- https://github.com/norcalli/nvim-colorizer.lua
-	{
-		"norcalli/nvim-colorizer.lua",
-		config = function()
-			require("config.colorizer")
-		end,
-	},
-
-	-- Highlight, list and search todo comments
-	-- https://github.com/folke/todo-comments.nvim
-	{
-		"folke/todo-comments.nvim",
-		dependencies = {
-			-- lua utils
-			-- https://github.com/nvim-lua/plenary.nvim/
-			"nvim-lua/plenary.nvim",
-		},
-		config = function()
-			require("todo-comments").setup({})
-		end,
-	},
-
 	-- markdown preview plugin for (neo)vim
 	-- https://github.com/iamcco/markdown-preview.nvim
 	{
 		"iamcco/markdown-preview.nvim",
 		build = function()
 			vim.fn["mkdp#util#install"]()
-		end,
-	},
-
-	-- New org-mode, I guess?
-	-- https://github.com/nvim-neorg/neorg
-	{
-		"nvim-neorg/neorg",
-		build = ":Neorg sync-parsers",
-		config = function()
-			require("config.neorg")
 		end,
 	},
 

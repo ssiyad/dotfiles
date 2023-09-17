@@ -15,6 +15,7 @@ opt.laststatus = 3
 opt.number = true
 opt.relativenumber = true
 opt.shiftwidth = 0
+opt.shortmess:append("WIFS")
 opt.showmode = false
 opt.signcolumn = "yes:1"
 opt.smartcase = true

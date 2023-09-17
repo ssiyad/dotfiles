@@ -8,3 +8,5 @@ keymap_set("n", "g*", [[g*<Cmd>lua require('hlslens').start()<CR>]])
 keymap_set("n", "g#", [[g#<Cmd>lua require('hlslens').start()<CR>]])
 
 keymap_set("n", "<Leader>l", ":noh<CR>")
+
+keymap_set("n", "<Leader>t", ":vs | term<CR> | i")
