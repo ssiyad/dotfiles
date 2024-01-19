@@ -1,8 +1,9 @@
-local neorg = require("neorg")
+local keymap_set = require("utils.keymap_set")
 local workspace = "neorg"
 local workspace_dir = "~/neorg"
+local todo = "~/neorg/todo.norg"
 
-neorg.setup({
+require("neorg").setup({
 	load = {
 		["core.defaults"] = {},
 		["core.concealer"] = {
@@ -30,3 +31,8 @@ neorg.setup({
 		},
 	},
 })
+
+keymap_set("n", "<leader>nt", function()
+	vim.cmd.tabnew()
+	vim.cmd.edit(todo)
+end)
