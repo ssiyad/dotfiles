@@ -33,6 +33,12 @@ require("neorg").setup({
 })
 
 keymap_set("n", "<leader>nt", function()
-	vim.cmd.tabnew()
+	if vim.fn.expand("%:p") == vim.fn.expand(todo) then
+		vim.cmd.tabclose()
+		return
+	end
+	if vim.fn.expand("%:t") ~= "" then
+		vim.cmd.tabnew()
+	end
 	vim.cmd.edit(todo)
 end)
