@@ -26,6 +26,8 @@ require("neorg").setup({
 		},
 		["core.journal"] = {
 			config = {
+				strategy = "nested",
+				use_template = false,
 				workspace = workspace,
 			},
 		},
@@ -41,4 +43,11 @@ keymap_set("n", "<leader>nt", function()
 		vim.cmd.tabnew()
 	end
 	vim.cmd.edit(todo)
+end)
+
+keymap_set("n", "<leader>nj", function()
+	if vim.fn.expand("%:t") ~= "" then
+		vim.cmd.tabnew()
+	end
+	vim.cmd([[ :Neorg journal today ]])
 end)
