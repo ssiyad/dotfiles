@@ -1,9 +1,10 @@
+local neorg = require("neorg")
 local keymap_set = require("utils.keymap_set")
 local workspace = "neorg"
 local workspace_dir = "~/neorg"
-local todo = "~/neorg/todo.norg"
+local todo = "~/neorg/todo/index.norg"
 
-require("neorg").setup({
+neorg.setup({
 	load = {
 		["core.defaults"] = {},
 		["core.concealer"] = {
@@ -49,5 +50,5 @@ keymap_set("n", "<leader>nj", function()
 	if vim.fn.expand("%:t") ~= "" then
 		vim.cmd.tabnew()
 	end
-	vim.cmd([[ :Neorg journal today ]])
+	vim.cmd(":Neorg journal today")
 end)
