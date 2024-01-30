@@ -7,6 +7,8 @@ alias ix.io="curl -F 'f:1=<-' ix.io"
 
 abbr v "nvim"
 abbr g "git"
+abbr tn "tmux new -s"
+abbr ta "tmux attach -t"
 
 set fish_greeting
 set -x EDITOR nvim
