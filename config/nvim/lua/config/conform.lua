@@ -16,14 +16,7 @@ conform.setup({
 		typescript = js,
 		vue = js,
 	},
-	format_after_save = function()
-		local options = {
-			lsp_fallback = true,
-		}
-		local callback = function()
-			-- Use `GuessIndent` plugin to (re)set indentation
-			vim.cmd(":GuessIndent")
-		end
-		return options, callback
-	end,
+	format_after_save = {
+		lsp_fallback = true,
+	},
 })
