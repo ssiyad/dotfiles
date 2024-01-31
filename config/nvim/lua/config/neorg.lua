@@ -2,7 +2,7 @@ local neorg = require("neorg")
 local keymap_set = require("utils.keymap_set")
 local workspace = "neorg"
 local workspace_dir = "~/neorg"
-local todo = "~/neorg/todo/index.norg"
+local todo_global = "~/neorg/todo.norg"
 
 neorg.setup({
 	load = {
@@ -36,6 +36,8 @@ neorg.setup({
 })
 
 keymap_set("n", "<leader>nt", function()
+	local todo_local = vim.fn.getcwd() .. "/todo.norg"
+	local todo = vim.fn.filereadable(todo_local) == 1 and todo_local or todo_global
 	if vim.fn.expand("%:p") == vim.fn.expand(todo) then
 		vim.cmd.tabclose()
 		return
