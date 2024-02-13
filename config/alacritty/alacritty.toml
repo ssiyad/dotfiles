@@ -29,6 +29,3 @@ style = "Regular"
 [scrolling]
 history = 10000
 multiplier = 3
-
-[window]
-opacity = 0.95
