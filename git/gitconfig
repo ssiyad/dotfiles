@@ -11,6 +11,7 @@
 
 [core]
     hooksPath = /Users/ssiyad/dotfiles/git/hooks/
+    editor = nvim
 
 [fetch]
     prune = true
@@ -19,6 +20,8 @@
     autoSetupRemote = true
 
 [alias]
+    a = add -all
+    ai = add -i
     c = commit
     cl = clean -df
     co = checkout
