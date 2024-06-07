@@ -229,16 +229,6 @@ return {
 		end,
 	},
 
-	-- New org-mode, I guess?
-	-- https://github.com/nvim-neorg/neorg
-	{
-		"nvim-neorg/neorg",
-		build = ":Neorg sync-parsers",
-		config = function()
-			require("config.neorg")
-		end,
-	},
-
 	-- Edit filesystem like a buffer
 	-- https://github.com/stevearc/oil.nvim
 	{
