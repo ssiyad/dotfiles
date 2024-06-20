@@ -12,7 +12,6 @@ size = 13.5
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
-style = "Regular"
 
 [scrolling]
 history = 10000
