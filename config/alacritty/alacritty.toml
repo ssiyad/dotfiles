@@ -1,4 +1,4 @@
-import = ["/Users/ssiyad/dotfiles/config/alacritty/catppuccin/catppuccin-mocha.toml"]
+import = ["/Users/ssiyad/dotfiles/config/alacritty/catppuccin/catppuccin-latte.toml"]
 
 [cursor.style]
 blinking = "On"

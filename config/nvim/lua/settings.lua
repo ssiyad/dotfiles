@@ -2,6 +2,7 @@ local opt = vim.opt
 
 opt.autoindent = true
 opt.autoread = true
+opt.background = "light"
 opt.cmdheight = 0
 opt.cursorline = true
 opt.ff = "unix"
