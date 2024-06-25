@@ -9,7 +9,6 @@ catppuccin.setup({
 		telescope = true,
 		treesitter = true,
 		treesitter_context = true,
-		ts_rainbow = true,
 	},
 	custom_highlights = function(colors)
 		return {
