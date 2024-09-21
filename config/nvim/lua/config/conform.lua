@@ -14,6 +14,7 @@ conform.setup({
 		},
 		javascript = js,
 		typescript = js,
+		typescriptreact = js,
 		vue = js,
 	},
 	format_after_save = {

@@ -1,15 +1,10 @@
 local M = {
 	filetypes = {
-		'javascript',
-		'javascriptreact',
-		'json',
-		'typescript',
-		'typescriptreact',
-		'vue',
+		"vue",
 	},
 	init_options = {
 		typescript = {
-			tsdk = "/opt/homebrew/lib/node_modules/typescript/lib/"
+			tsdk = "/opt/homebrew/lib/node_modules/typescript/lib/",
 		},
 	},
 }
