@@ -1,6 +1,7 @@
 local conform = require("conform")
 local js = {
 	"eslint_d",
+	"prettier",
 }
 
 conform.setup({
@@ -9,8 +10,9 @@ conform.setup({
 			"stylua",
 		},
 		python = {
-			"isort",
-			"black",
+			"ruff_fix",
+			"ruff_format",
+			"ruff_organize_imports",
 		},
 		javascript = js,
 		typescript = js,
