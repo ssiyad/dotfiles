@@ -4,54 +4,54 @@ local themes = require("telescope.themes")
 
 local set_keymap = vim.keymap.set
 local opts = {
-    noremap = true,
-    silent = true,
+	noremap = true,
+	silent = true,
 }
 
 telescope.setup({
-    defaults = themes.get_dropdown({
-        borderchars = {
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-        },
-        color_devicons = true,
-        dynamic_preview_title = true,
-        entry_prefix = "  ",
-        initial_mode = "insert",
-        layout_config = {
-            horizontal = {
-                prompt_position = "top",
-                preview_width = 0.55,
-                results_width = 0.8,
-            },
-            vertical = {
-                mirror = false,
-            },
-            width = 0.87,
-            height = 0.80,
-            preview_cutoff = 120,
-        },
-        layout_strategy = "horizontal",
-        path_display = {
-            truncate = 3,
-        },
-        previewer = false,
-        prompt_prefix = "» ",
-        prompt_title = false,
-        selection_caret = "  ",
-        selection_strategy = "reset",
-        sorting_strategy = "ascending",
-        sroll_strategy = "cycle",
-        width = 0.8,
-        winblend = 0,
-        wrap_results = true,
-    }),
+	defaults = themes.get_dropdown({
+		borderchars = {
+			" ",
+			" ",
+			" ",
+			" ",
+			" ",
+			" ",
+			" ",
+			" ",
+		},
+		color_devicons = true,
+		dynamic_preview_title = true,
+		entry_prefix = "  ",
+		initial_mode = "insert",
+		layout_config = {
+			horizontal = {
+				prompt_position = "top",
+				preview_width = 0.55,
+				results_width = 0.8,
+			},
+			vertical = {
+				mirror = false,
+			},
+			width = 0.87,
+			height = 0.80,
+			preview_cutoff = 120,
+		},
+		layout_strategy = "horizontal",
+		path_display = {
+			truncate = 3,
+		},
+		previewer = false,
+		prompt_prefix = "» ",
+		prompt_title = false,
+		selection_caret = "  ",
+		selection_strategy = "reset",
+		sorting_strategy = "ascending",
+		sroll_strategy = "cycle",
+		width = 0.8,
+		winblend = 0,
+		wrap_results = true,
+	}),
 })
 
 set_keymap("n", "<Leader>ff", builtin.find_files, opts)
