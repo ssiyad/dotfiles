@@ -23,8 +23,6 @@ oil.setup({
 	default_file_explorer = false,
 	restore_win_options = true,
 	skip_confirm_for_simple_edits = true,
-	delete_to_trash = false,
-	trash_command = "trash",
 })
 
 keymap_set("n", "-", oil.toggle_float)
