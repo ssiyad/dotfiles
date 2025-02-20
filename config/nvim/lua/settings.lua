@@ -12,6 +12,7 @@ opt.guicursor = ""
 opt.ignorecase = true
 opt.incsearch = true
 opt.laststatus = 3
+opt.mouse = ""
 opt.number = true
 opt.relativenumber = true
 opt.shiftwidth = 0
