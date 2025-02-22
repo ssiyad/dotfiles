@@ -8,9 +8,11 @@ local languages = {
 return {
   init_options = {
     plugins = {
-      name = '@vue/typescript-plugin',
-      locations = location,
-      languages = languages,
+      {
+        name = '@vue/typescript-plugin',
+        location = location,
+        languages = languages,
+      },
     },
   },
   filetypes = languages,
