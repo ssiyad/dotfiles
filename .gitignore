@@ -13,3 +13,5 @@ config/fish/fish_plugins
 config/tmux/plugins
 
 **/.luarc.json
+
+config/nvim/lazy-lock.json
