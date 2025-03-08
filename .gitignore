@@ -1,5 +1,6 @@
 config/qutebrowser/*
 !config/qutebrowser/config.py
+!config/qutebrowser/catppuccin/
 !config/qutebrowser/conf/*.py
 
 .vscode/
