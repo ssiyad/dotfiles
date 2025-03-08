@@ -6,4 +6,4 @@ f.statusbar = "default_size default_family"
 f.tabs.selected = "13 default_family"
 f.tabs.unselected = "13 default_family"
 f.web.family.fixed = "JetBrainsMono Nerd Font"
-f.web.size.default = 17
+f.web.size.default = 16
