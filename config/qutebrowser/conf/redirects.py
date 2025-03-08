@@ -1,11 +1,9 @@
 from qutebrowser.api import interceptor
 
 targets = {
-    'www.reddit.com': 'old.reddit.com',
-
-    # https://github.com/zedeus/nitter/wiki/Instances
-    'twitter.com': 'nitter.net'
+    "www.reddit.com": "old.reddit.com",
 }
+
 
 def rewrite(request: interceptor.Request):
     if request.request_url.host() in targets:
@@ -15,5 +13,5 @@ def rewrite(request: interceptor.Request):
         except interceptor.interceptors.RedirectException:
             pass
 
-interceptor.register(rewrite)
 
+interceptor.register(rewrite)

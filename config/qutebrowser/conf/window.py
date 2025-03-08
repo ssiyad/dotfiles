@@ -1,6 +1,5 @@
 w = c.window
 
-w.hide_decoration = True
-w.title_format = '{perc}{current_title}'
+w.hide_decoration = False
+w.title_format = "{perc}{current_title}"
 w.transparent = True
-

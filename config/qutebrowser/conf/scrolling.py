@@ -1,5 +1,4 @@
 s = c.scrolling
 
-s.bar = 'when-searching'
+s.bar = "when-searching"
 s.smooth = False
-

@@ -1,4 +1,3 @@
 s = c.spellcheck
 
-s.languages = ['en-US']
-
+s.languages = ["en-US"]
