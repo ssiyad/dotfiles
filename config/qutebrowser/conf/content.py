@@ -1,9 +1,7 @@
-c = c.content
-
-c.pdfjs = True
-c.prefers_reduced_motion = True
-c.autoplay = False
-c.blocking.adblock.lists = [
+c.content.pdfjs = True
+c.content.prefers_reduced_motion = True
+c.content.autoplay = False
+c.content.blocking.adblock.lists = [
     "https://easylist.to/easylist/easylist.txt",
     "https://easylist.to/easylist/easyprivacy.txt",
     "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",

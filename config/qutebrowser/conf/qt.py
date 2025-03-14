@@ -1,3 +1,1 @@
-q = c.qt
-
-q.highdpi = True
+c.qt.highdpi = True

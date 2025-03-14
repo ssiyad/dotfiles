@@ -1,12 +1,10 @@
-f = c.fonts
-
-f.default_family = "JetBrainsMono Nerd Font"
-f.default_size = "13pt"
-f.statusbar = "default_size default_family"
-f.tabs.selected = "13 default_family"
-f.tabs.unselected = "13 default_family"
-f.web.family.fixed = "JetBrainsMono Nerd Font"
-f.web.family.standard = "Geist"
-f.web.family.sans_serif = "Geist"
-f.web.family.serif = "Geist"
-f.web.size.default = 16
+c.fonts.default_family = "JetBrainsMono Nerd Font"
+c.fonts.default_size = "13pt"
+c.fonts.statusbar = "default_size default_family"
+c.fonts.tabs.selected = "13 default_family"
+c.fonts.tabs.unselected = "13 default_family"
+c.fonts.web.family.fixed = "JetBrainsMono Nerd Font"
+c.fonts.web.family.standard = "Geist"
+c.fonts.web.family.sans_serif = "Geist"
+c.fonts.web.family.serif = "Geist"
+c.fonts.web.size.default = 16

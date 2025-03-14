@@ -1,3 +1,1 @@
-s = c.spellcheck
-
-s.languages = ["en-US"]
+c.spellcheck.languages = ["en-US"]

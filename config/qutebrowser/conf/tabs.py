@@ -1,8 +1,6 @@
-t = c.tabs
-
-t.favicons.show = "pinned"
-t.indicator.width = 2
-t.last_close = "startpage"
-t.position = "bottom"
-t.show = "never"
-t.show_switching_delay = 1000
+c.tabs.favicons.show = "pinned"
+c.tabs.indicator.width = 2
+c.tabs.last_close = "startpage"
+c.tabs.position = "bottom"
+c.tabs.show = "never"
+c.tabs.show_switching_delay = 1000

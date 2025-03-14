@@ -1,4 +1,2 @@
-s = c.statusbar
-
-s.show = "always"
-s.widgets = ["keypress", "url", "scroll", "history", "tabs"]
+c.statusbar.show = "always"
+c.statusbar.widgets = ["keypress", "url", "scroll", "history", "tabs"]
