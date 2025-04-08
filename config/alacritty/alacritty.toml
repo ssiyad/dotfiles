@@ -17,6 +17,3 @@ multiplier = 3
 
 [general]
 import = ["/Users/ssiyad/dotfiles/config/alacritty/catppuccin/catppuccin-mocha.toml"]
-
-[colors.primary]
-background = '#000000'
