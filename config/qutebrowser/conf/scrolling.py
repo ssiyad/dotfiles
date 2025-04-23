@@ -1,2 +1,2 @@
 c.scrolling.bar = "when-searching"
-c.scrolling.smooth = True
+c.scrolling.smooth = False
