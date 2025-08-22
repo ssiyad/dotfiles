@@ -1,9 +1,8 @@
-[cursor.style]
-blinking = "On"
-shape = "Block"
-
 [env]
 TERM = "xterm-256color"
+
+[general]
+import = ["/Users/ssiyad/dotfiles/config/alacritty/catppuccin/catppuccin-mocha.toml"]
 
 [font]
 size = 14
@@ -14,9 +13,13 @@ y = 1
 [font.normal]
 family = "GeistMono Nerd Font"
 
+[cursor.style]
+blinking = "On"
+shape = "Block"
+
 [scrolling]
 history = 10000
 multiplier = 3
 
-[general]
-import = ["/Users/ssiyad/dotfiles/config/alacritty/catppuccin/catppuccin-mocha.toml"]
+[window]
+option_as_alt = 'OnlyLeft'
