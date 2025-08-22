@@ -1,5 +1,6 @@
 config.load_autoconfig()
 
+config.source("conf/aliases.py")
 config.source("conf/bindings.py")
 config.source("conf/colors.py")
 config.source("conf/content.py")
