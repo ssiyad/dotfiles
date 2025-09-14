@@ -1,5 +1,5 @@
 c.content.pdfjs = True
-c.content.prefers_reduced_motion = False
+c.content.prefers_reduced_motion = True
 c.content.autoplay = False
 c.content.blocking.adblock.lists = [
     "https://easylist.to/easylist/easylist.txt",
