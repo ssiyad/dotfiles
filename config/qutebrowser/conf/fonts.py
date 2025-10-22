@@ -7,4 +7,4 @@ c.fonts.web.family.fixed = "GeistMonoNerdFont"
 c.fonts.web.family.standard = "Geist"
 c.fonts.web.family.sans_serif = "Geist"
 c.fonts.web.family.serif = "Geist"
-c.fonts.web.size.default = 14
+c.fonts.web.size.default = 16

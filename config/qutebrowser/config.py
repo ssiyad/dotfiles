@@ -1,5 +1,4 @@
-config.load_autoconfig()
-
+config.load_autoconfig(False)
 config.source("conf/aliases.py")
 config.source("conf/bindings.py")
 config.source("conf/colors.py")

@@ -6,6 +6,6 @@ import catppuccin
 # menu rows
 catppuccin.setup(c, "mocha", True)
 
-c.colors.webpage.darkmode.enabled = True
+c.colors.webpage.darkmode.enabled = False
 c.colors.webpage.darkmode.algorithm = 'lightness-hsl'
 c.colors.webpage.preferred_color_scheme = 'dark'
