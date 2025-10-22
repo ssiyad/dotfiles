@@ -3,7 +3,6 @@ alias ls="ls -aFGh --color=always"
 alias rm="rm -rfv"
 alias mv="mv -iv"
 alias cp="cp -rv"
-alias ix.io="curl -F 'f:1=<-' ix.io"
 
 abbr v "nvim"
 abbr g "git"
@@ -11,6 +10,14 @@ abbr g "git"
 set fish_greeting
 set -x EDITOR nvim
 
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
+function ts
+	set session_name (basename (pwd))
+	if set -q TMUX
+		echo 'Already inside a tmux session'
+		exit 1
+	else if tmux has-session -t $session_name
+		tmux attach-session -t $session_name
+	else
+		tmux new-session -s $session_name
+	end
+end
