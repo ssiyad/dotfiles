@@ -1,6 +1,7 @@
 config/qutebrowser/*
 !config/qutebrowser/config.py
 !config/qutebrowser/conf/*.py
+!config/qutebrowser/catppuccin
 
 .vscode/
 config/nvim/spell/
