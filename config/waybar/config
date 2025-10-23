@@ -2,7 +2,7 @@
     "position": "top",
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
     "modules-center": [],
-    "modules-right": ["pulseaudio", "backlight", "battery", "network", "cpu", "memory", "custom/tasks", "clock", "tray"],
+    "modules-right": ["wireplumber", "backlight", "battery", "network", "cpu", "memory", "custom/tasks", "clock", "tray"],
 
     "sway/workspaces": {
         "disable-scroll": true,
@@ -43,11 +43,11 @@
     "backlight": {
         "format": "BRI {percent}%"
     },
-    "pulseaudio": {
+    "wireplumber": {
         "format": "VOL {volume}%",
         "format-muted": "VOL Muted {volume}%",
         "format-bluetooth": "VOL {desc} {volume}%",
-        "tooltip": true
+        "tooltip": false
     },
     "cpu": {
         "interval": 2,
