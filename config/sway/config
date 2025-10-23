@@ -1,66 +1,58 @@
-output * {
-    background ~/dotfiles/wallpaper fill
-}
-# set mod key
+# Set mod key.
 set $mod Mod4
 
-# set font for title
-font pango:Fira\ Code 12
+# Set alacritty as terminal.
+set $terminal alacritty
 
-# set floating modifier
+# Set floating modifier.
 floating_modifier $mod
 
-# define colors
-set $trueblack #000000
-
-# home row direction keys, like vim
+# Define direction keys.
 set $left h
 set $down j
 set $up k
 set $right l
 
-# start a terminal
-bindsym $mod+Return exec alacritty
+# Start a terminal.
+bindsym $mod+Return exec $terminal
 
-# kill focused window
+# Kill focused window.
 bindsym $mod+Shift+q kill
 
-bindsym $mod+d exec ~/dotfiles/scripts/launcher.sh
+# bindsym $mod+d exec ~/dotfiles/scripts/launcher.sh
+bindsym $mod+d exec rofi -show drun
 
-# helper script
-bindsym $mod+backslash exec ~/dotfiles/scripts/helper.sh
-
-# change focus
+# Change focus.
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
 bindsym $mod+$right focus right
 
-# move focused window
+# Move focused window.
 bindsym $mod+Shift+$left move left
 bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
 
-# split in horizontal orientation
+# Change to horizontal split.
 bindsym $mod+b split h
 
-# split in vertical orientation
+# Change to vertical split.
 bindsym $mod+v split v
 
-# enter fullscreen mode for the focused container
+# Fullscreen mode for focused window.
 bindsym $mod+f fullscreen toggle
 
-# toggle tiling / floating
+# Toggle between tiling and floating.
 bindsym $mod+Shift+space floating toggle
 
-# change focus between tiling / floating windows
+# Change focus between tiling and floating windows.
 bindsym $mod+space focus mode_toggle
 
-# focus the parent container
+# Focus parent container.
 bindsym $mod+p focus parent
 
-# focus the child container
+# Focus child container
 bindsym $mod+c focus child
 
 client.focused          #9d7cd8 #1a1b26 #9d7cd8 #7dcfff #9d7cd8
@@ -68,7 +60,6 @@ client.unfocused        #33467c #1a1b26 #33467c #7dcfff #33467c
 client.focused_inactive #9d7cd8 #1a1b26 #33467c #7dcfff #33467c
 
 # Define names for default workspaces for which we configure key bindings later on.
-# We use variables to avoid repeating the names in multiple places.
 set $ws1 1
 set $ws2 2
 set $ws3 3
@@ -91,7 +82,7 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
-# move focused container to workspace
+# Move focused container to workspace.
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
@@ -103,22 +94,18 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-# resize window
+# Resize window.
 mode "resize" {
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Left resize grow width 10 px or 10 ppt
+        bindsym Right resize shrink width 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+        bindsym Down resize grow height 10 px or 10 ppt
         bindsym $mod+r mode "default"
 }
 
 bindsym $mod+r mode "resize"
 
-# Bar
+# Statusbar.
 bar {
     swaybar_command waybar
 }
@@ -132,22 +119,16 @@ input type:touchpad {
 }
 
 # audio
-bindsym XF86AudioRaiseVolume exec pamixer -i 3
-bindsym XF86AudioLowerVolume exec pamixer -d 3
-bindsym XF86AudioMute exec pamixer --toggle-mute
+bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%+
+bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-
+bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 
-# backlight
-bindsym XF86MonBrightnessUp exec light -A 2
-bindsym XF86MonBrightnessDown exec light -U 2
+# Adjust screen brightness.
+bindsym XF86MonBrightnessUp exec brightnessctl s +10%
+bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
-# Start mako
+# Start mako (notifications service).
 exec mako &
-
-# Start swayidle
-exec swayidle -w &
-
-# udiskie for automatic usb management
-exec udiskie &
 
 default_border pixel 1
 default_floating_border pixel 1
@@ -156,11 +137,4 @@ smart_borders on
 gaps outer 0
 gaps inner 5
 
-# required for xdg-desktop-portal-wlr
-exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-
-for_window [app_id="pinentry-qt"] floating enable
-for_window [app_id="term_float"] floating enable
-
 seat * hide_cursor when-typing enable
-
