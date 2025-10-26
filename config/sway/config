@@ -20,7 +20,7 @@ bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+q kill
 
 # bindsym $mod+d exec ~/dotfiles/scripts/launcher.sh
-bindsym $mod+d exec rofi -show drun
+bindsym $mod+d exec rofi -show combi
 
 # Change focus.
 bindsym $mod+$left focus left
