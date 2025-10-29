@@ -127,6 +127,10 @@ bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 bindsym XF86MonBrightnessUp exec brightnessctl s +10%
 bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
+# Screenshot
+bindsym Print exec grim - | wl-copy
+bindsym Shift+Print exec grim -g "$(slurp)" - | wl-copy
+
 # Start mako (notifications service).
 exec mako &
 
