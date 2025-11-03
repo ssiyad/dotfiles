@@ -1,3 +1,6 @@
 [submodule "nvim/.config/nvim"]
 	path = nvim/.config/nvim
 	url = git@github.com:ssiyad/nvim.git
+[submodule "qutebrowser/.config/qutebrowser/catppuccin"]
+	path = qutebrowser/.config/qutebrowser/catppuccin
+	url = https://github.com/catppuccin/qutebrowser
