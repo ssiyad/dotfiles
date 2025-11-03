@@ -1,1 +1,0 @@
-text/html; elinks --force-html %s; needsterminal; copiousoutput

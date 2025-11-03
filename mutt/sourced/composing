@@ -1,8 +1,0 @@
-# -*- muttrc -*-
-#
-# Composing & sending
-#
-
-set ispell="aspell -c --mode=email" # Spell checker
-set mime_forward			        # Forward message as MIME attachments.
-set fast_reply
