@@ -1,18 +1,4 @@
-config/qutebrowser/*
-!config/qutebrowser/config.py
-!config/qutebrowser/conf/*.py
-!config/qutebrowser/catppuccin
-
-.vscode/
-config/nvim/spell/
-config/nvim/plugin
-
-config/fish/*
-config/fish/config.fish
-config/fish/fish_plugins
-
-config/tmux/plugins
-
-**/.luarc.json
-
-config/nvim/lazy-lock.json
+# Qutebrowser
+qutebrowser/.config/qutebrowser/autoconfig.yml
+qutebrowser/.config/qutebrowser/bookmarks
+qutebrowser/.config/qutebrowser/quickmarks
