@@ -134,6 +134,9 @@ bindsym Shift+Print exec grimshot --notify copy area
 # Start mako (notifications service).
 exec mako &
 
+# Idle management
+exec swayidle &
+
 default_border pixel 1
 default_floating_border pixel 1
 smart_gaps on
