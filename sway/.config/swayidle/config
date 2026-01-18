@@ -1,1 +1,4 @@
-timeout 300 'systemctl suspend-then-hibernate'
+timeout 300 "swaymsg 'output * dpms off'"
+timeout 1800 "systemctl suspend-then-hibernate"
+resume "swaymsg 'output * dpms on'"
+after-resume "swaymsg 'output * dpms on'"
