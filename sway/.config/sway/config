@@ -131,9 +131,6 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 bindsym Print exec grimshot --notify copy active
 bindsym Shift+Print exec grimshot --notify copy area
 
-# Start mako (notifications service).
-exec mako &
-
 # Idle management
 exec swayidle &
 
