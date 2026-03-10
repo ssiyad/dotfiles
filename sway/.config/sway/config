@@ -1,3 +1,6 @@
+# Set primary output scale.
+output eDP-1 scale 1.8
+
 # Set mod key.
 set $mod Mod4
 
@@ -96,10 +99,10 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Resize window.
 mode "resize" {
-        bindsym Left resize grow width 10 px or 10 ppt
-        bindsym Right resize shrink width 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym h resize grow width 10 px or 10 ppt
+        bindsym l resize shrink width 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
         bindsym $mod+r mode "default"
 }
 
