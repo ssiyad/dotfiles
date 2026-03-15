@@ -22,8 +22,12 @@ bindsym $mod+Return exec $terminal
 # Kill focused window.
 bindsym $mod+Shift+q kill
 
-# bindsym $mod+d exec ~/dotfiles/scripts/launcher.sh
+# Launcher.
 bindsym $mod+d exec rofi -show combi
+
+# Clipboard manager.
+exec wl-paste --watch cliphist store &
+bindsym $mod+Shift+d exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
 
 # Change focus.
 bindsym $mod+$left focus left
