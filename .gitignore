@@ -1,4 +1,16 @@
+# Fish
+fish/.config/fish/completions
+fish/.config/fish/conf.d
+fish/.config/fish/fish_variables
+fish/.config/fish/functions
+fish/.config/fish/themes
+
 # Qutebrowser
 qutebrowser/.config/qutebrowser/autoconfig.yml
 qutebrowser/.config/qutebrowser/bookmarks
+qutebrowser/.config/qutebrowser/greasemonkey
+qutebrowser/.config/qutebrowser/qsettings
 qutebrowser/.config/qutebrowser/quickmarks
+
+# Tmux
+tmux/.config/tmux/plugins
