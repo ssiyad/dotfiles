@@ -71,7 +71,7 @@ color = "#f5e0dc"
 size = 10
 
 [font.offset]
-y = 2
+y = 3
 
 [font.normal]
 family = "GeistMonoNerdFont"
