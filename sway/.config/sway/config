@@ -115,6 +115,10 @@ bindsym $mod+r mode "resize"
 # Statusbar.
 bar {
     swaybar_command waybar
+    position top
+    hidden_state hide
+    mode hide
+    modifier $mod
 }
 
 input type:touchpad {
