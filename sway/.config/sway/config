@@ -145,6 +145,9 @@ bindsym Shift+Print exec grimshot --notify copy area
 # Idle management
 exec swayidle &
 
+# Autotiling
+exec autotiling-rs
+
 default_border pixel 1
 default_floating_border pixel 1
 smart_gaps on
