@@ -23,11 +23,11 @@ bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+q kill
 
 # Launcher.
-bindsym $mod+d exec rofi -show combi
+bindsym $mod+d exec bemenu-run --prompt run
 
 # Clipboard manager.
 exec wl-paste --watch cliphist store &
-bindsym $mod+Shift+d exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
+bindsym $mod+Shift+d exec cliphist list | bemenu --prompt clipboard | cliphist decode | wl-copy
 
 # Change focus.
 bindsym $mod+$left focus left

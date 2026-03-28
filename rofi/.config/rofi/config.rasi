@@ -1,8 +1,0 @@
-configuration {
-    modes: [drun, ssh, combi];
-    combi-modes: [drun, ssh];
-    font: "GeistMonoNerdFont 10";
-    drun-display-format: "{name}";
-}
-
-@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
