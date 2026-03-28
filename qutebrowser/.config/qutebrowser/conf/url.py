@@ -7,5 +7,6 @@ c.url.searchengines = {
     "s": "https://stackoverflow.com/search?q={}",
     "w": "https://en.wikipedia.org/wiki/Special:Search?search={}",
     "y": "https://www.youtube.com/results?search_query={}",
+    "gp": "https://gameplan.frappe.cloud/g/search?q={}",
 }
 c.url.open_base_url = True
