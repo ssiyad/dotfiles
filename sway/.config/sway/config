@@ -1,3 +1,6 @@
+# Import catppuccin-mocha colorscheme.
+include catppuccin-mocha
+
 # Set primary output scale.
 output eDP-1 scale 1.8
 
@@ -6,9 +9,6 @@ set $mod Mod4
 
 # Set alacritty as terminal.
 set $terminal alacritty
-
-# Set floating modifier.
-floating_modifier $mod
 
 # Define direction keys.
 set $left h
@@ -53,18 +53,13 @@ bindsym $mod+f fullscreen toggle
 # Toggle between tiling and floating.
 bindsym $mod+Shift+space floating toggle
 
-# Change focus between tiling and floating windows.
-bindsym $mod+space focus mode_toggle
-
-# Focus parent container.
-bindsym $mod+p focus parent
-
-# Focus child container
-bindsym $mod+c focus child
-
-client.focused          #9d7cd8 #1a1b26 #9d7cd8 #7dcfff #9d7cd8
-client.unfocused        #33467c #1a1b26 #33467c #7dcfff #33467c
-client.focused_inactive #9d7cd8 #1a1b26 #33467c #7dcfff #33467c
+# target                 title     bg    text   indicator  border
+client.focused           $lavender $base $text  $rosewater $lavender
+client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
+client.unfocused         $overlay0 $base $text  $rosewater $overlay0
+client.urgent            $peach    $base $peach $overlay0  $peach
+client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+client.background        $base
 
 # Define names for default workspaces for which we configure key bindings later on.
 set $ws1 1
@@ -143,7 +138,7 @@ bindsym Print exec grimshot --notify copy active
 bindsym Shift+Print exec grimshot --notify copy area
 
 # Idle management
-exec swayidle &
+exec swayidle
 
 # Autotiling
 exec autotiling-rs
