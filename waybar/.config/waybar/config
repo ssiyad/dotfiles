@@ -3,7 +3,7 @@
     "position": "top",
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
     "modules-center": [],
-    "modules-right": ["wireplumber", "backlight", "battery", "network", "cpu", "memory", "custom/tasks", "clock", "tray"],
+    "modules-right": ["wireplumber", "backlight", "battery", "network", "cpu", "memory", "clock", "tray"],
 
     "sway/workspaces": {
         "disable-scroll": true,
