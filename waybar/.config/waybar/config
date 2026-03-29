@@ -19,40 +19,40 @@
     },
     "clock": {
         "interval": 2,
-        "format": "{:%d %A %H:%M}",
+        "format": "󰥔 {:%d %A %H:%M}", // alternative clock icon
         "tooltip": false
     },
     "memory": {
         "interval": 2,
-        "format": "MEM {percentage:0>2}%"
+        "format": "󰘚 {percentage:0>2}%" // alternative memory icon
     },
     "network": {
         "interval": 2,
         "tooltip": false,
-        "format-wifi": "NET {essid} {signalStrength}%",
-        "format-ethernet": "NET {ipaddr}"
+        "format-wifi": "󰤨 {essid} {signalStrength}%", // alternative wifi icon
+        "format-ethernet": "󰈁 {ipaddr}" // alternative ethernet icon
     },
     "battery": {
         "interval": 2,
         "tooltip": false,
-        "format": "BAT {capacity}%",
+        "format": "󰁹 {capacity}%", // alternative battery icon
         "states": {
             "warning": 30,
             "critical": 15
         },
     },
     "backlight": {
-        "format": "BRI {percent}%"
+        "format": "󰃞 {percent}%" // alternative brightness icon
     },
     "wireplumber": {
-        "format": "VOL {volume}%",
-        "format-muted": "VOL Muted {volume}%",
-        "format-bluetooth": "VOL {desc} {volume}%",
+        "format": "󰕾 {volume}%", // alternative volume icon
+        "format-muted": "󰖁 {volume}%",
+        "format-bluetooth": "󰂯 {desc} {volume}%",
         "tooltip": false
     },
     "cpu": {
         "interval": 2,
-        "format": "CPU {usage:0>2}%"
+        "format": "󰍛 {usage:0>2}%" // alternative cpu icon
     },
     "tray": {
         "icon-size": 14,
