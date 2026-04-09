@@ -1,6 +1,9 @@
 [env]
 TERM = "xterm-256color"
 
+[window]
+opacity = 0.9
+
 [colors.primary]
 background = "#000000"
 foreground = "#cdd6f4"
