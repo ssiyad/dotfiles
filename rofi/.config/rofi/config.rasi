@@ -1,0 +1,6 @@
+configuration {
+    modes: [drun, ssh, window, combi];
+    combi-modes: [drun, ssh, window];
+    font: "GeistMonoNerdFont 10";
+    drun-display-format: "{name}";
+}
