@@ -72,9 +72,8 @@ color = "#f5e0dc"
 
 [font]
 size = 10
-
-[font.offset]
-y = 3
+offset.y = 8
+glyph_offset.y = 4
 
 [font.normal]
 family = "GeistMonoNerdFont"
