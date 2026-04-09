@@ -7,7 +7,7 @@
 
 window#waybar {
     color: @text;
-    background-color: @crust;
+    background-color: @mantle;
 }
 
 #workspaces button {
@@ -86,13 +86,6 @@ window#waybar {
 #clock {
     color: @yellow;
     margin-right: 8px;
-}
-
-#tray {
-    background-color: @surface1;
-    color: @text;
-    padding: 0 8px;
-    border-radius: 6px 0 0 8px;
 }
 
 @keyframes blinker {

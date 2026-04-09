@@ -1,22 +1,10 @@
 {
-    "ipc": true,
-    "position": "top",
-    "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
+    "margin": "4 4 0 4",
+    "height": 28,
+    "spacing": 8,
+    "modules-left": ["niri/window"],
     "modules-center": [],
-    "modules-right": ["wireplumber", "backlight", "battery", "network", "cpu", "memory", "clock", "tray"],
-
-    "sway/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "format": "{name}"
-    },
-    "sway/mode": {
-        "format": "{}",
-    },
-    "sway/window": {
-        "format": "{}",
-        "icon": false,
-    },
+    "modules-right": ["tray", "wireplumber", "backlight", "battery", "network", "cpu", "memory", "clock"],
     "clock": {
         "interval": 2,
         "format": "󰥔 {:%d %A %H:%M}", // alternative clock icon
