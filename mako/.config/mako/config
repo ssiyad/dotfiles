@@ -1,0 +1,12 @@
+default-timeout=10000
+max-visible=7
+font=GeistMonoNerdFont 10
+background-color=#1e1e2e
+text-color=#cdd6f4
+border-color=#89b4fa
+progress-color=over #313244
+padding=10
+border-size=1
+
+[urgency=high]
+border-color=#fab387

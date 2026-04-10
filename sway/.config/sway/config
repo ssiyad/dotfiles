@@ -137,6 +137,9 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 bindsym Print exec grimshot save active - | magick - -bordercolor black -border 3 png:- | wl-copy --type image/png
 bindsym Shift+Print exec grimshot save area - | magick - -bordercolor black -border 3 png:- | wl-copy --type image/png
 
+# Start mako (notifications service).
+exec mako &
+
 # Idle management
 exec swayidle
 
