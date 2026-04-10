@@ -1,11 +1,11 @@
 ignore-empty-password
 show-failed-attempts
 indicator-idle-visible
-color=000000
+image=~/dotfiles/wallpaper.png
 bs-hl-color=f5e0dc
 caps-lock-bs-hl-color=f5e0dc
 caps-lock-key-hl-color=a6e3a1
-inside-color=000000
+inside-color=00000000
 inside-clear-color=000000
 inside-caps-lock-color=000000
 inside-ver-color=000000
@@ -19,7 +19,7 @@ line-clear-color=00000000
 line-caps-lock-color=00000000
 line-ver-color=00000000
 line-wrong-color=00000000
-ring-color=313244
+ring-color=31324499
 ring-clear-color=f5e0dc
 ring-caps-lock-color=fab387
 ring-ver-color=89b4fa
