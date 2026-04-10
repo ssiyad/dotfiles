@@ -88,6 +88,10 @@ window#waybar {
     margin-right: 8px;
 }
 
+#tray {
+    margin-right: 8px;
+}
+
 @keyframes blinker {
     50% {
         opacity: 0.5;
