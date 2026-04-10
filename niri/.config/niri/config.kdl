@@ -82,3 +82,8 @@ spawn-sh-at-startup "gammastep -O 5000"
 layer-rule {
     place-within-backdrop true
 }
+
+layer-rule {
+    match namespace="^notifications$"
+    block-out-from "screencast"
+}
