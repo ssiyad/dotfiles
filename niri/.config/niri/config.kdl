@@ -37,6 +37,7 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 binds {
     Mod+Return { spawn "alacritty"; }
     Mod+D { spawn-sh "rofi -show combi"; }
+    Mod+Shift+D { spawn-sh "cliphist list | rofi -dmenu | cliphist decode | wl-copy"; }
     Mod+O repeat=false { toggle-overview; }
     Mod+Q repeat=false { close-window; }
     Mod+Shift+E { quit; }
@@ -78,6 +79,7 @@ binds {
 }
 
 spawn-sh-at-startup "gammastep -O 5000"
+spawn-sh-at-startup "wl-paste --watch cliphist store"
 
 layer-rule {
     place-within-backdrop true
