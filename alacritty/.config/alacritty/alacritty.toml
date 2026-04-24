@@ -2,9 +2,8 @@
 TERM = "xterm-256color"
 
 [window]
-opacity = 0.9
-padding.x = 8
-padding.y = 4
+padding.x = 6
+padding.y = 3
 
 [colors.primary]
 background = "#000000"
@@ -73,7 +72,7 @@ index = 17
 color = "#f5e0dc"
 
 [font]
-size = 10
+size = 9
 offset.y = 6
 glyph_offset.y = 3
 

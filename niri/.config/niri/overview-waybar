@@ -1,0 +1,8 @@
+#!/bin/sh
+
+niri msg --json event-stream | while read -r line; do
+    if echo "$line" | grep -q "OverviewOpenedOrClosed"; then
+        pkill -USR1 waybar
+    fi
+done
+

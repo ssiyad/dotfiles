@@ -15,15 +15,17 @@ output "eDP-1" {
 
 layout {
     background-color "transparent"
-    gaps 4
+    gaps 0
     focus-ring {
         off
     }
-    border {
-        width 0.5
-        active-color "#89b4fa"
-        inactive-color "#585b70"
-        urgent-color "#f38ba8"
+    shadow {
+        on
+        softness 150
+        spread 50
+        offset x=0 y=5
+        draw-behind-window true
+        color "#000000"
     }
 }
 
@@ -80,6 +82,7 @@ binds {
 
 spawn-sh-at-startup "gammastep -O 5000"
 spawn-sh-at-startup "wl-paste --watch cliphist store"
+spawn-sh-at-startup "sleep 2 && sh /home/ssiyad/.config/niri/overview-waybar"
 
 layer-rule {
     place-within-backdrop true

@@ -1,5 +1,5 @@
 {
-    "margin": "4 4 0 4",
+    "mode": "overlay",
     "height": 28,
     "spacing": 8,
     "modules-left": ["niri/window"],
