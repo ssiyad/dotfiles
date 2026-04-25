@@ -23,7 +23,7 @@ layout {
         on
         softness 150
         spread 50
-        offset x=0 y=5
+        offset x=0 y=0
         draw-behind-window true
         color "#000000"
     }
