@@ -31,14 +31,14 @@
 }
 
 element {
-    padding: 4px;
+    padding: 2px;
     cursor:  pointer;
     spacing: 4px;
     border:  0;
 }
 
 element normal.normal {
-    background-color: @normal-background;
+    background-color: #000000;
     text-color:       @normal-foreground;
 }
 
@@ -68,7 +68,7 @@ element selected.active {
 }
 
 element alternate.normal {
-    background-color: @alternate-normal-background;
+    background-color: #000000;
     text-color:       @alternate-normal-foreground;
 }
 
@@ -97,8 +97,8 @@ element-icon {
 }
 
 window {
-    padding:          10;
-    background-color: @background;
+    padding:          8;
+    background-color: #000000;
     border:           1;
 }
 
