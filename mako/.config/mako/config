@@ -5,7 +5,7 @@ background-color=#000000
 text-color=#cdd6f4
 border-color=#89b4fa
 progress-color=over #313244
-padding=10
+padding=6
 border-size=1
 
 [urgency=high]
