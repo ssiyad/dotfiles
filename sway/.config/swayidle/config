@@ -1,5 +1,5 @@
 timeout 300 "niri msg action power-off-monitors" resume "niri msg action power-on-monitors"
 timeout 900 "swaylock"
-timeout 1800 "systemctl suspend"
+timeout 1800 "systemctl suspend-then-hibernate"
 before-sleep "swaylock"
 lock "swaylock"
