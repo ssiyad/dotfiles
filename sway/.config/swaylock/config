@@ -1,3 +1,4 @@
+ignore-empty-password
 show-failed-attempts
 indicator-idle-visible
 image=~/dotfiles/wallpaper.png
