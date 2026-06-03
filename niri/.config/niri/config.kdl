@@ -43,10 +43,10 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 binds {
     Mod+Return { spawn "alacritty"; }
-    Mod+D { spawn-sh "rofi -show combi"; }
+    Mod+Space { spawn-sh "rofi -show combi"; }
     Mod+Shift+D { spawn-sh "cliphist list | rofi -dmenu | cliphist decode | wl-copy"; }
     Mod+O repeat=false { toggle-overview; }
-    Mod+Q repeat=false { close-window; }
+    Mod+Shift+Q repeat=false { close-window; }
     Mod+Shift+E { quit; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%+"; }
