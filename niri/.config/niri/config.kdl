@@ -6,6 +6,7 @@ input {
         dwt
         drag-lock
         natural-scroll
+        accel-speed 0.2
     }
 }
 
