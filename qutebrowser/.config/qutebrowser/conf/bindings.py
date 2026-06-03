@@ -1,18 +1,18 @@
 config.bind(
     "\\\\",
-    "spawn --userscript qute-pass --mode gopass --dmenu-invocation 'bemenu --prompt passwords' --password-store ~/.local/share/gopass/stores/root",
+    "spawn --userscript qute-pass --mode gopass --password-store ~/.local/share/gopass/stores/root",
 )
 config.bind(
     "\\u",
-    "spawn --userscript qute-pass --mode gopass --dmenu-invocation 'bemenu --prompt passwords' --password-store ~/.local/share/gopass/stores/root --username-only",
+    "spawn --userscript qute-pass --mode gopass --password-store ~/.local/share/gopass/stores/root --username-only",
 )
 config.bind(
     "\\p",
-    "spawn --userscript qute-pass --mode gopass --dmenu-invocation 'bemenu --prompt passwords' --password-store ~/.local/share/gopass/stores/root --password-only",
+    "spawn --userscript qute-pass --mode gopass --password-store ~/.local/share/gopass/stores/root --password-only",
 )
 config.bind(
     "\\o",
-    "spawn --userscript qute-pass --mode gopass --dmenu-invocation 'bemenu --prompt passwords' --password-store ~/.local/share/gopass/stores/root --otp-only",
+    "spawn --userscript qute-pass --mode gopass --password-store ~/.local/share/gopass/stores/root --otp-only",
 )
 
 # Media
