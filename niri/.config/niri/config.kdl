@@ -9,6 +9,11 @@ input {
     }
 }
 
+cursor {
+    hide-when-typing
+    hide-after-inactive-ms 5000
+}
+
 output "eDP-1" {
     scale 1.6
 }
