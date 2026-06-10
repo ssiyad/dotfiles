@@ -1,3 +1,4 @@
+timeout 5 "brightnessctl --device="asus::kbd_backlight" set 0" resume "brightnessctl --device="asus::kbd_backlight" set 1"
 timeout 300 "niri msg action power-off-monitors" resume "niri msg action power-on-monitors"
 timeout 900 "swaylock"
 timeout 1800 "systemctl suspend-then-hibernate"
