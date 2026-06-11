@@ -1,4 +1,4 @@
-c.content.pdfjs = True
+c.content.pdfjs = False
 c.content.prefers_reduced_motion = True
 c.content.autoplay = False
 c.content.blocking.adblock.lists = [
