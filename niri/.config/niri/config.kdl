@@ -87,7 +87,7 @@ binds {
 
 spawn-sh-at-startup "gammastep -O 5000"
 spawn-sh-at-startup "wl-paste --watch cliphist store"
-spawn-sh-at-startup "sleep 2 && sh /home/ssiyad/.config/niri/overview-waybar"
+spawn-sh-at-startup "bash /home/ssiyad/.config/niri/overview-waybar"
 
 layer-rule {
     place-within-backdrop true
