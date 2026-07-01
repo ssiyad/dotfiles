@@ -1,0 +1,14 @@
+:root {
+  --font-mono: "GeistMono Nerd Font", monospace;
+  --font-ui: "Geist", sans-serif;
+  --font-ui-serif: "Geist", sans-serif;
+}
+
+html, body, p {
+  font-family: "Geist", sans-serif !important;
+}
+
+pre, code, kbd, samp,
+pre *, code *, kbd *, samp * {
+  font-family: "GeistMono Nerd Font", monospace !important;
+}

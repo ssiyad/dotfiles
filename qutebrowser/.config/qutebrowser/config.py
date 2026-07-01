@@ -11,3 +11,7 @@ config.source("conf/statusbar.py")
 config.source("conf/tabs.py")
 config.source("conf/url.py")
 config.source("conf/window.py")
+
+c.content.user_stylesheets = [
+    "~/.config/qutebrowser/override_style.css",
+]
