@@ -1,11 +1,21 @@
 :root {
+  --font-sans: "Geist", sans-serif;
   --font-mono: "GeistMono Nerd Font", monospace;
   --font-ui: "Geist", sans-serif;
   --font-ui-serif: "Geist", sans-serif;
 }
 
+.dark,
+[data-theme=dark],
+[data-color-mode][data-color-mode=auto][data-dark-theme=dark] {
+  --surface-base: black;
+  --surface-white: black;
+  --surface-menu-bar: black;
+  --bgColor-default: black; 
+}
+
 html, body, p {
-  font-family: "Geist", sans-serif !important;
+  font-family: "Geist", sans-serif;
 }
 
 pre, code, kbd, samp,
