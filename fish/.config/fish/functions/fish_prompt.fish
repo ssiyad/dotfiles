@@ -31,6 +31,13 @@ function fish_prompt --description 'Write out the prompt'
         set -g __fish_git_prompt_color_cleanstate green --bold
     end
 
+    # user@host when connected over SSH
+    if set -q SSH_TTY; or set -q SSH_CLIENT; or set -q SSH_CONNECTION
+        set_color --bold yellow
+        echo -n (whoami)'@'(prompt_hostname)' '
+        set_color normal
+    end
+
     # PWD
     set_color --bold $green
 
