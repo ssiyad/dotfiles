@@ -9,3 +9,6 @@ abbr g "git"
 
 set fish_greeting
 set -x EDITOR nvim
+
+# uv
+fish_add_path "~/.local/bin"
