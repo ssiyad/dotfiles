@@ -7,7 +7,7 @@
     "modules-right": ["tray", "wireplumber", "backlight", "battery", "network", "cpu", "memory", "clock"],
     "clock": {
         "interval": 2,
-        "format": "󰥔 {:%d %A %I:%M}", 
+        "format": "󰥔 {:%d %A %H:%M}", 
         "tooltip": false
     },
     "memory": {
