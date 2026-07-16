@@ -39,10 +39,10 @@ function fish_prompt --description 'Write out the prompt'
     end
 
     # PWD
-    set_color --bold $green
+    set_color --bold green
 
     if [ $__fish_last_status != 0 ]
-        set_color --bold $red
+        set_color --bold red
     end
 
     echo -n (prompt_pwd)
@@ -50,7 +50,7 @@ function fish_prompt --description 'Write out the prompt'
 
     printf '%s ' (fish_vcs_prompt)
 
-    set_color $cyan
-    echo -n "» " 
+    set_color cyan
+    echo -n "» "
     set_color normal
 end
