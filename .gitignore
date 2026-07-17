@@ -1,8 +1,11 @@
 # Fish
 fish/.config/fish/completions
-fish/.config/fish/conf.d
+fish/.config/fish/conf.d/*
+!fish/.config/fish/conf.d/theme.fish
 fish/.config/fish/fish_variables
-fish/.config/fish/functions
+fish/.config/fish/functions/*
+!fish/.config/fish/functions/fish_prompt.fish
+!fish/.config/fish/functions/fish_mode_prompt.fish
 fish/.config/fish/themes
 
 # Qutebrowser
