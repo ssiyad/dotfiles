@@ -31,6 +31,17 @@ function fish_prompt --description 'Write out the prompt'
         set -g __fish_git_prompt_color_cleanstate green --bold
     end
 
+    # Container name, if running inside one.
+    if test -f /run/.containerenv
+        set -l cname (cat /run/.containerenv | grep '^name=' | cut -d'"' -f2)
+        if test -z "$cname"
+            set cname "box"
+        end
+        set_color --bold yellow
+        echo -n "[$cname] "
+        set_color normal
+    end
+
     # user@host when connected over SSH
     if set -q SSH_TTY; or set -q SSH_CLIENT; or set -q SSH_CONNECTION
         set_color --bold yellow
