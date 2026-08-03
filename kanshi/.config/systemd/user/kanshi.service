@@ -1,0 +1,13 @@
+[Unit]
+Description=kanshi daemon
+Documentation=man:kanshi(5)
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/kanshi
+Restart=on-failure
+RestartSec=1
+
+[Install]
+WantedBy=graphical-session.target
