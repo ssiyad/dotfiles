@@ -1,0 +1,15 @@
+[Unit]
+Description=Auto-mount Android devices over MTP
+Requires=dbus.socket
+After=dbus.socket
+Wants=gvfs-mtp-volume-monitor.service
+After=gvfs-daemon.service gvfs-mtp-volume-monitor.service
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/mtp-automount --watch
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,139 @@
+#!/bin/sh
+# Mount a connected Android device over MTP at a stable ~/mnt/phone.
+#
+# gvfs already detects MTP volumes (it even reports should_automount=1), but
+# nothing under niri acts on that -- on GNOME it would be gsd-automount. This
+# fills in that one missing step.
+#
+#   mtp-automount            mount whatever is connected, refresh the symlink
+#   mtp-automount --watch    same, driven by gvfs volume signals (the service)
+#   mtp-automount --unmount  unmount and drop the symlink
+
+set -u
+
+LINK="$HOME/mnt/phone"
+GVFS="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/gvfs"
+
+log() { printf '%s\n' "$*" >&2; }
+
+# Never let a missing notification daemon fail an otherwise successful mount --
+# the mount path only needs the session bus, notifications are cosmetic.
+notify() {
+	command -v notify-send >/dev/null 2>&1 || return 0
+	notify-send -a mtp-automount -i phone "$@" 2>/dev/null || true
+}
+
+# First MTP volume as "<unix-device><TAB><activation_root><TAB><name>", if any.
+mtp_volume() {
+	gio mount -li 2>/dev/null | awk '
+		/^Volume\([0-9]+\): / {
+			name = substr($0, index($0, ": ") + 2)
+			mtp = 0; dev = ""
+		}
+		/^  Type: .*GProxyVolumeMonitorMTP/ { mtp = 1 }
+		mtp && /^   unix-device: / { dev = $2; gsub(/\047/, "", dev) }
+		mtp && /^  activation_root=/ {
+			print dev "\t" substr($0, index($0, "=") + 1) "\t" name
+			exit
+		}
+	'
+}
+
+# gvfs derives the mount point from the activation root, so it is predictable:
+#   mtp://HOST/  ->  $XDG_RUNTIME_DIR/gvfs/mtp:host=HOST
+mount_dir_for() {
+	host=${1#mtp://}
+	printf '%s/mtp:host=%s\n' "$GVFS" "${host%/}"
+}
+
+do_sync() {
+	vol=$(mtp_volume)
+
+	if [ -z "$vol" ]; then
+		if [ -L "$LINK" ]; then
+			rm -f "$LINK"
+			log "no MTP device connected; removed $LINK"
+			notify "Phone disconnected"
+		fi
+		return 0
+	fi
+
+	dev=$(printf '%s' "$vol" | cut -f1)
+	name=$(printf '%s' "$vol" | cut -f3)
+	dir=$(mount_dir_for "$(printf '%s' "$vol" | cut -f2)")
+
+	if [ ! -d "$dir" ]; then
+		log "mounting $name ($dev)"
+		# One retry: the volume can be listed a moment before it will mount.
+		if ! gio mount -d "$dev" >/dev/null 2>&1; then
+			sleep 1
+			if ! gio mount -d "$dev" >/dev/null 2>&1; then
+				log "gio mount failed for $dev"
+				notify -u critical "Phone mount failed" "$name"
+				return 1
+			fi
+		fi
+		# gvfsd-mtp sets the mount point up asynchronously; wait up to 5s.
+		i=0
+		while [ ! -d "$dir" ] && [ "$i" -lt 50 ]; do
+			sleep 0.1
+			i=$((i + 1))
+		done
+	fi
+
+	if [ ! -d "$dir" ]; then
+		log "mount point never appeared: $dir"
+		notify -u critical "Phone mount failed" "$name"
+		return 1
+	fi
+
+	# Already correct: stay quiet, so repeated signals don't spam notifications.
+	[ "$(readlink "$LINK" 2>/dev/null)" = "$dir" ] && return 0
+
+	mkdir -p "${LINK%/*}"
+	ln -sfn "$dir" "$LINK"
+	log "linked $LINK -> $dir"
+	notify "Phone mounted" "$name -> ~/mnt/phone"
+}
+
+# Note: -u takes a location, not a device -- `gio mount -u -d DEV` silently does
+# the wrong thing. Also worth knowing that ending the MTP session makes the phone
+# drop back to charge-only mode, so it takes another File Transfer tap to return.
+do_unmount() {
+	vol=$(mtp_volume)
+	if [ -n "$vol" ]; then
+		gio mount -u "$(printf '%s' "$vol" | cut -f2)" >/dev/null 2>&1 || true
+	fi
+	rm -f "$LINK"
+	log "unmounted; removed $LINK"
+}
+
+do_watch() {
+	# Touching gio activates the volume monitors before we subscribe. The initial
+	# sync catches a phone already plugged in at login.
+	gio mount -li >/dev/null 2>&1
+	do_sync || true
+
+	# `gio mount -o` is GVolumeMonitor's own event stream -- a supported API
+	# client rather than gvfs D-Bus internals, so it survives the MTP monitor
+	# being reactivated. Events are only a trigger; every decision is re-derived
+	# from `gio mount -li` in do_sync, which makes repeated firing harmless.
+	gio mount -o 2>/dev/null |
+	while IFS= read -r line; do
+		case $line in
+		'Volume added:'*|'Volume removed:'*|'Mount removed:'*)
+			do_sync || true
+			;;
+		esac
+	done
+}
+
+case "${1-}" in
+--watch)   do_watch ;;
+--unmount) do_unmount ;;
+''|sync)   do_sync ;;
+*)
+	printf 'usage: %s [--watch|--unmount|sync]\n' "${0##*/}" >&2
+	exit 2
+	;;
+esac
