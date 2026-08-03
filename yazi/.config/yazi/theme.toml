@@ -37,7 +37,7 @@ unset_alt   = { fg = "#f38ba8", bg = "#313244" }
 [indicator]
 current = { reversed = true }
 preview = { fg = "#cdd6f4", bg = "#313244" }
-padding = { open = "", close = "" }
+padding = { open = " ", close = " " }
 
 [status]
 sep_left  = { open = "", close = "" }
