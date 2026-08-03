@@ -6,6 +6,7 @@ fish/.config/fish/fish_variables
 fish/.config/fish/functions/*
 !fish/.config/fish/functions/fish_prompt.fish
 !fish/.config/fish/functions/fish_mode_prompt.fish
+!fish/.config/fish/functions/y.fish
 fish/.config/fish/themes
 
 # Qutebrowser
