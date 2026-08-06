@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -o pipefail
+
+seen_snapshot=false
+niri msg --json event-stream | while read -r line; do
+    if echo "$line" | grep -q "OverviewOpenedOrClosed"; then
+        if [[ $seen_snapshot == false ]]; then
+            seen_snapshot=true
+            continue
+        fi
+        pkill -USR1 waybar
+    fi
+done
+
