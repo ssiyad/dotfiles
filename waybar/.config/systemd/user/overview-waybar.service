@@ -5,7 +5,7 @@ After=waybar.service
 Requisite=waybar.service
 
 [Service]
-ExecStartPre=/usr/bin/sleep 2
+ExecStartPre=/usr/bin/sleep 1
 ExecStart=/bin/bash %h/.config/waybar/overview-waybar
 Restart=on-failure
 RestartSec=1
