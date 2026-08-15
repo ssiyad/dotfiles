@@ -20,3 +20,9 @@ if status is-interactive; and not functions -q fisher
     curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source
     fisher update
 end
+
+# Set history location to avoid mixing host and container history.
+if test -f /run/.containerenv
+    set -l cname (cat /run/.containerenv | grep '^name=' | cut -d'"' -f2)
+    set -x fish_history "$cname"
+end
