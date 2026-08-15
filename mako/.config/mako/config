@@ -1,5 +1,6 @@
 default-timeout=10000
 max-visible=7
+layer=overlay
 font=GeistMonoNerdFont 10
 background-color=#000000
 text-color=#cdd6f4
