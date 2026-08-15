@@ -3,6 +3,7 @@
   --font-mono: "GeistMono Nerd Font", monospace;
   --font-ui: "Geist", sans-serif;
   --font-ui-serif: "Geist", sans-serif;
+  --fontStack-monospace: "GeistMono Nerd Font", monospace !important; // GitHub
 }
 
 .dark,
