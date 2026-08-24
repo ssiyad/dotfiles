@@ -13,6 +13,7 @@ set -x EDITOR nvim
 # Vi key bindings (mode indicator lives in fish_mode_prompt)
 set -g fish_key_bindings fish_vi_key_bindings
 
+fish_add_path ~/.cargo/bin
 fish_add_path ~/.local/bin
 
 # Bootstrap fisher + install plugins from fish_plugins on a fresh machine
@@ -23,6 +24,6 @@ end
 
 # Set history location to avoid mixing host and container history.
 if test -f /run/.containerenv
-    set -l cname (cat /run/.containerenv | grep '^name=' | cut -d'"' -f2)
+    set -l cname (cat /run/.containerenv | grep '^name=' | cut -d'"' -f2 | sed 's/-/_/')
     set -x fish_history "$cname"
 end
