@@ -200,7 +200,7 @@ textbox-prompt-colon {
 
 configuration {
     modes: [drun, ssh, window, combi];
-    combi-modes: [drun, ssh, window];
-    font: "GeistMonoNerdFont 10";
+    combi-modes: [drun, notes, ssh, window];
+    font: "GeistMono Nerd Font 10";
     drun-display-format: "{name}";
 }
