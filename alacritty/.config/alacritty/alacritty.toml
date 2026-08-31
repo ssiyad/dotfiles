@@ -73,7 +73,7 @@ offset.y = 6
 glyph_offset.y = 3
 
 [font.normal]
-family = "GeistMonoNerdFont"
+family = "GeistMono Nerd Font"
 
 [cursor.style]
 blinking = "On"
