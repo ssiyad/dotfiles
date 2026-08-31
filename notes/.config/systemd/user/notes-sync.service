@@ -3,7 +3,7 @@ Description=Sync notes
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash -c 'git add . && git commit || true && git push'
+ExecStart=/bin/bash -c 'git add -A && git c --no-edit || true && git p'
 WorkingDirectory=/home/ssiyad/notes
 Restart=on-failure
 RestartSec=5
