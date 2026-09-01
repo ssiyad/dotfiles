@@ -1,8 +1,9 @@
 [Unit]
-Description=Sync notes everyday at 16:00
+Description=Sync notes every 3 hours
 
 [Timer]
-OnCalendar=*-*-* 16:00:00
+OnBootSec=5min
+OnUnitActiveSec=3h
 Persistent=true
 
 [Install]
