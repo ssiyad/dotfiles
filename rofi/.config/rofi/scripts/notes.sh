@@ -15,6 +15,6 @@ case "$1" in
     ;;
 esac
 
+echo -e "tasks\x00display\x1fTasks"
 echo -e "journal\x00display\x1fJournal"
 echo -e "reading_list\x00display\x1fReading List"
-echo -e "tasks\x00display\x1fTasks"
