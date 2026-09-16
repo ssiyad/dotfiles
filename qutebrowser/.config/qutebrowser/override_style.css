@@ -10,6 +10,8 @@
 [data-theme=dark],
 [data-color-mode][data-color-mode=auto][data-dark-theme=dark] {
   --surface-base: black;
+  --surface-gray-1: black;
+  --surface-elevation-1: black;
   --surface-white: black;
   --surface-menu-bar: black;
   --bgColor-default: black; 
@@ -22,4 +24,8 @@ html, body, p {
 pre, code, kbd, samp,
 pre *, code *, kbd *, samp * {
   font-family: "GeistMono Nerd Font", monospace !important;
+}
+
+nav {
+  border-right: 0.66px solid var(--outline-gray-2) !important;
 }
