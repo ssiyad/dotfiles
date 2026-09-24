@@ -4,6 +4,8 @@ if status is-interactive; and not functions -q fisher
     fisher update
 end
 
+fish_config theme choose "Acid Acetic"
+
 alias mkdir="mkdir -pv"
 alias ls="ls -aFh --color=auto"
 alias rm="rm -rfv"
