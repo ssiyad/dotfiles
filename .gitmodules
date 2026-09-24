@@ -16,3 +16,6 @@
 [submodule "alacritty/.config/alacritty/acid"]
 	path = alacritty/.config/alacritty/acid
 	url = git@github.com:acid-theme/alacritty.git
+[submodule "waybar/.config/waybar/acid"]
+	path = waybar/.config/waybar/acid
+	url = git@github.com:acid-theme/waybar.git

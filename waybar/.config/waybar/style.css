@@ -1,4 +1,4 @@
-@import "mocha.css";
+@import "acid/acid-acetic.css";
 
 * {
     font-family: 'GeistMonoNerdFont';
@@ -7,7 +7,12 @@
 
 window#waybar {
     color: @text;
-    background-color: @mantle;
+    background-color: @base;
+    border: 1px solid @surface1;
+}
+
+#workspaces {
+    margin: 0 0 0 4px;
 }
 
 #workspaces button {
@@ -16,12 +21,11 @@ window#waybar {
     border: none;
     border-radius: 0;
     padding: 0 2px;
-    color: @surface1;
+    color: @overlay0;
 }
 
 #workspaces button.focused {
     color: @text;
-    background-color: @surface1;
 }
 
 #mode {
@@ -35,7 +39,7 @@ window#waybar {
 }
 
 #wireplumber {
-    color: @sky;
+    color: @aqua;
     margin-right: 8px;
 }
 
@@ -59,12 +63,12 @@ window#waybar {
 }
 
 #battery.discharging.warning {
-    color: @red;
+    color: @orange;
     animation: blinker 1s linear infinite;
 }
 
 #battery.discharging.critical {
-    color: @maroon;
+    color: @red;
     animation: blinker 1s linear infinite;
 }
 
@@ -79,7 +83,7 @@ window#waybar {
 }
 
 #memory {
-    color: @mauve;
+    color: @purple;
     margin-right: 8px;
 }
 
