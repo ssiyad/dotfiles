@@ -10,3 +10,6 @@
 [submodule "mako/.config/mako/mako"]
 	path = mako/.config/mako/mako
 	url = git@github.com:acid-theme/mako.git
+[submodule "mako/.config/mako/acid"]
+	path = mako/.config/mako/acid
+	url = git@github.com:acid-theme/mako.git

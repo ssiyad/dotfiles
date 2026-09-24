@@ -1,4 +1,4 @@
-include=~/.config/mako/mako/acid-acetic.conf
+include=~/.config/mako/acid/acid-acetic.conf
 
 default-timeout=10000
 max-visible=7
