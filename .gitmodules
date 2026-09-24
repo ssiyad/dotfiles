@@ -7,3 +7,6 @@
 [submodule "tmux/.config/tmux/tpm"]
 	path = tmux/.config/tmux/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "mako/.config/mako/mako"]
+	path = mako/.config/mako/mako
+	url = git@github.com:acid-theme/mako.git
