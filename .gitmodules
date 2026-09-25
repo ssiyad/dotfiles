@@ -19,3 +19,9 @@
 [submodule "waybar/.config/waybar/acid"]
 	path = waybar/.config/waybar/acid
 	url = git@github.com:acid-theme/waybar.git
+[submodule "rofi/.config/rofi/acid"]
+	path = rofi/.config/rofi/acid
+	url = git@github.com:acid-theme/rofi.git
+[submodule "qutebrowser/.config/qutebrowser/acid"]
+	path = qutebrowser/.config/qutebrowser/acid
+	url = git@github.com:acid-theme/qutebrowser.git

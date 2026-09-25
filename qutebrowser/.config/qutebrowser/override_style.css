@@ -25,7 +25,3 @@ pre, code, kbd, samp,
 pre *, code *, kbd *, samp * {
   font-family: "GeistMono Nerd Font", monospace !important;
 }
-
-nav {
-  border-right: 0.66px solid var(--outline-gray-2) !important;
-}

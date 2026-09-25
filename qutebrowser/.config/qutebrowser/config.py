@@ -1,4 +1,5 @@
 config.load_autoconfig(False)
+config.source("acid/acid-acetic.py")
 config.source("conf/bindings.py")
 config.source("conf/colors.py")
 config.source("conf/content.py")

@@ -1,4 +1,4 @@
-@import "catppuccin-mocha"
+@import "acid/acid-acetic"
 
 * {
   selected-active-foreground:  @background;
@@ -27,7 +27,6 @@
   normal-foreground:           @foreground;
   alternate-urgent-foreground: @red;
   alternate-active-foreground: @blue;
-
 }
 
 element {
@@ -38,7 +37,7 @@ element {
 }
 
 element normal.normal {
-    background-color: #000000;
+    background-color: @background-color;
     text-color:       @normal-foreground;
 }
 
@@ -68,7 +67,7 @@ element selected.active {
 }
 
 element alternate.normal {
-    background-color: #000000;
+    background-color: @mantle;
     text-color:       @alternate-normal-foreground;
 }
 
@@ -98,7 +97,7 @@ element-icon {
 
 window {
     padding:          8;
-    background-color: #000000;
+    background-color: @base;
     border:           1;
 }
 
