@@ -25,3 +25,6 @@
 [submodule "qutebrowser/.config/qutebrowser/acid"]
 	path = qutebrowser/.config/qutebrowser/acid
 	url = git@github.com:acid-theme/qutebrowser.git
+[submodule "btop/.config/btop/acid"]
+	path = btop/.config/btop/acid
+	url = git@github.com:acid-theme/btop.git
