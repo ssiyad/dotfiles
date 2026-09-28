@@ -8,7 +8,7 @@
 window#waybar {
     color: @text;
     background-color: @base;
-    border: 1px solid @surface1;
+    border: 2px solid @surface1;
 }
 
 #workspaces {
