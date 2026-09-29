@@ -25,6 +25,12 @@ layout {
         active-color "#ffc832"
         inactive-color "#383838"
     }
+    preset-column-widths {
+        proportion 0.35
+        proportion 0.50
+        proportion 0.65
+        proportion 1.00
+    }
 }
 
 hotkey-overlay {
