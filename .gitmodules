@@ -28,3 +28,6 @@
 [submodule "btop/.config/btop/acid"]
 	path = btop/.config/btop/acid
 	url = git@github.com:acid-theme/btop.git
+[submodule "aerc/.config/aerc/acid"]
+	path = aerc/.config/aerc/acid
+	url = git@github.com:acid-theme/aerc.git
