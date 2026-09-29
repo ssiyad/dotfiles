@@ -1,9 +1,10 @@
-include=~/.config/mako/acid/acid-acetic.conf
+include=~/.config/mako/acid/acid-citric.conf
 
-default-timeout=10000
-max-visible=7
-layer=overlay
-font=GeistMonoNerdFont 10
-padding=6
 border-size=1
+default-timeout=10000
+font=GeistMonoNerdFont 10
+icons=0
+layer=overlay
+max-visible=7
+padding=6
 
