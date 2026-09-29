@@ -8,17 +8,17 @@ output "LG Electronics LG ULTRAWIDE 608PMYH069538" {
 
 output "Samsung Display Corp. 0x419D Unknown" {
     mode preferred
-    scale 1.5
+    scale 1.6
     adaptive_sync on
     transform normal
     alias $LAPTOP
 }
 
-profile {
+profile standalone {
     output $LAPTOP position 0,0 
 }
 
-profile {
+profile home_dock {
     output $HOME_UW position 0,0 
     output $LAPTOP position 745,1440 
 }

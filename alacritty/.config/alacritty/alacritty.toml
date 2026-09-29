@@ -1,5 +1,5 @@
 [general]
-import = ["~/.config/alacritty/acid/acid-acetic.toml"]
+import = ["~/.config/alacritty/acid/acid-citric.toml"]
 
 [env]
 TERM = "xterm-256color"

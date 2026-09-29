@@ -16,17 +16,14 @@ cursor {
 
 layout {
     background-color "transparent"
-    gaps 0
+    gaps 4
     focus-ring {
         off
     }
-    shadow {
-        on
-        softness 150
-        spread 50
-        offset x=0 y=0
-        draw-behind-window true
-        color "#000000"
+    border {
+        width 1
+        active-color "#ffc832"
+        inactive-color "#383838"
     }
 }
 
@@ -62,11 +59,16 @@ binds {
     Mod+Shift+K     { move-window-up-or-to-workspace-up; }
     Mod+Shift+L     { move-column-right; }
 
+    Mod+Ctrl+J     { focus-monitor-down; }
+    Mod+Ctrl+K     { focus-monitor-up; }
+    Mod+Shift+Ctrl+J { move-window-to-monitor-down; }
+    Mod+Shift+Ctrl+K { move-window-to-monitor-up; }
+
     Mod+BracketLeft  { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
 
     Mod+C { center-column; }
-    Mod+F { maximize-column; }
+    Mod+F { fullscreen-window; }
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Minus { set-column-width "-10%"; }

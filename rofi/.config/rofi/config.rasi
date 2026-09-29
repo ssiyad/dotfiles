@@ -1,4 +1,4 @@
-@import "acid/acid-acetic"
+@import "acid/acid-citric"
 
 * {
   selected-active-foreground:  @background;
