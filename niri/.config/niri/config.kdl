@@ -16,14 +16,20 @@ cursor {
 
 layout {
     background-color "transparent"
-    gaps 4
+    gaps 0
     focus-ring {
         off
     }
     border {
-        width 1
-        active-color "#ffc832"
-        inactive-color "#383838"
+        off
+    }
+    shadow {
+        on
+        softness 150
+        spread 50
+        offset x=0 y=0
+        draw-behind-window true
+        color "#000000"
     }
 }
 
@@ -38,7 +44,7 @@ binds {
     Mod+Return { spawn "alacritty"; }
     Mod+Space { spawn-sh "rofi -show combi"; }
     Mod+Shift+D { spawn-sh "cliphist list | rofi -dmenu | cliphist decode | wl-copy"; }
-    Mod+O repeat=false { toggle-overview; }
+    Mod+O repeat=false { spawn-sh "sh -c 'niri msg action toggle-overview && pkill -USR1 -x waybar'"; }
     Mod+Shift+Q repeat=false { close-window; }
     Mod+Shift+E { quit; }
 

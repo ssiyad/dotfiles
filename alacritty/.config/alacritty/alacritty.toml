@@ -1,5 +1,5 @@
 [general]
-import = ["~/.config/alacritty/acid/acid-citric.toml"]
+import = ["~/.config/alacritty/acid/acid-acetic.toml"]
 
 [env]
 TERM = "xterm-256color"
@@ -19,7 +19,3 @@ shape = "Block"
 [scrolling]
 history = 10000
 multiplier = 3
-
-[window]
-padding.x = 6
-padding.y = 6

@@ -1,5 +1,5 @@
 {
-    "mode": "dock",
+    "mode": "overlay",
     "height": 28,
     "spacing": 8,
     "margin-top": 4,
