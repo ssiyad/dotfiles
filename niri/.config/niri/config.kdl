@@ -75,7 +75,6 @@ binds {
 
     Mod+C { center-column; }
     Mod+F { maximize-column; }
-    Mod+Shift+F { fullscreen-window; }
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Minus { set-column-width "-10%"; }
