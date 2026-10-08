@@ -2,31 +2,47 @@ ignore-empty-password
 show-failed-attempts
 indicator-idle-visible
 image=~/dotfiles/wallpaper.png
-bs-hl-color=f5e0dc
-caps-lock-bs-hl-color=f5e0dc
-caps-lock-key-hl-color=a6e3a1
-inside-color=00000000
-inside-clear-color=000000
-inside-caps-lock-color=000000
-inside-ver-color=000000
-inside-wrong-color=000000
-key-hl-color=a6e3a1
-layout-bg-color=00000000
-layout-border-color=00000000
-layout-text-color=cdd6f4
-line-color=00000000
-line-clear-color=00000000
-line-caps-lock-color=00000000
-line-ver-color=00000000
-line-wrong-color=00000000
-ring-color=31324499
-ring-clear-color=f5e0dc
-ring-caps-lock-color=fab387
-ring-ver-color=89b4fa
-ring-wrong-color=eba0ac
-separator-color=00000000
-text-color=cdd6f4
-text-clear-color=f5e0dc
-text-caps-lock-color=fab387
-text-ver-color=89b4fa
-text-wrong-color=eba0ac
+
+# Background, shown when no --image is given. An image overrides it.
+color=000000
+
+# The indicator's inside, translucent so a wallpaper still reads through it.
+inside-color=00000099
+inside-clear-color=00000099
+inside-caps-lock-color=00000099
+inside-ver-color=00000099
+inside-wrong-color=00000099
+
+# The hairline between inside and ring, and the gaps between key segments.
+line-color=1c1c1c
+line-clear-color=1c1c1c
+line-caps-lock-color=1c1c1c
+line-ver-color=1c1c1c
+line-wrong-color=1c1c1c
+separator-color=1c1c1c
+
+# The ring carries the state: idle is a surface, then the accents escalate.
+ring-color=4a4a4a
+ring-clear-color=c9e02b
+ring-caps-lock-color=ffc832
+ring-ver-color=45b6ff
+ring-wrong-color=ff4536
+
+# Keypress and backspace segments. Caps Lock recolours the keypress to yellow
+# so the state is visible while typing; deletion stays orange either way.
+key-hl-color=2fe0b8
+bs-hl-color=ff8b1f
+caps-lock-key-hl-color=ffc832
+caps-lock-bs-hl-color=ff8b1f
+
+# Indicator text, matching its ring.
+text-color=f2e9d0
+text-clear-color=c9e02b
+text-caps-lock-color=ffc832
+text-ver-color=45b6ff
+text-wrong-color=ff4536
+
+# The keyboard-layout box, shown with --show-keyboard-layout.
+layout-bg-color=242424e6
+layout-border-color=ea7fc4
+layout-text-color=f2e9d0
