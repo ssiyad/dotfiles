@@ -1,8 +1,12 @@
+* {
+  font-family: "Geist", sans-serif !important;
+}
+
 :root {
-  --font-sans: "Geist", sans-serif;
-  --font-mono: "GeistMono Nerd Font", monospace;
   --font-ui: "Geist", sans-serif;
   --font-ui-serif: "Geist", sans-serif;
+  --font-sans: "Geist", sans-serif;
+  --font-mono: "GeistMono Nerd Font", monospace !important;
   --fontStack-monospace: "GeistMono Nerd Font", monospace !important; // GitHub
 }
 
