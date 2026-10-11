@@ -1,4 +1,4 @@
-* {
+*:not(.google-symbols) {
   font-family: "Geist", sans-serif !important;
 }
 
