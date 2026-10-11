@@ -15,10 +15,12 @@ output "Samsung Display Corp. 0x419D Unknown" {
 }
 
 profile standalone {
-    output $LAPTOP position 0,0 
+    output $LAPTOP enable position 0,0 
+    exec pkill -USR1 -x waybar
 }
 
 profile home_dock {
     output $HOME_UW position 0,0 
-    output $LAPTOP position 745,1440 
+    output $LAPTOP disable
+    exec pkill -USR1 -x waybar
 }
