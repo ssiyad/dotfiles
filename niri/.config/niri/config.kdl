@@ -65,11 +65,6 @@ binds {
     Mod+Shift+K     { move-window-up-or-to-workspace-up; }
     Mod+Shift+L     { move-column-right; }
 
-    Mod+Ctrl+J     { focus-monitor-down; }
-    Mod+Ctrl+K     { focus-monitor-up; }
-    Mod+Shift+Ctrl+J { move-window-to-monitor-down; }
-    Mod+Shift+Ctrl+K { move-window-to-monitor-up; }
-
     Mod+BracketLeft  { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
 
