@@ -1,4 +1,5 @@
 c.qt.args = [
+    "disable-remote-fonts",
     "performance",
     "enable-gpu-rasterization",
     "ignore-gpu-blacklist",
