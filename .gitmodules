@@ -30,4 +30,4 @@
 	url = git@github.com:acid-theme/aerc.git
 [submodule "ironbar/.config/ironbar/acid"]
 	path = ironbar/.config/ironbar/acid
-	url = git@github.com:acid-theme/waybar.git
+	url = git@github.com:acid-theme/ironbar.git
