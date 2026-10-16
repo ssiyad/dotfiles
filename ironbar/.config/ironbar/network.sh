@@ -1,6 +1,6 @@
 #!/bin/sh
 # Show the default-route connection: SSID and signal for Wi-Fi, the address
-# for wired. With "icon", print a matching Adwaita icon name instead.
+# for wired. With "icon", print a matching icon name instead.
 # Ironbar's network_manager module needs NetworkManager; this machine uses iwd.
 
 iface=$(ip route show default | awk '{ for (i = 1; i < NF; i++) if ($i == "dev") { print $(i + 1); exit } }')

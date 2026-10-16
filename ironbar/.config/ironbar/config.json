@@ -22,13 +22,9 @@
         },
         {
             "type": "volume",
-            "format": "{icon}  {percentage}%",
-            "mute_format": "{icon}  {percentage}%",
-            "show_sources": false,
-            "icons": {
-                "volume": "󰕾",
-                "muted": "󰖁"
-            }
+            "format": "{percentage}%",
+            "mute_format": "{percentage}%",
+            "show_sources": false
         },
         {
             "type": "battery",

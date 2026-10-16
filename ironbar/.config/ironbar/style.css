@@ -85,6 +85,34 @@
     color: @red;
 }
 
+/* The volume module only takes text icons, so the speaker is drawn as a
+ * background. -gtk-icontheme() would look in GTK's global theme, not the bar's,
+ * so the files are named directly and recoloured to the text colour. The
+ * module marks the level on the button (profile-low, profile-medium; none
+ * above 66%) and mute on the label. */
+#bar .volume .sink {
+    background-image: -gtk-recolor(url("../../.local/share/icons/ironbar/status/audio-volume-high-symbolic.svg"));
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 16px 16px;
+    padding-left: 22px;
+    /* Even height, so the centred icon lands on whole pixels instead of
+     * blurring across two. */
+    min-height: 16px;
+}
+
+#bar .volume.profile-medium .sink {
+    background-image: -gtk-recolor(url("../../.local/share/icons/ironbar/status/audio-volume-medium-symbolic.svg"));
+}
+
+#bar .volume.profile-low .sink {
+    background-image: -gtk-recolor(url("../../.local/share/icons/ironbar/status/audio-volume-low-symbolic.svg"));
+}
+
+#bar .volume .sink.muted {
+    background-image: -gtk-recolor(url("../../.local/share/icons/ironbar/status/audio-volume-muted-symbolic.svg"));
+}
+
 /* Popups are GTK popovers. */
 popover > contents {
     color: @text;

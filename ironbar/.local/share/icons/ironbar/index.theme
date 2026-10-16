@@ -1,6 +1,6 @@
 [Icon Theme]
 Name=Ironbar
-Comment=Horizontal battery icons for Ironbar, made symbolic from Breeze (LGPL-3.0). Everything else falls back to Adwaita.
+Comment=macOS-style status icons for Ironbar. Battery and Wi-Fi from WhiteSur (GPL-3.0, github.com/vinceliuice/WhiteSur-icon-theme), made monochrome; the speakers are drawn for a 16px grid. Everything else falls back to Adwaita.
 Inherits=Adwaita,hicolor
 Directories=status
 
