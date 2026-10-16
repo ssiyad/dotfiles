@@ -12,8 +12,12 @@ border-size=1
 border-color=#383838
 border-radius=12
 padding=10,12
-outer-margin=0,2
 margin=6
+
+# Sit below the bar: its pills end at 44px (6px top margin + 40px height, less
+# their 2px inner margin), and the 6px notification margin gives the same gap
+# as the bar's popups.
+outer-margin=44,2,0
 
 # Ironbar has no accent colour, so urgency shows through text and border only.
 [urgency=low]
