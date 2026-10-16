@@ -1,10 +1,31 @@
 include=~/.config/mako/acid/acid-acetic.conf
 
-border-size=1
 default-timeout=10000
-font=GeistMonoNerdFont 10
 icons=0
 layer=overlay
 max-visible=7
-padding=6
 
+# Match the Ironbar pills: solid black, a thin grey border, rounded corners,
+# and the same edge gaps as the bar.
+font=Geist 10
+border-size=1
+border-color=#383838
+border-radius=12
+padding=10,12
+outer-margin=0,2
+margin=6
+
+# Ironbar has no accent colour, so urgency shows through text and border only.
+[urgency=low]
+text-color=#a49f95
+border-color=#383838
+
+[urgency=normal]
+border-color=#383838
+
+[urgency=high]
+border-color=#ff4536
+
+[hidden]
+text-color=#5a5a5a
+border-color=#383838
