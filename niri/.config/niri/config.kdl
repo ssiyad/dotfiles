@@ -44,7 +44,7 @@ binds {
     Mod+Return { spawn "alacritty"; }
     Mod+Space { spawn-sh "rofi -show combi"; }
     Mod+Shift+D { spawn-sh "cliphist list | rofi -dmenu | cliphist decode | wl-copy"; }
-    Mod+O repeat=false { spawn-sh "niri msg action toggle-overview && ironbar bar main toggle-visible"; }
+    Mod+O repeat=false { toggle-overview; }
     Mod+Shift+Q repeat=false { close-window; }
     Mod+Shift+E { quit; }
 
@@ -87,6 +87,7 @@ binds {
 spawn-sh-at-startup "gammastep -O 5000"
 spawn-sh-at-startup "wl-paste --watch cliphist store"
 spawn-sh-at-startup "wluma"
+spawn-sh-at-startup "~/.config/ironbar/overview.sh"
 
 layer-rule {
     place-within-backdrop true
@@ -95,20 +96,4 @@ layer-rule {
 layer-rule {
     match namespace="^notifications$"
     block-out-from "screencast"
-}
-
-layer-rule {
-    match namespace="^ironbar$"
-
-    background-effect {
-        blur true
-    }
-
-    popups {
-        geometry-corner-radius 10
-
-        background-effect {
-            blur true
-        }
-    }
 }
