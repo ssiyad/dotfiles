@@ -1,42 +1,29 @@
 {
     "name": "main",
+    "icon_theme": "ironbar",
     "position": "top",
     "anchor_to_edges": true,
     "layer": "top",
     "exclusive_zone": false,
-    "height": 26,
+    "start_hidden": true,
+    "height": 40,
     "popup_gap": 6,
     "start": [
         {
-            "type": "label",
-            "name": "logo",
-            "label": "\uf303",
-            "on_click_left": "rofi -show power"
-        },
-        {
             "type": "workspaces",
-            "format": "\uf111",
+            "format": "",
             "sort": "index"
-        },
-        {
-            "type": "focused",
-            "name": "window",
-            "show_icon": false,
-            "truncate": {
-                "mode": "end",
-                "max_length": 80
-            }
         }
     ],
     "end": [
         {
             "type": "tray",
-            "icon_size": 14
+            "icon_size": 16
         },
         {
             "type": "volume",
-            "format": "{icon} {percentage}%",
-            "mute_format": "{icon} {percentage}%",
+            "format": "{icon}  {percentage}%",
+            "mute_format": "{icon}  {percentage}%",
             "show_sources": false,
             "icons": {
                 "volume": "󰕾",
@@ -44,47 +31,43 @@
             }
         },
         {
-            "type": "brightness",
-            "format": "󰃞 {percentage}%",
-            "use_default_profiles": false
-        },
-        {
             "type": "battery",
-            "format": "󰁹 {percentage}%",
-            "show_icon": false,
+            "format": "{percentage}%",
+            "icon_size": 16,
             "profiles": {
                 "critical": {
-                    "when": { "percent": 15, "charging": false },
-                    "format": "󰂃 {percentage}%"
+                    "percent": 15,
+                    "charging": false
                 },
                 "warning": {
-                    "when": { "percent": 30, "charging": false },
-                    "format": "󰁻 {percentage}%"
-                },
-                "charging": {
-                    "when": { "percent": 100, "charging": true },
-                    "format": "󰂄 {percentage}%"
+                    "percent": 30,
+                    "charging": false
                 }
             }
         },
         {
-            "type": "sys_info",
-            "format": [
-                "󰍛 {cpu_percent:0<2.0}%",
-                "󰘚 {memory_percent:0<2.0}%"
-            ],
-            "interval": {
-                "cpu": 2,
-                "memory": 2,
-                "temps": 86400,
-                "disks": 86400,
-                "networks": 86400,
-                "system": 86400
-            }
+            "type": "custom",
+            "name": "network",
+            "bar": [
+                {
+                    "type": "image",
+                    "src": "icon:{{5000:~/.config/ironbar/network.sh icon}}",
+                    "size": 16
+                },
+                {
+                    "type": "label",
+                    "label": "{{5000:~/.config/ironbar/network.sh}}"
+                }
+            ]
         },
         {
             "type": "clock",
             "format": "%a %-d %b  %H:%M"
         }
-    ]
+    ],
+    "margin": {
+        "top": 6,
+        "left": 8,
+        "right": 8
+    }
 }

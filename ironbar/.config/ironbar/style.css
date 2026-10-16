@@ -1,26 +1,32 @@
 @import url("acid/acid-acetic.css");
 
-/* macOS-style menu bar: flush to the top edge, translucent over niri's
- * background blur, one text colour, and rounded highlights on hover. */
+/* Split bar: the start and end groups float as separate rounded pills,
+ * with rounded highlights on hover. */
 
 * {
-    font-family: 'Geist', 'GeistMono Nerd Font';
+    /* Geist alone: naming a GeistMono family here makes fontconfig put
+     * GeistMono first. Icons come from the Nerd Font through fallback. */
+    font-family: 'Geist';
     font-size: 10pt;
     font-weight: 500;
 }
 
-.background {
+.background,
+#bar {
     background-color: transparent;
 }
 
 #bar {
     color: @text;
-    background-color: alpha(@base, 0.45);
 }
 
 #bar #start,
 #bar #end {
-    margin: 0 6px;
+    background-color: @base;
+    border: 1px solid @surface1;
+    border-radius: 12px;
+    margin: 2px 0;
+    padding: 0 6px;
 }
 
 #bar button {
@@ -31,30 +37,22 @@
     border-radius: 0;
     box-shadow: none;
     background: none;
+    color: inherit;
 }
 
 #bar .widget {
-    padding: 0 8px;
-    margin: 3px 0;
-    border-radius: 5px;
+    padding: 0 10px;
+    margin: 5px 0;
+    border-radius: 8px;
 }
 
 #bar .widget:hover {
-    background-color: alpha(@text, 0.15);
-}
-
-#logo {
-    font-size: 12pt;
-    padding: 0 10px;
-}
-
-#window {
-    font-weight: 700;
+    background-color: @surface0;
 }
 
 #bar .workspaces .item {
-    padding: 0 3px;
-    color: alpha(@text, 0.35);
+    padding: 0 4px;
+    color: @overlay0;
 }
 
 #bar .workspaces .item label {
@@ -66,31 +64,32 @@
 }
 
 .tray {
-    border-spacing: 8px;
+    border-spacing: 10px;
 }
 
-.tray .item {
-    -gtk-icon-filter: grayscale(1);
+/* Gap between a theme icon and its text. The battery box already has
+ * built-in spacing. */
+#network {
+    border-spacing: 6px;
 }
 
-.battery.profile-warning {
+.battery .contents {
+    border-spacing: 0;
+}
+
+#bar .battery.profile-warning {
     color: @orange;
 }
 
-.battery.profile-critical {
+#bar .battery.profile-critical {
     color: @red;
 }
 
-.sysinfo {
-    border-spacing: 12px;
-}
-
-/* Popups are GTK popovers. niri blurs behind them with a 10px radius, so
- * keep the same radius and no shadow outside it. */
+/* Popups are GTK popovers. */
 popover > contents {
     color: @text;
-    background-color: alpha(@surface0, 0.75);
-    border: 1px solid alpha(@text, 0.15);
+    background-color: @base;
+    border: 1px solid @surface1;
     border-radius: 10px;
     box-shadow: none;
     padding: 10px;
@@ -99,4 +98,50 @@ popover > contents {
 popover > arrow {
     background: none;
     border: none;
+}
+
+/* Widgets inside popups: replace the GTK theme's grey and blue. */
+popover button {
+    color: @text;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+popover button:hover,
+popover row:selected {
+    background-color: @surface0;
+}
+
+popover scale trough {
+    background-color: @surface1;
+}
+
+popover scale highlight,
+popover scale slider {
+    background-color: @text;
+    background-image: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+popover calendar {
+    color: @text;
+    background-color: @base;
+    border: none;
+}
+
+popover calendar > grid > label.day-name {
+    color: @subtext0;
+}
+
+popover calendar > grid > label.other-month {
+    color: @overlay0;
+}
+
+popover calendar > grid > label:selected {
+    color: @base;
+    background-color: @text;
+    border-radius: 6px;
 }
