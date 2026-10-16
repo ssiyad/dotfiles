@@ -27,8 +27,10 @@ border-color=#383838
 [urgency=normal]
 border-color=#383838
 
+# Critical notifications stay until dismissed.
 [urgency=high]
 border-color=#ff4536
+default-timeout=0
 
 [hidden]
 text-color=#5a5a5a
