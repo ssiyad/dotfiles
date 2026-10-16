@@ -1,9 +1,6 @@
 [general]
 import = ["~/.config/alacritty/acid/acid-acetic.toml"]
 
-[env]
-TERM = "xterm-256color"
-
 [font]
 size = 9
 offset.y = 6
