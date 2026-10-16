@@ -1,0 +1,102 @@
+@import url("acid/acid-acetic.css");
+
+/* macOS-style menu bar: flush to the top edge, translucent over niri's
+ * background blur, one text colour, and rounded highlights on hover. */
+
+* {
+    font-family: 'Geist', 'GeistMono Nerd Font';
+    font-size: 10pt;
+    font-weight: 500;
+}
+
+.background {
+    background-color: transparent;
+}
+
+#bar {
+    color: @text;
+    background-color: alpha(@base, 0.45);
+}
+
+#bar #start,
+#bar #end {
+    margin: 0 6px;
+}
+
+#bar button {
+    padding: 0;
+    min-height: 0;
+    min-width: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+}
+
+#bar .widget {
+    padding: 0 8px;
+    margin: 3px 0;
+    border-radius: 5px;
+}
+
+#bar .widget:hover {
+    background-color: alpha(@text, 0.15);
+}
+
+#logo {
+    font-size: 12pt;
+    padding: 0 10px;
+}
+
+#window {
+    font-weight: 700;
+}
+
+#bar .workspaces .item {
+    padding: 0 3px;
+    color: alpha(@text, 0.35);
+}
+
+#bar .workspaces .item label {
+    font-size: 6pt;
+}
+
+#bar .workspaces .item.focused {
+    color: @text;
+}
+
+.tray {
+    border-spacing: 8px;
+}
+
+.tray .item {
+    -gtk-icon-filter: grayscale(1);
+}
+
+.battery.profile-warning {
+    color: @orange;
+}
+
+.battery.profile-critical {
+    color: @red;
+}
+
+.sysinfo {
+    border-spacing: 12px;
+}
+
+/* Popups are GTK popovers. niri blurs behind them with a 10px radius, so
+ * keep the same radius and no shadow outside it. */
+popover > contents {
+    color: @text;
+    background-color: alpha(@surface0, 0.75);
+    border: 1px solid alpha(@text, 0.15);
+    border-radius: 10px;
+    box-shadow: none;
+    padding: 10px;
+}
+
+popover > arrow {
+    background: none;
+    border: none;
+}

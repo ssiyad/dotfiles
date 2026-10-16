@@ -31,3 +31,6 @@
 [submodule "aerc/.config/aerc/acid"]
 	path = aerc/.config/aerc/acid
 	url = git@github.com:acid-theme/aerc.git
+[submodule "ironbar/.config/ironbar/acid"]
+	path = ironbar/.config/ironbar/acid
+	url = git@github.com:acid-theme/waybar.git
