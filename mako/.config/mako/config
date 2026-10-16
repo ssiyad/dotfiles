@@ -27,10 +27,10 @@ border-color=#383838
 [urgency=normal]
 border-color=#383838
 
-# Critical notifications stay until dismissed.
+# Critical notifications stay longer than the rest, but still expire.
 [urgency=high]
 border-color=#ff4536
-default-timeout=0
+default-timeout=60000
 
 [hidden]
 text-color=#5a5a5a
